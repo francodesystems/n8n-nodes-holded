@@ -104,13 +104,7 @@ jobs:
         run: npx eslint -c .eslintrc.prepublish.js nodes credentials package.json
 
       - name: Publish to npm with provenance
-        # `id-token: write` (declared at the job level) lets npm exchange the
-        # GitHub OIDC token for a short-lived publish credential, matched
-        # against the Trusted Publisher configured on npmjs.com. No long-lived
-        # NPM_TOKEN secret is required. `--provenance` attaches a signed
-        # attestation that anyone can later verify against the GitHub run.
         run: |
-          [ -n "$NPM_TOKEN" ] && npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
-          npm publish --provenance
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          echo "ACTIONS_ID_TOKEN_REQUEST_URL is ${ACTIONS_ID_TOKEN_REQUEST_URL:+set}${ACTIONS_ID_TOKEN_REQUEST_URL:-UNSET}"
+          echo "ACTIONS_ID_TOKEN_REQUEST_TOKEN is ${ACTIONS_ID_TOKEN_REQUEST_TOKEN:+set}${ACTIONS_ID_TOKEN_REQUEST_TOKEN:-UNSET}"
+          npm publish --provenance --access public --verbose
