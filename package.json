@@ -1,0 +1,71 @@
+{
+  "name": "@francodesystems-npm/n8n-nodes-holded",
+  "version": "0.3.0",
+  "description": "n8n community node for Holded — the Spanish ERP / accounting platform. Full coverage of both API versions: v2 (42 resources, 323 operations) and legacy v1 (24 resources, 134 operations).",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "holded",
+    "erp",
+    "accounting",
+    "spain",
+    "invoicing",
+    "verifactu"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/francodesystems/n8n-nodes-holded",
+  "author": {
+    "name": "Francodesystems",
+    "email": "hola@francodesystems.com",
+    "url": "https://francodesystems.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francodesystems/n8n-nodes-holded.git"
+  },
+  "bugs": {
+    "url": "https://github.com/francodesystems/n8n-nodes-holded/issues"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "release": "n8n-node release",
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/HoldedApi.credentials.js",
+      "dist/credentials/HoldedV2Api.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Holded/Holded.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "^0.23.0",
+    "@typescript-eslint/parser": "~8.32.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^5.0.0",
+    "n8n-workflow": "*",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}

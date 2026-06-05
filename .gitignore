@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.tsbuildinfo
+.DS_Store
+*.tsbuildinfo
+.env
+.env.local
+.idea/
+.vscode/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+__pycache__/
+*.pyc
