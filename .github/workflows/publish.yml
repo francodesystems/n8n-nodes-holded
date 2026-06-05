@@ -86,16 +86,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Release
-        # Publishes to npm with a provenance attestation (requires id-token: write above).
-        # Lint and build run automatically as part of the release process.
-        #
-        # Option A (OIDC): leave NPM_TOKEN unset — the token step is skipped and
-        #   npm uses the OIDC exchange instead.
-        # Option B (token): set NPM_TOKEN in repo secrets — it is written to
-        #   .npmrc here before publishing.
+      - name: Build
+        run: npm run build
+
+      - name: Lint
+        run: npx eslint -c .eslintrc.prepublish.js nodes credentials package.json
+
+      - name: Publish to npm with provenance
+        # `id-token: write` (declared at the job level) lets npm exchange the
+        # GitHub OIDC token for a short-lived publish credential, matched
+        # against the Trusted Publisher configured on npmjs.com. No long-lived
+        # NPM_TOKEN secret is required. `--provenance` attaches a signed
+        # attestation that anyone can later verify against the GitHub run.
         run: |
           [ -n "$NPM_TOKEN" ] && npm config set //registry.npmjs.org/:_authToken "$NPM_TOKEN"
-          npm run release
+          npm publish --provenance
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
