@@ -7,6 +7,8 @@
 
 This is an [n8n](https://n8n.io) community node that lets you use **Holded** in your n8n workflows. Built and maintained by [Francodesystems](https://francodesystems.com), Spanish integrations specialists.
 
+> **Disclaimer**: This is an unofficial community integration. "Holded" and the Holded logo are trademarks of Holded Technologies S.L. and are used here under nominative fair use to identify the third-party service this node integrates with. This package is not affiliated with, endorsed by, or sponsored by Holded.
+
 [Installation](#installation) · [Operations](#operations) · [Credentials](#credentials) · [Compatibility](#compatibility) · [Usage](#usage) · [Resources](#resources)
 
 ## Installation
