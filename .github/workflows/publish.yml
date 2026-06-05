@@ -84,27 +84,16 @@ jobs:
           cache: 'npm'
 
       - name: Upgrade npm
-        # Trusted Publisher OIDC support was added in npm 11.5.1. The npm
-        # bundled with Node 22 LTS is older and falls back to ENEEDAUTH.
+        # Trusted Publisher OIDC support was added in npm 11.5.1; the npm
+        # bundled with Node LTS is older and falls back to ENEEDAUTH.
         run: sudo npm install -g npm@latest
-
-      - name: Show toolchain versions
-        run: |
-          echo "node: $(node --version)"
-          echo "npm:  $(npm --version)"
-          echo "npm bin path: $(which npm)"
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
-
-      - name: Lint
-        run: npx eslint -c .eslintrc.prepublish.js nodes credentials package.json
-
       - name: Publish to npm with provenance
-        run: |
-          echo "ACTIONS_ID_TOKEN_REQUEST_URL is ${ACTIONS_ID_TOKEN_REQUEST_URL:+set}${ACTIONS_ID_TOKEN_REQUEST_URL:-UNSET}"
-          echo "ACTIONS_ID_TOKEN_REQUEST_TOKEN is ${ACTIONS_ID_TOKEN_REQUEST_TOKEN:+set}${ACTIONS_ID_TOKEN_REQUEST_TOKEN:-UNSET}"
-          npm publish --provenance --access public --verbose
+        # Build + lint run automatically via the prepublishOnly script.
+        # OIDC handshake exchanges the GitHub ID token (id-token: write at the
+        # job level) for a short-lived npm publish credential, matched against
+        # the Trusted Publisher configured on npmjs.com for this package.
+        run: npm publish --provenance
