@@ -23,11 +23,7 @@ In your n8n instance: **Settings → Community Nodes → Install**, and enter:
 
 ## Operations
 
-The node supports **both Holded API v1 (legacy) and v2 (current)**. Pick the version from the "API Version" dropdown at the top of the node. Each version requires its own credential type.
-
-### v2 — full coverage (current API)
-
-Every Holded v2 endpoint is exposed: **41 resources, 311 operations**. The Contact resource is hand-tuned for a polished UX (nested address, defaults collection, custom fields as JSON); the rest are driven by the catalog scraped from the official Holded developers portal — each operation exposes its path parameters, query filters and request body fields as native n8n inputs.
+Targets the **Holded API v2** (current). Every v2 endpoint is exposed: **42 resources, 323 operations**. The Contact resource is hand-tuned for a polished UX (nested address, defaults collection, custom fields as JSON, multipart attachment upload/download); the rest are driven by the catalog scraped from the official Holded developers portal — each operation exposes its path parameters, query filters and request body fields as native n8n inputs.
 
 | Area | Resources |
 |---|---|
@@ -41,30 +37,17 @@ Every Holded v2 endpoint is exposed: **41 resources, 311 operations**. The Conta
 
 For complex bodies (invoice lines, custom field arrays, etc.) the corresponding field expects JSON; the dispatcher parses it before sending. Pagination on collection GETs uses Holded's cursor (`limit` + `has_more`) and the node automatically loops when **Return All** is enabled.
 
-### v1 — Contact (legacy)
-
-- **Create** a new contact (person or company) with VAT number, IBAN, address, etc.
-- **Get** a contact by ID.
-- **Get Many** contacts, optionally filtered by type (client / supplier / lead / debtor / creditor), with offset pagination.
-- **Update** an existing contact.
-- **Delete** a contact.
-
-> Need more v1 resources (Invoice, Product, etc.)? Open an [issue](https://github.com/francodesystems/n8n-nodes-holded/issues) — the v1 catalog is available in `spec/v1-endpoints.json`.
+> **Looking for v1?** Up to v0.3.x this package shipped both v1 and v2 side by side. Starting from v0.4.0 the focus is v2 only (Holded recommends v2 for all new integrations). If you need v1 endpoints, pin `0.3.8` or open an [issue](https://github.com/francodesystems/n8n-nodes-holded/issues).
 
 ## Credentials
 
 You need a Holded API key. Generate one in Holded → **Settings → API → Generate new key**.
 
-This node ships two credential types:
-
-| Credential | Auth scheme | Use for |
+| Credential | Auth scheme | Notes |
 |---|---|---|
-| **Holded API** | `key: <api_key>` header | v1 endpoints (legacy) |
-| **Holded V2 API** | `Authorization: Bearer <api_key>` | v2 endpoints (current) |
+| **Holded V2 API** | `Authorization: Bearer <api_key>` | Tested against `GET /api/v2/contacts?limit=1` |
 
-Create the credential that matches the API version you selected on the node. The v2 credential is tested against `GET /api/v2/contacts?limit=1`; v1 against `GET /api/invoicing/v1/contacts?limit=1`.
-
-Note that **v2 keys have per-scope permissions** (e.g. `contacts:contacts.read`, `contacts:contacts.write`). If a key is missing the scope a given endpoint needs, you get a `403 Forbidden`. Pick the minimum set of scopes when generating the key.
+**v2 keys have per-scope permissions** (e.g. `contacts:contacts.read`, `contacts:contacts.write`). If a key is missing the scope a given endpoint needs, you get a `403 Forbidden`. Pick the minimum set of scopes when generating the key.
 
 ## Compatibility
 
@@ -95,17 +78,11 @@ Stripe Trigger (charge.succeeded)
   → Holded (Contact / Update, set tag: "paid")
 ```
 
-## API version
+## API
 
-This node ships side-by-side support for both Holded API versions:
+This node targets the **Holded REST API v2**: Bearer auth (`Authorization: Bearer <api_key>`), cursor pagination (`cursor`+`limit`+`has_more`), RFC 7807 structured errors, scoped permissions, and a consolidated base URL `/api/v2/<resource>`. Holded's v1 (legacy) is no longer covered from v0.4.0 onwards.
 
-- **v1** — the legacy API. Header auth (`key: <api_key>`), offset pagination (`page`+`limit`), and resource-prefixed URLs (`/api/invoicing/v1/contacts`, `/api/crm/v1/...`). Existing integrations keep working without changes; Holded has not announced a sunset date.
-- **v2** — the current API. Bearer auth (`Authorization: Bearer <api_key>`), cursor pagination (`cursor`+`limit`+`has_more`), RFC 7807 structured errors, scoped permissions, and a consolidated base URL `/api/v2/<resource>`. Use v2 for new integrations.
-
-Pick the version in the "API Version" field at the top of the node. Both versions share the same Resource and Operation UI; field names and request shapes follow the version you selected.
-
-- v1 docs (legacy): https://www.holded.com/es/desarrolladores/v1
-- v2 docs (current): https://www.holded.com/es/desarrolladores
+Reference: https://www.holded.com/es/desarrolladores
 
 ## Releasing (maintainers)
 
@@ -149,7 +126,6 @@ To get the "Verified" badge in n8n's nodes panel (so users can install the packa
 
 ## Resources
 
-- [Holded API v1 documentation](https://www.holded.com/es/desarrolladores/v1) — legacy, kept for backward compatibility
 - [Holded API v2 documentation](https://www.holded.com/es/desarrolladores) — current
 - [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
 - [n8n verified node guidelines](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/)

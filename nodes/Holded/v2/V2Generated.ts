@@ -4,48 +4,48 @@
 
 import type { INodeProperties } from 'n8n-workflow';
 
-export const V2_RESOURCE_OPTIONS: Array<{ name: string; value: string; description?: string }> = [
-	{ name: 'Accounting (V2)', value: 'accounting', description: 'V2 only. Equivalent to V1 Chart of Accounts + Daily Ledger' },
-	{ name: 'Bank Account (V2)', value: 'bankAccount', description: 'V2 only. Equivalent to V1 Treasury' },
-	{ name: 'Billing Forecast (V2)', value: 'billingForecast', description: 'V2 only' },
-	{ name: 'Booking (V2)', value: 'booking', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Contact Group (V2)', value: 'contactGroup', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Credit Note (V2)', value: 'creditNote', description: 'V2 only' },
-	{ name: 'Delivery Note (V2)', value: 'deliveryNote', description: 'V2 only' },
-	{ name: 'Document (V2)', value: 'document', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Employee (V2)', value: 'employee', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Employee Time Tracking (V2)', value: 'employeeTimeTracking', description: 'V2 only. Equivalent to V1 Employee Time Tracking' },
-	{ name: 'Estimate (V2)', value: 'estimate', description: 'V2 only' },
-	{ name: 'Event (V2)', value: 'event', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Expense Account (V2)', value: 'expenseAccount', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Funnel (V2)', value: 'funnel', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Inbox (V2)', value: 'inbox', description: 'V2 only' },
-	{ name: 'Invoice (V2)', value: 'invoice', description: 'V2 only' },
-	{ name: 'Numbering Series (V2)', value: 'numberingSeries', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Opportunity (V2)', value: 'opportunity', description: 'V2 only. Equivalent to V1 Lead' },
-	{ name: 'Payment (V2)', value: 'payment', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Payment Method (V2)', value: 'paymentMethod', description: 'V2 only' },
-	{ name: 'Payroll Record (V2)', value: 'payrollRecord', description: 'V2 only' },
-	{ name: 'Price List (V2)', value: 'priceList', description: 'V2 only' },
-	{ name: 'Product (V2)', value: 'product', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Production Order (V2)', value: 'productionOrder', description: 'V2 only' },
-	{ name: 'Proforma (V2)', value: 'proforma', description: 'V2 only' },
-	{ name: 'Project (V2)', value: 'project', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Project Time Tracking (V2)', value: 'projectTimeTracking', description: 'V2 only. Equivalent to V1 Project Time Tracking' },
-	{ name: 'Purchase (V2)', value: 'purchase', description: 'V2 only' },
-	{ name: 'Purchase Delivery Note (V2)', value: 'purchaseDeliveryNote', description: 'V2 only' },
-	{ name: 'Purchase Order (V2)', value: 'purchaseOrder', description: 'V2 only' },
-	{ name: 'Recurring Invoice (V2)', value: 'recurringInvoice', description: 'V2 only' },
-	{ name: 'Remittance (V2)', value: 'remittance', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Sales Channel (V2)', value: 'salesChannel', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Sales Credit Note (V2)', value: 'salesCreditNote', description: 'V2 only' },
-	{ name: 'Sales Order (V2)', value: 'salesOrder', description: 'V2 only' },
-	{ name: 'Sales Receipt (V2)', value: 'salesReceipt', description: 'V2 only' },
-	{ name: 'Service (V2)', value: 'service', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Tag (V2)', value: 'tag', description: 'V2 only' },
-	{ name: 'Task (V2)', value: 'task', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Tax (V2)', value: 'tax', description: 'Available in both V1 and V2 — schemas differ between versions' },
-	{ name: 'Warehouse (V2)', value: 'warehouse', description: 'Available in both V1 and V2 — schemas differ between versions' },
+export const V2_RESOURCE_OPTIONS: Array<{ name: string; value: string }> = [
+	{ name: 'Accounting', value: 'accounting' },
+	{ name: 'Bank Account', value: 'bankAccount' },
+	{ name: 'Billing Forecast', value: 'billingForecast' },
+	{ name: 'Booking', value: 'booking' },
+	{ name: 'Contact Group', value: 'contactGroup' },
+	{ name: 'Credit Note', value: 'creditNote' },
+	{ name: 'Delivery Note', value: 'deliveryNote' },
+	{ name: 'Document', value: 'document' },
+	{ name: 'Employee', value: 'employee' },
+	{ name: 'Employee Time Tracking', value: 'employeeTimeTracking' },
+	{ name: 'Estimate', value: 'estimate' },
+	{ name: 'Event', value: 'event' },
+	{ name: 'Expense Account', value: 'expenseAccount' },
+	{ name: 'Funnel', value: 'funnel' },
+	{ name: 'Inbox', value: 'inbox' },
+	{ name: 'Invoice', value: 'invoice' },
+	{ name: 'Numbering Series', value: 'numberingSeries' },
+	{ name: 'Opportunity', value: 'opportunity' },
+	{ name: 'Payment', value: 'payment' },
+	{ name: 'Payment Method', value: 'paymentMethod' },
+	{ name: 'Payroll Record', value: 'payrollRecord' },
+	{ name: 'Price List', value: 'priceList' },
+	{ name: 'Product', value: 'product' },
+	{ name: 'Production Order', value: 'productionOrder' },
+	{ name: 'Proforma', value: 'proforma' },
+	{ name: 'Project', value: 'project' },
+	{ name: 'Project Time Tracking', value: 'projectTimeTracking' },
+	{ name: 'Purchase', value: 'purchase' },
+	{ name: 'Purchase Delivery Note', value: 'purchaseDeliveryNote' },
+	{ name: 'Purchase Order', value: 'purchaseOrder' },
+	{ name: 'Recurring Invoice', value: 'recurringInvoice' },
+	{ name: 'Remittance', value: 'remittance' },
+	{ name: 'Sales Channel', value: 'salesChannel' },
+	{ name: 'Sales Credit Note', value: 'salesCreditNote' },
+	{ name: 'Sales Order', value: 'salesOrder' },
+	{ name: 'Sales Receipt', value: 'salesReceipt' },
+	{ name: 'Service', value: 'service' },
+	{ name: 'Tag', value: 'tag' },
+	{ name: 'Task', value: 'task' },
+	{ name: 'Tax', value: 'tax' },
+	{ name: 'Warehouse', value: 'warehouse' },
 ];
 
 export interface V2EndpointMeta {
@@ -5733,7 +5733,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 			},
 		},
@@ -5741,22 +5740,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Accounting Account',
 				value: 'createAccountingAccount',
-				action: 'Create Accounting Account (V2)',
+				action: 'Create Accounting Account',
 			},
 			{
 				name: 'Create Ledger Entry',
 				value: 'createLedgerEntry',
-				action: 'Create Ledger Entry (V2)',
+				action: 'Create Ledger Entry',
 			},
 			{
 				name: 'List Accounting Accounts',
 				value: 'listAccountingAccounts',
-				action: 'List Accounting Accounts (V2)',
+				action: 'List Accounting Accounts',
 			},
 			{
 				name: 'List Ledger Entries',
 				value: 'listLedgerEntries',
-				action: 'List Ledger Entries (V2)',
+				action: 'List Ledger Entries',
 			},
 		],
 		default: 'createAccountingAccount',
@@ -5769,7 +5768,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['createAccountingAccount'],
 			},
@@ -5783,7 +5781,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['createAccountingAccount'],
 			},
@@ -5797,7 +5794,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['createAccountingAccount'],
 			},
@@ -5831,7 +5827,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['createLedgerEntry'],
 			},
@@ -5846,7 +5841,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['createLedgerEntry'],
 			},
@@ -5860,7 +5854,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['createLedgerEntry'],
 			},
@@ -5888,7 +5881,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['listAccountingAccounts'],
 			},
@@ -5928,7 +5920,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['listAccountingAccounts'],
 			},
@@ -5943,7 +5934,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['listAccountingAccounts'],
 				returnAll: [false],
@@ -5958,7 +5948,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['listLedgerEntries'],
 			},
@@ -5986,7 +5975,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['listLedgerEntries'],
 			},
@@ -6001,7 +5989,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['accounting'],
 				operation: ['listLedgerEntries'],
 				returnAll: [false],
@@ -6015,7 +6002,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 			},
 		},
@@ -6023,52 +6009,52 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Archive Banking Account',
 				value: 'archiveBankingAccount',
-				action: 'Archive Banking Account (V2)',
+				action: 'Archive Banking Account',
 			},
 			{
 				name: 'Create Bank Movement',
 				value: 'createBankMovement',
-				action: 'Create Bank Movement (V2)',
+				action: 'Create Bank Movement',
 			},
 			{
 				name: 'Create Banking Account',
 				value: 'createBankingAccount',
-				action: 'Create Banking Account (V2)',
+				action: 'Create Banking Account',
 			},
 			{
 				name: 'Delete Banking Account',
 				value: 'deleteBankingAccount',
-				action: 'Delete Banking Account (V2)',
+				action: 'Delete Banking Account',
 			},
 			{
 				name: 'Get Banking Account',
 				value: 'getBankingAccount',
-				action: 'Get Banking Account (V2)',
+				action: 'Get Banking Account',
 			},
 			{
 				name: 'List Banking Account Bank Movements',
 				value: 'listBankingAccountBankMovements',
-				action: 'List Banking Account Bank Movements (V2)',
+				action: 'List Banking Account Bank Movements',
 			},
 			{
 				name: 'List Banking Account Cash Movements',
 				value: 'listBankingAccountCashMovements',
-				action: 'List Banking Account Cash Movements (V2)',
+				action: 'List Banking Account Cash Movements',
 			},
 			{
 				name: 'List Banking Accounts',
 				value: 'listBankingAccounts',
-				action: 'List Banking Accounts (V2)',
+				action: 'List Banking Accounts',
 			},
 			{
 				name: 'Reconcile Transactionwith Document',
 				value: 'reconcileTransactionwithDocument',
-				action: 'Reconcile Transactionwith Document (V2)',
+				action: 'Reconcile Transactionwith Document',
 			},
 			{
 				name: 'Update Banking Account',
 				value: 'updateBankingAccount',
-				action: 'Update Banking Account (V2)',
+				action: 'Update Banking Account',
 			},
 		],
 		default: 'archiveBankingAccount',
@@ -6081,7 +6067,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['archiveBankingAccount'],
 			},
@@ -6095,7 +6080,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['createBankMovement'],
 			},
@@ -6109,7 +6093,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['createBankingAccount'],
 			},
@@ -6129,7 +6112,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['createBankingAccount'],
 			},
@@ -6143,7 +6125,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['createBankingAccount'],
 			},
@@ -6195,7 +6176,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['deleteBankingAccount'],
 			},
@@ -6209,7 +6189,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['getBankingAccount'],
 			},
@@ -6223,7 +6202,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['listBankingAccountBankMovements'],
 			},
@@ -6237,7 +6215,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['listBankingAccountBankMovements'],
 			},
@@ -6271,7 +6248,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['listBankingAccountBankMovements'],
 			},
@@ -6286,7 +6262,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['listBankingAccountBankMovements'],
 				returnAll: [false],
@@ -6301,7 +6276,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['listBankingAccountCashMovements'],
 			},
@@ -6315,7 +6289,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['listBankingAccountCashMovements'],
 			},
@@ -6343,7 +6316,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['listBankingAccountCashMovements'],
 			},
@@ -6358,7 +6330,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['listBankingAccountCashMovements'],
 				returnAll: [false],
@@ -6373,7 +6344,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['listBankingAccounts'],
 			},
@@ -6401,7 +6371,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['listBankingAccounts'],
 			},
@@ -6416,7 +6385,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['listBankingAccounts'],
 				returnAll: [false],
@@ -6431,7 +6399,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['reconcileTransactionwithDocument'],
 			},
@@ -6445,7 +6412,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['reconcileTransactionwithDocument'],
 			},
@@ -6459,7 +6425,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['reconcileTransactionwithDocument'],
 			},
@@ -6482,7 +6447,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['updateBankingAccount'],
 			},
@@ -6496,7 +6460,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['updateBankingAccount'],
 			},
@@ -6510,7 +6473,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['updateBankingAccount'],
 			},
@@ -6524,7 +6486,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['updateBankingAccount'],
 			},
@@ -6538,7 +6499,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['updateBankingAccount'],
 			},
@@ -6552,7 +6512,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['bankAccount'],
 				operation: ['updateBankingAccount'],
 			},
@@ -6597,7 +6556,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 			},
 		},
@@ -6605,27 +6563,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Invoicing Forecast',
 				value: 'createInvoicingForecast',
-				action: 'Create Invoicing Forecast (V2)',
+				action: 'Create Invoicing Forecast',
 			},
 			{
 				name: 'Delete Invoicing Forecast',
 				value: 'deleteInvoicingForecast',
-				action: 'Delete Invoicing Forecast (V2)',
+				action: 'Delete Invoicing Forecast',
 			},
 			{
 				name: 'Editinvoicing Forecast',
 				value: 'editinvoicingForecast',
-				action: 'Editinvoicing Forecast (V2)',
+				action: 'Editinvoicing Forecast',
 			},
 			{
 				name: 'Get Invoicing Forecast',
 				value: 'getInvoicingForecast',
-				action: 'Get Invoicing Forecast (V2)',
+				action: 'Get Invoicing Forecast',
 			},
 			{
 				name: 'List Invoicing Forecasts',
 				value: 'listInvoicingForecasts',
-				action: 'List Invoicing Forecasts (V2)',
+				action: 'List Invoicing Forecasts',
 			},
 		],
 		default: 'createInvoicingForecast',
@@ -6638,7 +6596,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['createInvoicingForecast'],
 			},
@@ -6656,7 +6613,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['createInvoicingForecast'],
 			},
@@ -6670,7 +6626,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['createInvoicingForecast'],
 			},
@@ -6684,7 +6639,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['createInvoicingForecast'],
 			},
@@ -6698,7 +6652,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['createInvoicingForecast'],
 			},
@@ -6712,7 +6665,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['createInvoicingForecast'],
 			},
@@ -6726,7 +6678,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['createInvoicingForecast'],
 			},
@@ -6748,7 +6699,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['deleteInvoicingForecast'],
 			},
@@ -6762,7 +6712,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['editinvoicingForecast'],
 			},
@@ -6776,7 +6725,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['editinvoicingForecast'],
 			},
@@ -6790,7 +6738,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['editinvoicingForecast'],
 			},
@@ -6804,7 +6751,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['editinvoicingForecast'],
 			},
@@ -6818,7 +6764,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['editinvoicingForecast'],
 			},
@@ -6832,7 +6777,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['editinvoicingForecast'],
 			},
@@ -6854,7 +6798,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['getInvoicingForecast'],
 			},
@@ -6868,7 +6811,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['listInvoicingForecasts'],
 			},
@@ -6896,7 +6838,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['listInvoicingForecasts'],
 			},
@@ -6911,7 +6852,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['billingForecast'],
 				operation: ['listInvoicingForecasts'],
 				returnAll: [false],
@@ -6925,7 +6865,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 			},
 		},
@@ -6933,37 +6872,37 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Booking',
 				value: 'create',
-				action: 'Create Booking (V2)',
+				action: 'Create Booking',
 			},
 			{
 				name: 'Get Booking',
 				value: 'get',
-				action: 'Get Booking (V2)',
+				action: 'Get Booking',
 			},
 			{
 				name: 'List Bookings',
 				value: 'getAll',
-				action: 'List Bookings (V2)',
+				action: 'List Bookings',
 			},
 			{
 				name: 'Update Booking',
 				value: 'update',
-				action: 'Update Booking (V2)',
+				action: 'Update Booking',
 			},
 			{
 				name: 'Delete Booking',
 				value: 'delete',
-				action: 'Delete Booking (V2)',
+				action: 'Delete Booking',
 			},
 			{
 				name: 'Get Booking Location Slots',
 				value: 'getBookingLocationSlots',
-				action: 'Get Booking Location Slots (V2)',
+				action: 'Get Booking Location Slots',
 			},
 			{
 				name: 'List Booking Locations',
 				value: 'listBookingLocations',
-				action: 'List Booking Locations (V2)',
+				action: 'List Booking Locations',
 			},
 		],
 		default: 'create',
@@ -6976,7 +6915,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['create'],
 			},
@@ -6990,7 +6928,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['create'],
 			},
@@ -7004,7 +6941,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['create'],
 			},
@@ -7018,7 +6954,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['create'],
 			},
@@ -7032,7 +6967,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['create'],
 			},
@@ -7046,7 +6980,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['create'],
 			},
@@ -7069,7 +7002,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['get'],
 			},
@@ -7083,7 +7015,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['getAll'],
 			},
@@ -7129,7 +7060,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['getAll'],
 			},
@@ -7144,7 +7074,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -7159,7 +7088,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['update'],
 			},
@@ -7173,7 +7101,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['update'],
 			},
@@ -7202,7 +7129,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['delete'],
 			},
@@ -7216,7 +7142,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['getBookingLocationSlots'],
 			},
@@ -7230,7 +7155,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['getBookingLocationSlots'],
 			},
@@ -7258,7 +7182,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['getBookingLocationSlots'],
 			},
@@ -7273,7 +7196,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['getBookingLocationSlots'],
 				returnAll: [false],
@@ -7288,7 +7210,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['listBookingLocations'],
 			},
@@ -7303,7 +7224,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['booking'],
 				operation: ['listBookingLocations'],
 				returnAll: [false],
@@ -7317,7 +7237,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['contactGroup'],
 			},
 		},
@@ -7325,27 +7244,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Contact Group',
 				value: 'create',
-				action: 'Create Contact Group (V2)',
+				action: 'Create Contact Group',
 			},
 			{
 				name: 'Get Contact Group',
 				value: 'get',
-				action: 'Get Contact Group (V2)',
+				action: 'Get Contact Group',
 			},
 			{
 				name: 'List Contact Groups',
 				value: 'getAll',
-				action: 'List Contact Groups (V2)',
+				action: 'List Contact Groups',
 			},
 			{
 				name: 'Update Contact Group',
 				value: 'update',
-				action: 'Update Contact Group (V2)',
+				action: 'Update Contact Group',
 			},
 			{
 				name: 'Delete Contact Group',
 				value: 'delete',
-				action: 'Delete Contact Group (V2)',
+				action: 'Delete Contact Group',
 			},
 		],
 		default: 'create',
@@ -7358,7 +7277,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['contactGroup'],
 				operation: ['create'],
 			},
@@ -7372,7 +7290,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['contactGroup'],
 				operation: ['create'],
 			},
@@ -7400,7 +7317,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['contactGroup'],
 				operation: ['get'],
 			},
@@ -7414,7 +7330,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['contactGroup'],
 				operation: ['getAll'],
 			},
@@ -7429,7 +7344,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['contactGroup'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -7444,7 +7358,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['contactGroup'],
 				operation: ['update'],
 			},
@@ -7458,7 +7371,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['contactGroup'],
 				operation: ['update'],
 			},
@@ -7492,7 +7404,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['contactGroup'],
 				operation: ['delete'],
 			},
@@ -7505,7 +7416,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 			},
 		},
@@ -7513,67 +7423,67 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Approve Creditnote',
 				value: 'approveCreditnote',
-				action: 'Approve Creditnote (V2)',
+				action: 'Approve Creditnote',
 			},
 			{
 				name: 'Attach Creditnote File',
 				value: 'attachCreditnoteFile',
-				action: 'Attach Creditnote File (V2)',
+				action: 'Attach Creditnote File',
 			},
 			{
 				name: 'Create Creditnote',
 				value: 'createCreditnote',
-				action: 'Create Creditnote (V2)',
+				action: 'Create Creditnote',
 			},
 			{
 				name: 'Create Creditnote Payment',
 				value: 'createCreditnotePayment',
-				action: 'Create Creditnote Payment (V2)',
+				action: 'Create Creditnote Payment',
 			},
 			{
 				name: 'Delete Creditnote',
 				value: 'deleteCreditnote',
-				action: 'Delete Creditnote (V2)',
+				action: 'Delete Creditnote',
 			},
 			{
 				name: 'Get Creditnote',
 				value: 'getCreditnote',
-				action: 'Get Creditnote (V2)',
+				action: 'Get Creditnote',
 			},
 			{
 				name: 'Get Creditnote Attachment',
 				value: 'getCreditnoteAttachment',
-				action: 'Get Creditnote Attachment (V2)',
+				action: 'Get Creditnote Attachment',
 			},
 			{
 				name: 'Get Creditnote PDF',
 				value: 'getCreditnotePdf',
-				action: 'Get Creditnote PDF (V2)',
+				action: 'Get Creditnote PDF',
 			},
 			{
 				name: 'List Creditnote Attachments',
 				value: 'listCreditnoteAttachments',
-				action: 'List Creditnote Attachments (V2)',
+				action: 'List Creditnote Attachments',
 			},
 			{
 				name: 'List Creditnotes',
 				value: 'listCreditnotes',
-				action: 'List Creditnotes (V2)',
+				action: 'List Creditnotes',
 			},
 			{
 				name: 'Send Creditnote',
 				value: 'sendCreditnote',
-				action: 'Send Creditnote (V2)',
+				action: 'Send Creditnote',
 			},
 			{
 				name: 'Set Creditnote Pipeline',
 				value: 'setCreditnotePipeline',
-				action: 'Set Creditnote Pipeline (V2)',
+				action: 'Set Creditnote Pipeline',
 			},
 			{
 				name: 'Update Creditnote',
 				value: 'updateCreditnote',
-				action: 'Update Creditnote (V2)',
+				action: 'Update Creditnote',
 			},
 		],
 		default: 'approveCreditnote',
@@ -7586,7 +7496,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['approveCreditnote'],
 			},
@@ -7600,7 +7509,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['attachCreditnoteFile'],
 			},
@@ -7614,7 +7522,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['attachCreditnoteFile'],
 			},
@@ -7636,7 +7543,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['createCreditnote'],
 			},
@@ -7651,7 +7557,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['createCreditnote'],
 			},
@@ -7665,7 +7570,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['createCreditnote'],
 			},
@@ -7785,7 +7689,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['createCreditnotePayment'],
 			},
@@ -7799,7 +7702,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['createCreditnotePayment'],
 			},
@@ -7839,7 +7741,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['deleteCreditnote'],
 			},
@@ -7853,7 +7754,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['getCreditnote'],
 			},
@@ -7867,7 +7767,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['getCreditnoteAttachment'],
 			},
@@ -7881,7 +7780,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['getCreditnoteAttachment'],
 			},
@@ -7895,7 +7793,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['getCreditnotePdf'],
 			},
@@ -7909,7 +7806,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['getCreditnotePdf'],
 			},
@@ -7924,7 +7820,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['getCreditnotePdf'],
 				returnAll: [false],
@@ -7939,7 +7834,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['listCreditnoteAttachments'],
 			},
@@ -7953,7 +7847,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['listCreditnoteAttachments'],
 			},
@@ -7968,7 +7861,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['listCreditnoteAttachments'],
 				returnAll: [false],
@@ -7983,7 +7875,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['listCreditnotes'],
 			},
@@ -8035,7 +7926,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['listCreditnotes'],
 			},
@@ -8050,7 +7940,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['listCreditnotes'],
 				returnAll: [false],
@@ -8065,7 +7954,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['sendCreditnote'],
 			},
@@ -8080,7 +7968,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Comma-separated.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['sendCreditnote'],
 			},
@@ -8094,7 +7981,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['sendCreditnote'],
 			},
@@ -8142,7 +8028,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['setCreditnotePipeline'],
 			},
@@ -8156,7 +8041,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['setCreditnotePipeline'],
 			},
@@ -8170,7 +8054,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['updateCreditnote'],
 			},
@@ -8184,7 +8067,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['creditNote'],
 				operation: ['updateCreditnote'],
 			},
@@ -8217,7 +8099,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 			},
 		},
@@ -8225,67 +8106,67 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Approve Waybill',
 				value: 'approveWaybill',
-				action: 'Approve Waybill (V2)',
+				action: 'Approve Waybill',
 			},
 			{
 				name: 'Attach Waybill File',
 				value: 'attachWaybillFile',
-				action: 'Attach Waybill File (V2)',
+				action: 'Attach Waybill File',
 			},
 			{
 				name: 'Create Waybill',
 				value: 'createWaybill',
-				action: 'Create Waybill (V2)',
+				action: 'Create Waybill',
 			},
 			{
 				name: 'Delete Waybill',
 				value: 'deleteWaybill',
-				action: 'Delete Waybill (V2)',
+				action: 'Delete Waybill',
 			},
 			{
 				name: 'Get Waybill',
 				value: 'getWaybill',
-				action: 'Get Waybill (V2)',
+				action: 'Get Waybill',
 			},
 			{
 				name: 'Get Waybill Attachment',
 				value: 'getWaybillAttachment',
-				action: 'Get Waybill Attachment (V2)',
+				action: 'Get Waybill Attachment',
 			},
 			{
 				name: 'Get Waybill PDF',
 				value: 'getWaybillPdf',
-				action: 'Get Waybill PDF (V2)',
+				action: 'Get Waybill PDF',
 			},
 			{
 				name: 'List Waybill Attachments',
 				value: 'listWaybillAttachments',
-				action: 'List Waybill Attachments (V2)',
+				action: 'List Waybill Attachments',
 			},
 			{
 				name: 'List Waybills',
 				value: 'listWaybills',
-				action: 'List Waybills (V2)',
+				action: 'List Waybills',
 			},
 			{
 				name: 'Send Waybill',
 				value: 'sendWaybill',
-				action: 'Send Waybill (V2)',
+				action: 'Send Waybill',
 			},
 			{
 				name: 'Set Waybill Pipeline',
 				value: 'setWaybillPipeline',
-				action: 'Set Waybill Pipeline (V2)',
+				action: 'Set Waybill Pipeline',
 			},
 			{
 				name: 'Update Waybill',
 				value: 'updateWaybill',
-				action: 'Update Waybill (V2)',
+				action: 'Update Waybill',
 			},
 			{
 				name: 'Update Waybill Tracking',
 				value: 'updateWaybillTracking',
-				action: 'Update Waybill Tracking (V2)',
+				action: 'Update Waybill Tracking',
 			},
 		],
 		default: 'approveWaybill',
@@ -8298,7 +8179,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['approveWaybill'],
 			},
@@ -8312,7 +8192,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['attachWaybillFile'],
 			},
@@ -8326,7 +8205,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['attachWaybillFile'],
 			},
@@ -8348,7 +8226,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['createWaybill'],
 			},
@@ -8363,7 +8240,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['createWaybill'],
 			},
@@ -8377,7 +8253,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['createWaybill'],
 			},
@@ -8485,7 +8360,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['deleteWaybill'],
 			},
@@ -8499,7 +8373,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['getWaybill'],
 			},
@@ -8513,7 +8386,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['getWaybillAttachment'],
 			},
@@ -8527,7 +8399,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['getWaybillAttachment'],
 			},
@@ -8541,7 +8412,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['getWaybillPdf'],
 			},
@@ -8555,7 +8425,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['getWaybillPdf'],
 			},
@@ -8570,7 +8439,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['getWaybillPdf'],
 				returnAll: [false],
@@ -8585,7 +8453,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['listWaybillAttachments'],
 			},
@@ -8599,7 +8466,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['listWaybillAttachments'],
 			},
@@ -8614,7 +8480,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['listWaybillAttachments'],
 				returnAll: [false],
@@ -8629,7 +8494,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['listWaybills'],
 			},
@@ -8675,7 +8539,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['listWaybills'],
 			},
@@ -8690,7 +8553,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['listWaybills'],
 				returnAll: [false],
@@ -8705,7 +8567,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['sendWaybill'],
 			},
@@ -8720,7 +8581,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Comma-separated.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['sendWaybill'],
 			},
@@ -8734,7 +8594,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['sendWaybill'],
 			},
@@ -8782,7 +8641,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['setWaybillPipeline'],
 			},
@@ -8796,7 +8654,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['setWaybillPipeline'],
 			},
@@ -8810,7 +8667,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['updateWaybill'],
 			},
@@ -8824,7 +8680,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['updateWaybill'],
 			},
@@ -8858,7 +8713,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['updateWaybillTracking'],
 			},
@@ -8872,7 +8726,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['deliveryNote'],
 				operation: ['updateWaybillTracking'],
 			},
@@ -8923,7 +8776,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['document'],
 			},
 		},
@@ -8931,7 +8783,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Convert Document',
 				value: 'convert',
-				action: 'Convert Document (V2)',
+				action: 'Convert Document',
 			},
 		],
 		default: 'convert',
@@ -8955,7 +8807,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['document'],
 				operation: ['convert'],
 			},
@@ -8969,7 +8820,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['document'],
 				operation: ['convert'],
 			},
@@ -8994,7 +8844,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['document'],
 				operation: ['convert'],
 			},
@@ -9008,7 +8857,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['document'],
 				operation: ['convert'],
 			},
@@ -9059,7 +8907,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employee'],
 			},
 		},
@@ -9067,27 +8914,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Team',
 				value: 'team',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team2',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team3',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team4',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team5',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 		],
 		default: 'team',
@@ -9100,7 +8947,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employee'],
 				operation: ['team'],
 			},
@@ -9114,7 +8960,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employee'],
 				operation: ['team2'],
 			},
@@ -9128,7 +8973,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employee'],
 				operation: ['team3'],
 			},
@@ -9143,7 +8987,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employee'],
 				operation: ['team3'],
 				returnAll: [false],
@@ -9158,7 +9001,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employee'],
 				operation: ['team4'],
 			},
@@ -9172,7 +9014,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employee'],
 				operation: ['team4'],
 			},
@@ -9186,7 +9027,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employee'],
 				operation: ['team4'],
 			},
@@ -9200,7 +9040,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employee'],
 				operation: ['team4'],
 			},
@@ -9289,7 +9128,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employee'],
 				operation: ['team5'],
 			},
@@ -9303,7 +9141,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employee'],
 				operation: ['team5'],
 			},
@@ -9409,7 +9246,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 			},
 		},
@@ -9417,52 +9253,52 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Team',
 				value: 'team',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team10',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team2',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team3',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team4',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team5',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team6',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team7',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team8',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 			{
 				name: 'Team',
 				value: 'team9',
-				action: 'Team (V2)',
+				action: 'Team',
 			},
 		],
 		default: 'team',
@@ -9475,7 +9311,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team'],
 			},
@@ -9489,7 +9324,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team10'],
 			},
@@ -9503,7 +9337,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team10'],
 			},
@@ -9517,7 +9350,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team10'],
 			},
@@ -9531,7 +9363,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team2'],
 			},
@@ -9545,7 +9376,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team3'],
 			},
@@ -9560,7 +9390,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team3'],
 				returnAll: [false],
@@ -9575,7 +9404,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team4'],
 			},
@@ -9589,7 +9417,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team4'],
 			},
@@ -9604,7 +9431,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team4'],
 				returnAll: [false],
@@ -9619,7 +9445,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team5'],
 			},
@@ -9633,7 +9458,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team5'],
 			},
@@ -9661,7 +9485,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team6'],
 			},
@@ -9675,7 +9498,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team6'],
 			},
@@ -9703,7 +9525,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team7'],
 			},
@@ -9717,7 +9538,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team7'],
 			},
@@ -9731,7 +9551,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team7'],
 			},
@@ -9745,7 +9564,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team8'],
 			},
@@ -9759,7 +9577,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team8'],
 			},
@@ -9787,7 +9604,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team9'],
 			},
@@ -9801,7 +9617,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['employeeTimeTracking'],
 				operation: ['team9'],
 			},
@@ -9828,7 +9643,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 			},
 		},
@@ -9836,67 +9650,67 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Estimate',
 				value: 'create',
-				action: 'Create Estimate (V2)',
+				action: 'Create Estimate',
 			},
 			{
 				name: 'Get Estimate',
 				value: 'get',
-				action: 'Get Estimate (V2)',
+				action: 'Get Estimate',
 			},
 			{
 				name: 'List Estimates',
 				value: 'getAll',
-				action: 'List Estimates (V2)',
+				action: 'List Estimates',
 			},
 			{
 				name: 'Update Estimate',
 				value: 'update',
-				action: 'Update Estimate (V2)',
+				action: 'Update Estimate',
 			},
 			{
 				name: 'Delete Estimate',
 				value: 'delete',
-				action: 'Delete Estimate (V2)',
+				action: 'Delete Estimate',
 			},
 			{
 				name: 'Accept Estimate',
 				value: 'accept',
-				action: 'Accept Estimate (V2)',
+				action: 'Accept Estimate',
 			},
 			{
 				name: 'Attach Estimate File',
 				value: 'attachEstimateFile',
-				action: 'Attach Estimate File (V2)',
+				action: 'Attach Estimate File',
 			},
 			{
 				name: 'Get Estimate Attachment',
 				value: 'getEstimateAttachment',
-				action: 'Get Estimate Attachment (V2)',
+				action: 'Get Estimate Attachment',
 			},
 			{
 				name: 'Get Estimate PDF',
 				value: 'getEstimatePdf',
-				action: 'Get Estimate PDF (V2)',
+				action: 'Get Estimate PDF',
 			},
 			{
 				name: 'List Estimate Attachments',
 				value: 'listEstimateAttachments',
-				action: 'List Estimate Attachments (V2)',
+				action: 'List Estimate Attachments',
 			},
 			{
 				name: 'Reject Estimate',
 				value: 'reject',
-				action: 'Reject Estimate (V2)',
+				action: 'Reject Estimate',
 			},
 			{
 				name: 'Send Estimate',
 				value: 'send',
-				action: 'Send Estimate (V2)',
+				action: 'Send Estimate',
 			},
 			{
 				name: 'Set Estimate Pipeline',
 				value: 'setEstimatePipeline',
-				action: 'Set Estimate Pipeline (V2)',
+				action: 'Set Estimate Pipeline',
 			},
 		],
 		default: 'create',
@@ -9909,7 +9723,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['create'],
 			},
@@ -9924,7 +9737,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['create'],
 			},
@@ -9938,7 +9750,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['create'],
 			},
@@ -10052,7 +9863,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['get'],
 			},
@@ -10066,7 +9876,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['getAll'],
 			},
@@ -10118,7 +9927,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['getAll'],
 			},
@@ -10133,7 +9941,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -10148,7 +9955,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['update'],
 			},
@@ -10162,7 +9968,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['update'],
 			},
@@ -10196,7 +10001,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['delete'],
 			},
@@ -10210,7 +10014,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['accept'],
 			},
@@ -10224,7 +10027,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['accept'],
 			},
@@ -10252,7 +10054,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['attachEstimateFile'],
 			},
@@ -10266,7 +10067,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['attachEstimateFile'],
 			},
@@ -10288,7 +10088,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['getEstimateAttachment'],
 			},
@@ -10302,7 +10101,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['getEstimateAttachment'],
 			},
@@ -10316,7 +10114,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['getEstimatePdf'],
 			},
@@ -10330,7 +10127,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['getEstimatePdf'],
 			},
@@ -10345,7 +10141,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['getEstimatePdf'],
 				returnAll: [false],
@@ -10360,7 +10155,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['listEstimateAttachments'],
 			},
@@ -10374,7 +10168,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['listEstimateAttachments'],
 			},
@@ -10389,7 +10182,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['listEstimateAttachments'],
 				returnAll: [false],
@@ -10404,7 +10196,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['reject'],
 			},
@@ -10418,7 +10209,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['reject'],
 			},
@@ -10446,7 +10236,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['send'],
 			},
@@ -10461,7 +10250,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Comma-separated.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['send'],
 			},
@@ -10475,7 +10263,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['send'],
 			},
@@ -10523,7 +10310,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['setEstimatePipeline'],
 			},
@@ -10537,7 +10323,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['estimate'],
 				operation: ['setEstimatePipeline'],
 			},
@@ -10550,7 +10335,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['event'],
 			},
 		},
@@ -10558,27 +10342,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Event',
 				value: 'create',
-				action: 'Create Event (V2)',
+				action: 'Create Event',
 			},
 			{
 				name: 'Get Event',
 				value: 'get',
-				action: 'Get Event (V2)',
+				action: 'Get Event',
 			},
 			{
 				name: 'List Events',
 				value: 'getAll',
-				action: 'List Events (V2)',
+				action: 'List Events',
 			},
 			{
 				name: 'Update Event',
 				value: 'update',
-				action: 'Update Event (V2)',
+				action: 'Update Event',
 			},
 			{
 				name: 'Delete Event',
 				value: 'delete',
-				action: 'Delete Event (V2)',
+				action: 'Delete Event',
 			},
 		],
 		default: 'create',
@@ -10591,7 +10375,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['event'],
 				operation: ['create'],
 			},
@@ -10605,7 +10388,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['event'],
 				operation: ['create'],
 			},
@@ -10619,7 +10401,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['event'],
 				operation: ['create'],
 			},
@@ -10702,7 +10483,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['event'],
 				operation: ['get'],
 			},
@@ -10716,7 +10496,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['event'],
 				operation: ['getAll'],
 			},
@@ -10731,7 +10510,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['event'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -10746,7 +10524,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['event'],
 				operation: ['update'],
 			},
@@ -10760,7 +10537,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['event'],
 				operation: ['update'],
 			},
@@ -10855,7 +10631,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['event'],
 				operation: ['delete'],
 			},
@@ -10868,7 +10643,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['expenseAccount'],
 			},
 		},
@@ -10876,27 +10650,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Expenses Account',
 				value: 'expensesAccount',
-				action: 'Expenses Account (V2)',
+				action: 'Expenses Account',
 			},
 			{
 				name: 'Expenses Account',
 				value: 'expensesAccount2',
-				action: 'Expenses Account (V2)',
+				action: 'Expenses Account',
 			},
 			{
 				name: 'Expenses Account',
 				value: 'expensesAccount3',
-				action: 'Expenses Account (V2)',
+				action: 'Expenses Account',
 			},
 			{
 				name: 'Expenses Account',
 				value: 'expensesAccount4',
-				action: 'Expenses Account (V2)',
+				action: 'Expenses Account',
 			},
 			{
 				name: 'Expenses Account',
 				value: 'expensesAccount5',
-				action: 'Expenses Account (V2)',
+				action: 'Expenses Account',
 			},
 		],
 		default: 'expensesAccount',
@@ -10909,7 +10683,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['expenseAccount'],
 				operation: ['expensesAccount'],
 			},
@@ -10923,7 +10696,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['expenseAccount'],
 				operation: ['expensesAccount2'],
 			},
@@ -10937,7 +10709,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['expenseAccount'],
 				operation: ['expensesAccount3'],
 			},
@@ -10952,7 +10723,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['expenseAccount'],
 				operation: ['expensesAccount3'],
 				returnAll: [false],
@@ -10967,7 +10737,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['expenseAccount'],
 				operation: ['expensesAccount4'],
 			},
@@ -10981,7 +10750,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['expenseAccount'],
 				operation: ['expensesAccount4'],
 			},
@@ -10995,7 +10763,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['expenseAccount'],
 				operation: ['expensesAccount4'],
 			},
@@ -11017,7 +10784,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['expenseAccount'],
 				operation: ['expensesAccount5'],
 			},
@@ -11031,7 +10797,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['expenseAccount'],
 				operation: ['expensesAccount5'],
 			},
@@ -11058,7 +10823,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['funnel'],
 			},
 		},
@@ -11066,27 +10830,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Crm',
 				value: 'crm',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm2',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm3',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm4',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm5',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 		],
 		default: 'crm',
@@ -11099,7 +10863,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['funnel'],
 				operation: ['crm'],
 			},
@@ -11113,7 +10876,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['funnel'],
 				operation: ['crm2'],
 			},
@@ -11127,7 +10889,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['funnel'],
 				operation: ['crm3'],
 			},
@@ -11142,7 +10903,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['funnel'],
 				operation: ['crm3'],
 				returnAll: [false],
@@ -11157,7 +10917,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['funnel'],
 				operation: ['crm4'],
 			},
@@ -11171,7 +10930,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['funnel'],
 				operation: ['crm4'],
 			},
@@ -11194,7 +10952,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['funnel'],
 				operation: ['crm5'],
 			},
@@ -11208,7 +10965,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['funnel'],
 				operation: ['crm5'],
 			},
@@ -11236,7 +10992,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 			},
 		},
@@ -11244,42 +10999,42 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Get Inbox',
 				value: 'get',
-				action: 'Get Inbox (V2)',
+				action: 'Get Inbox',
 			},
 			{
 				name: 'List Inbox',
 				value: 'getAll',
-				action: 'List Inbox (V2)',
+				action: 'List Inbox',
 			},
 			{
 				name: 'Update Inbox',
 				value: 'update',
-				action: 'Update Inbox (V2)',
+				action: 'Update Inbox',
 			},
 			{
 				name: 'Delete Inbox',
 				value: 'delete',
-				action: 'Delete Inbox (V2)',
+				action: 'Delete Inbox',
 			},
 			{
 				name: 'Attach Inbox',
 				value: 'attach',
-				action: 'Attach Inbox (V2)',
+				action: 'Attach Inbox',
 			},
 			{
 				name: 'Download Inbox File',
 				value: 'downloadInboxFile',
-				action: 'Download Inbox File (V2)',
+				action: 'Download Inbox File',
 			},
 			{
 				name: 'Preview Inbox File',
 				value: 'previewInboxFile',
-				action: 'Preview Inbox File (V2)',
+				action: 'Preview Inbox File',
 			},
 			{
 				name: 'Upload Inbox',
 				value: 'upload',
-				action: 'Upload Inbox (V2)',
+				action: 'Upload Inbox',
 			},
 		],
 		default: 'get',
@@ -11292,7 +11047,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['get'],
 			},
@@ -11306,7 +11060,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['getAll'],
 			},
@@ -11346,7 +11099,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['getAll'],
 			},
@@ -11361,7 +11113,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -11376,7 +11127,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['update'],
 			},
@@ -11390,7 +11140,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['delete'],
 			},
@@ -11404,7 +11153,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['attach'],
 			},
@@ -11418,7 +11166,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['attach'],
 			},
@@ -11438,7 +11185,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['attach'],
 			},
@@ -11452,7 +11198,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['downloadInboxFile'],
 			},
@@ -11466,7 +11211,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['downloadInboxFile'],
 			},
@@ -11480,7 +11224,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['downloadInboxFile'],
 			},
@@ -11502,7 +11245,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['downloadInboxFile'],
 			},
@@ -11517,7 +11259,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['downloadInboxFile'],
 				returnAll: [false],
@@ -11532,7 +11273,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['previewInboxFile'],
 			},
@@ -11546,7 +11286,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['previewInboxFile'],
 			},
@@ -11560,7 +11299,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['previewInboxFile'],
 			},
@@ -11612,7 +11350,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['previewInboxFile'],
 			},
@@ -11627,7 +11364,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['previewInboxFile'],
 				returnAll: [false],
@@ -11642,7 +11378,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['inbox'],
 				operation: ['upload'],
 			},
@@ -11655,7 +11390,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 			},
 		},
@@ -11663,87 +11397,87 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Invoice',
 				value: 'create',
-				action: 'Create Invoice (V2)',
+				action: 'Create Invoice',
 			},
 			{
 				name: 'Get Invoice',
 				value: 'get',
-				action: 'Get Invoice (V2)',
+				action: 'Get Invoice',
 			},
 			{
 				name: 'List Invoices',
 				value: 'getAll',
-				action: 'List Invoices (V2)',
+				action: 'List Invoices',
 			},
 			{
 				name: 'Update Invoice',
 				value: 'update',
-				action: 'Update Invoice (V2)',
+				action: 'Update Invoice',
 			},
 			{
 				name: 'Delete Invoice',
 				value: 'delete',
-				action: 'Delete Invoice (V2)',
+				action: 'Delete Invoice',
 			},
 			{
 				name: 'Approve Invoice',
 				value: 'approve',
-				action: 'Approve Invoice (V2)',
+				action: 'Approve Invoice',
 			},
 			{
 				name: 'Attach Invoice File',
 				value: 'attachInvoiceFile',
-				action: 'Attach Invoice File (V2)',
+				action: 'Attach Invoice File',
 			},
 			{
 				name: 'Bulk Approve Invoices',
 				value: 'bulkApprove',
-				action: 'Bulk Approve Invoices (V2)',
+				action: 'Bulk Approve Invoices',
 			},
 			{
 				name: 'Bulk Cancel Invoices',
 				value: 'bulkCancel',
-				action: 'Bulk Cancel Invoices (V2)',
+				action: 'Bulk Cancel Invoices',
 			},
 			{
 				name: 'Bulk Delete Invoices',
 				value: 'bulkDelete',
-				action: 'Bulk Delete Invoices (V2)',
+				action: 'Bulk Delete Invoices',
 			},
 			{
 				name: 'Cancel Invoice',
 				value: 'cancel',
-				action: 'Cancel Invoice (V2)',
+				action: 'Cancel Invoice',
 			},
 			{
 				name: 'Create Invoice Payment',
 				value: 'createInvoicePayment',
-				action: 'Create Invoice Payment (V2)',
+				action: 'Create Invoice Payment',
 			},
 			{
 				name: 'Get Invoice Attachment',
 				value: 'getInvoiceAttachment',
-				action: 'Get Invoice Attachment (V2)',
+				action: 'Get Invoice Attachment',
 			},
 			{
 				name: 'Get Invoice PDF',
 				value: 'getInvoicePdf',
-				action: 'Get Invoice PDF (V2)',
+				action: 'Get Invoice PDF',
 			},
 			{
 				name: 'List Invoice Attachments',
 				value: 'listInvoiceAttachments',
-				action: 'List Invoice Attachments (V2)',
+				action: 'List Invoice Attachments',
 			},
 			{
 				name: 'Send Invoice',
 				value: 'send',
-				action: 'Send Invoice (V2)',
+				action: 'Send Invoice',
 			},
 			{
 				name: 'Set Invoice Pipeline',
 				value: 'setInvoicePipeline',
-				action: 'Set Invoice Pipeline (V2)',
+				action: 'Set Invoice Pipeline',
 			},
 		],
 		default: 'create',
@@ -11756,7 +11490,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['create'],
 			},
@@ -11771,7 +11504,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['create'],
 			},
@@ -11785,7 +11517,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['create'],
 			},
@@ -11905,7 +11636,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['get'],
 			},
@@ -11919,7 +11649,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['getAll'],
 			},
@@ -11971,7 +11700,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['getAll'],
 			},
@@ -11986,7 +11714,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -12001,7 +11728,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['update'],
 			},
@@ -12015,7 +11741,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['update'],
 			},
@@ -12148,7 +11873,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['delete'],
 			},
@@ -12162,7 +11886,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['approve'],
 			},
@@ -12176,7 +11899,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['attachInvoiceFile'],
 			},
@@ -12190,7 +11912,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['attachInvoiceFile'],
 			},
@@ -12212,7 +11933,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['bulkApprove'],
 			},
@@ -12236,7 +11956,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Comma-separated.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['bulkCancel'],
 			},
@@ -12250,7 +11969,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['bulkDelete'],
 			},
@@ -12273,7 +11991,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['cancel'],
 			},
@@ -12287,7 +12004,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['createInvoicePayment'],
 			},
@@ -12301,7 +12017,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['createInvoicePayment'],
 			},
@@ -12341,7 +12056,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['getInvoiceAttachment'],
 			},
@@ -12355,7 +12069,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['getInvoiceAttachment'],
 			},
@@ -12369,7 +12082,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['getInvoicePdf'],
 			},
@@ -12383,7 +12095,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['getInvoicePdf'],
 			},
@@ -12398,7 +12109,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['getInvoicePdf'],
 				returnAll: [false],
@@ -12413,7 +12123,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['listInvoiceAttachments'],
 			},
@@ -12427,7 +12136,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['listInvoiceAttachments'],
 			},
@@ -12442,7 +12150,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['listInvoiceAttachments'],
 				returnAll: [false],
@@ -12457,7 +12164,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['send'],
 			},
@@ -12472,7 +12178,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Comma-separated.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['send'],
 			},
@@ -12486,7 +12191,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['send'],
 			},
@@ -12534,7 +12238,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['setInvoicePipeline'],
 			},
@@ -12548,7 +12251,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['invoice'],
 				operation: ['setInvoicePipeline'],
 			},
@@ -12561,7 +12263,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 			},
 		},
@@ -12569,22 +12270,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Numbering Series',
 				value: 'create',
-				action: 'Numbering Series (V2)',
+				action: 'Numbering Series',
 			},
 			{
 				name: 'Numbering Series',
 				value: 'update',
-				action: 'Numbering Series (V2)',
+				action: 'Numbering Series',
 			},
 			{
 				name: 'Numbering Series',
 				value: 'delete',
-				action: 'Numbering Series (V2)',
+				action: 'Numbering Series',
 			},
 			{
 				name: 'Numbering Series',
 				value: 'listarSeriesDeNumeracionPorTipoDeDocumento',
-				action: 'Numbering Series (V2)',
+				action: 'Numbering Series',
 			},
 		],
 		default: 'create',
@@ -12597,7 +12298,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['create'],
 			},
@@ -12611,7 +12311,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['create'],
 			},
@@ -12625,7 +12324,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['create'],
 			},
@@ -12639,7 +12337,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['create'],
 			},
@@ -12673,7 +12370,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['update'],
 			},
@@ -12687,7 +12383,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['update'],
 			},
@@ -12701,7 +12396,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['update'],
 			},
@@ -12715,7 +12409,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['update'],
 			},
@@ -12729,7 +12422,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['update'],
 			},
@@ -12763,7 +12455,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['delete'],
 			},
@@ -12777,7 +12468,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['delete'],
 			},
@@ -12791,7 +12481,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['numberingSeries'],
 				operation: ['listarSeriesDeNumeracionPorTipoDeDocumento'],
 			},
@@ -12804,7 +12493,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 			},
 		},
@@ -12812,62 +12500,62 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Crm',
 				value: 'crm',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm10',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm11',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm12',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm2',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm3',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm4',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm5',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm6',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm7',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm8',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 			{
 				name: 'Crm',
 				value: 'crm9',
-				action: 'Crm (V2)',
+				action: 'Crm',
 			},
 		],
 		default: 'crm',
@@ -12880,7 +12568,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm'],
 			},
@@ -12894,7 +12581,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm10'],
 			},
@@ -12908,7 +12594,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm10'],
 			},
@@ -12922,7 +12607,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm10'],
 			},
@@ -12950,7 +12634,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm11'],
 			},
@@ -12964,7 +12647,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm11'],
 			},
@@ -12978,7 +12660,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm12'],
 			},
@@ -12992,7 +12673,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm12'],
 			},
@@ -13006,7 +12686,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm12'],
 			},
@@ -13020,7 +12699,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm2'],
 			},
@@ -13034,7 +12712,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm2'],
 			},
@@ -13048,7 +12725,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm3'],
 			},
@@ -13062,7 +12738,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm4'],
 			},
@@ -13077,7 +12752,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm4'],
 				returnAll: [false],
@@ -13092,7 +12766,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm5'],
 			},
@@ -13106,7 +12779,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm5'],
 			},
@@ -13120,7 +12792,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm5'],
 			},
@@ -13134,7 +12805,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm5'],
 			},
@@ -13181,7 +12851,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm6'],
 			},
@@ -13195,7 +12864,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm6'],
 			},
@@ -13209,7 +12877,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm6'],
 			},
@@ -13231,7 +12898,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm7'],
 			},
@@ -13245,7 +12911,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm7'],
 			},
@@ -13259,7 +12924,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm8'],
 			},
@@ -13273,7 +12937,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm8'],
 			},
@@ -13338,7 +13001,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm9'],
 			},
@@ -13352,7 +13014,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['opportunity'],
 				operation: ['crm9'],
 			},
@@ -13365,7 +13026,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 			},
 		},
@@ -13373,27 +13033,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Payment',
 				value: 'create',
-				action: 'Create Payment (V2)',
+				action: 'Create Payment',
 			},
 			{
 				name: 'Get Payment',
 				value: 'get',
-				action: 'Get Payment (V2)',
+				action: 'Get Payment',
 			},
 			{
 				name: 'List Payments',
 				value: 'getAll',
-				action: 'List Payments (V2)',
+				action: 'List Payments',
 			},
 			{
 				name: 'Update Payment',
 				value: 'update',
-				action: 'Update Payment (V2)',
+				action: 'Update Payment',
 			},
 			{
 				name: 'Delete Payment',
 				value: 'delete',
-				action: 'Delete Payment (V2)',
+				action: 'Delete Payment',
 			},
 		],
 		default: 'create',
@@ -13410,7 +13070,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 				operation: ['create'],
 			},
@@ -13424,7 +13083,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 				operation: ['create'],
 			},
@@ -13438,7 +13096,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 				operation: ['create'],
 			},
@@ -13452,7 +13109,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 				operation: ['create'],
 			},
@@ -13486,7 +13142,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 				operation: ['get'],
 			},
@@ -13500,7 +13155,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 				operation: ['getAll'],
 			},
@@ -13546,7 +13200,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 				operation: ['getAll'],
 			},
@@ -13561,7 +13214,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -13576,7 +13228,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 				operation: ['update'],
 			},
@@ -13590,7 +13241,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 				operation: ['update'],
 			},
@@ -13646,7 +13296,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payment'],
 				operation: ['delete'],
 			},
@@ -13659,7 +13308,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['paymentMethod'],
 			},
 		},
@@ -13667,27 +13315,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Payment Method',
 				value: 'create',
-				action: 'Create Payment Method (V2)',
+				action: 'Create Payment Method',
 			},
 			{
 				name: 'Get Payment Method',
 				value: 'get',
-				action: 'Get Payment Method (V2)',
+				action: 'Get Payment Method',
 			},
 			{
 				name: 'List Payment Methods',
 				value: 'getAll',
-				action: 'List Payment Methods (V2)',
+				action: 'List Payment Methods',
 			},
 			{
 				name: 'Update Payment Method',
 				value: 'update',
-				action: 'Update Payment Method (V2)',
+				action: 'Update Payment Method',
 			},
 			{
 				name: 'Delete Payment Method',
 				value: 'delete',
-				action: 'Delete Payment Method (V2)',
+				action: 'Delete Payment Method',
 			},
 		],
 		default: 'create',
@@ -13700,7 +13348,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['paymentMethod'],
 				operation: ['create'],
 			},
@@ -13714,7 +13361,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['paymentMethod'],
 				operation: ['create'],
 			},
@@ -13742,7 +13388,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['paymentMethod'],
 				operation: ['get'],
 			},
@@ -13756,7 +13401,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['paymentMethod'],
 				operation: ['getAll'],
 			},
@@ -13771,7 +13415,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['paymentMethod'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -13786,7 +13429,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['paymentMethod'],
 				operation: ['update'],
 			},
@@ -13800,7 +13442,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['paymentMethod'],
 				operation: ['update'],
 			},
@@ -13834,7 +13475,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['paymentMethod'],
 				operation: ['delete'],
 			},
@@ -13847,7 +13487,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 			},
 		},
@@ -13855,27 +13494,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Salary Record',
 				value: 'salaryRecord',
-				action: 'Salary Record (V2)',
+				action: 'Salary Record',
 			},
 			{
 				name: 'Salary Record',
 				value: 'salaryRecord2',
-				action: 'Salary Record (V2)',
+				action: 'Salary Record',
 			},
 			{
 				name: 'Salary Record',
 				value: 'salaryRecord3',
-				action: 'Salary Record (V2)',
+				action: 'Salary Record',
 			},
 			{
 				name: 'Salary Record',
 				value: 'salaryRecord4',
-				action: 'Salary Record (V2)',
+				action: 'Salary Record',
 			},
 			{
 				name: 'Salary Record',
 				value: 'salaryRecord5',
-				action: 'Salary Record (V2)',
+				action: 'Salary Record',
 			},
 		],
 		default: 'salaryRecord',
@@ -13888,7 +13527,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord'],
 			},
@@ -13902,7 +13540,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord2'],
 			},
@@ -13916,7 +13553,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord3'],
 			},
@@ -13950,7 +13586,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord3'],
 			},
@@ -13965,7 +13600,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord3'],
 				returnAll: [false],
@@ -13980,7 +13614,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord4'],
 			},
@@ -13994,7 +13627,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord4'],
 			},
@@ -14008,7 +13640,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord4'],
 			},
@@ -14022,7 +13653,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord4'],
 			},
@@ -14036,7 +13666,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord4'],
 			},
@@ -14072,7 +13701,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord5'],
 			},
@@ -14086,7 +13714,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['payrollRecord'],
 				operation: ['salaryRecord5'],
 			},
@@ -14145,7 +13772,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['priceList'],
 			},
 		},
@@ -14153,27 +13779,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Pricelist',
 				value: 'pricelist',
-				action: 'Pricelist (V2)',
+				action: 'Pricelist',
 			},
 			{
 				name: 'Pricelist',
 				value: 'pricelist2',
-				action: 'Pricelist (V2)',
+				action: 'Pricelist',
 			},
 			{
 				name: 'Pricelist',
 				value: 'pricelist3',
-				action: 'Pricelist (V2)',
+				action: 'Pricelist',
 			},
 			{
 				name: 'Pricelist',
 				value: 'pricelist4',
-				action: 'Pricelist (V2)',
+				action: 'Pricelist',
 			},
 			{
 				name: 'Pricelist',
 				value: 'pricelist5',
-				action: 'Pricelist (V2)',
+				action: 'Pricelist',
 			},
 		],
 		default: 'pricelist',
@@ -14186,7 +13812,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['priceList'],
 				operation: ['pricelist'],
 			},
@@ -14200,7 +13825,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['priceList'],
 				operation: ['pricelist2'],
 			},
@@ -14214,7 +13838,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['priceList'],
 				operation: ['pricelist3'],
 			},
@@ -14229,7 +13852,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['priceList'],
 				operation: ['pricelist3'],
 				returnAll: [false],
@@ -14244,7 +13866,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['priceList'],
 				operation: ['pricelist4'],
 			},
@@ -14258,7 +13879,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['priceList'],
 				operation: ['pricelist4'],
 			},
@@ -14286,7 +13906,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['priceList'],
 				operation: ['pricelist5'],
 			},
@@ -14300,7 +13919,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['priceList'],
 				operation: ['pricelist5'],
 			},
@@ -14321,7 +13939,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 			},
 		},
@@ -14329,62 +13946,62 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Product',
 				value: 'create',
-				action: 'Create Product (V2)',
+				action: 'Create Product',
 			},
 			{
 				name: 'Get Product',
 				value: 'get',
-				action: 'Get Product (V2)',
+				action: 'Get Product',
 			},
 			{
 				name: 'List Products',
 				value: 'getAll',
-				action: 'List Products (V2)',
+				action: 'List Products',
 			},
 			{
 				name: 'Update Product',
 				value: 'update',
-				action: 'Update Product (V2)',
+				action: 'Update Product',
 			},
 			{
 				name: 'Delete Product',
 				value: 'delete',
-				action: 'Delete Product (V2)',
+				action: 'Delete Product',
 			},
 			{
 				name: 'Get Product Image',
 				value: 'getProductImage',
-				action: 'Get Product Image (V2)',
+				action: 'Get Product Image',
 			},
 			{
 				name: 'Get Product Main Image',
 				value: 'getProductMainImage',
-				action: 'Get Product Main Image (V2)',
+				action: 'Get Product Main Image',
 			},
 			{
 				name: 'Get Product Stock',
 				value: 'getProductStock',
-				action: 'Get Product Stock (V2)',
+				action: 'Get Product Stock',
 			},
 			{
 				name: 'Get Product Stock Transit',
 				value: 'getProductStockTransit',
-				action: 'Get Product Stock Transit (V2)',
+				action: 'Get Product Stock Transit',
 			},
 			{
 				name: 'List Product Images',
 				value: 'listProductImages',
-				action: 'List Product Images (V2)',
+				action: 'List Product Images',
 			},
 			{
 				name: 'Update Product Stock',
 				value: 'updateProductStock',
-				action: 'Update Product Stock (V2)',
+				action: 'Update Product Stock',
 			},
 			{
 				name: 'Upload Product Image',
 				value: 'uploadProductImage',
-				action: 'Upload Product Image (V2)',
+				action: 'Upload Product Image',
 			},
 		],
 		default: 'create',
@@ -14397,7 +14014,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['create'],
 			},
@@ -14418,7 +14034,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['create'],
 			},
@@ -14432,7 +14047,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['create'],
 			},
@@ -14446,7 +14060,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['create'],
 			},
@@ -14460,7 +14073,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['create'],
 			},
@@ -14474,7 +14086,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['create'],
 			},
@@ -14566,7 +14177,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['get'],
 			},
@@ -14580,7 +14190,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getAll'],
 			},
@@ -14595,7 +14204,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -14610,7 +14218,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['update'],
 			},
@@ -14624,7 +14231,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['update'],
 			},
@@ -14638,7 +14244,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['update'],
 			},
@@ -14652,7 +14257,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['update'],
 			},
@@ -14666,7 +14270,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['update'],
 			},
@@ -14680,7 +14283,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['update'],
 			},
@@ -14766,7 +14368,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['delete'],
 			},
@@ -14780,7 +14381,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getProductImage'],
 			},
@@ -14794,7 +14394,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getProductImage'],
 			},
@@ -14808,7 +14407,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getProductMainImage'],
 			},
@@ -14822,7 +14420,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getProductMainImage'],
 			},
@@ -14837,7 +14434,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getProductMainImage'],
 				returnAll: [false],
@@ -14852,7 +14448,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getProductStock'],
 			},
@@ -14866,7 +14461,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getProductStock'],
 			},
@@ -14881,7 +14475,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getProductStock'],
 				returnAll: [false],
@@ -14896,7 +14489,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getProductStockTransit'],
 			},
@@ -14910,7 +14502,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getProductStockTransit'],
 			},
@@ -14925,7 +14516,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['getProductStockTransit'],
 				returnAll: [false],
@@ -14940,7 +14530,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['listProductImages'],
 			},
@@ -14954,7 +14543,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['listProductImages'],
 			},
@@ -14969,7 +14557,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['listProductImages'],
 				returnAll: [false],
@@ -14984,7 +14571,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['updateProductStock'],
 			},
@@ -14998,7 +14584,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['updateProductStock'],
 			},
@@ -15012,7 +14597,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['updateProductStock'],
 			},
@@ -15026,7 +14610,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['updateProductStock'],
 			},
@@ -15054,7 +14637,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['uploadProductImage'],
 			},
@@ -15068,7 +14650,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['product'],
 				operation: ['uploadProductImage'],
 			},
@@ -15081,7 +14662,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['productionOrder'],
 			},
 		},
@@ -15089,27 +14669,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Production Order',
 				value: 'create',
-				action: 'Create Production Order (V2)',
+				action: 'Create Production Order',
 			},
 			{
 				name: 'Get Production Order',
 				value: 'get',
-				action: 'Get Production Order (V2)',
+				action: 'Get Production Order',
 			},
 			{
 				name: 'List Production Orders',
 				value: 'getAll',
-				action: 'List Production Orders (V2)',
+				action: 'List Production Orders',
 			},
 			{
 				name: 'Update Production Order',
 				value: 'update',
-				action: 'Update Production Order (V2)',
+				action: 'Update Production Order',
 			},
 			{
 				name: 'Delete Production Order',
 				value: 'delete',
-				action: 'Delete Production Order (V2)',
+				action: 'Delete Production Order',
 			},
 		],
 		default: 'create',
@@ -15123,7 +14703,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['productionOrder'],
 				operation: ['create'],
 			},
@@ -15137,7 +14716,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['productionOrder'],
 				operation: ['create'],
 			},
@@ -15251,7 +14829,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['productionOrder'],
 				operation: ['get'],
 			},
@@ -15265,7 +14842,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['productionOrder'],
 				operation: ['getAll'],
 			},
@@ -15280,7 +14856,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['productionOrder'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -15295,7 +14870,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['productionOrder'],
 				operation: ['update'],
 			},
@@ -15309,7 +14883,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['productionOrder'],
 				operation: ['update'],
 			},
@@ -15430,7 +15003,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['productionOrder'],
 				operation: ['delete'],
 			},
@@ -15443,7 +15015,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 			},
 		},
@@ -15451,62 +15022,62 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Proforma',
 				value: 'create',
-				action: 'Create Proforma (V2)',
+				action: 'Create Proforma',
 			},
 			{
 				name: 'Get Proforma',
 				value: 'get',
-				action: 'Get Proforma (V2)',
+				action: 'Get Proforma',
 			},
 			{
 				name: 'List Proformas',
 				value: 'getAll',
-				action: 'List Proformas (V2)',
+				action: 'List Proformas',
 			},
 			{
 				name: 'Update Proforma',
 				value: 'update',
-				action: 'Update Proforma (V2)',
+				action: 'Update Proforma',
 			},
 			{
 				name: 'Delete Proforma',
 				value: 'delete',
-				action: 'Delete Proforma (V2)',
+				action: 'Delete Proforma',
 			},
 			{
 				name: 'Approve Proforma',
 				value: 'approve',
-				action: 'Approve Proforma (V2)',
+				action: 'Approve Proforma',
 			},
 			{
 				name: 'Attach Proforma File',
 				value: 'attachProformaFile',
-				action: 'Attach Proforma File (V2)',
+				action: 'Attach Proforma File',
 			},
 			{
 				name: 'Get Proforma Attachment',
 				value: 'getProformaAttachment',
-				action: 'Get Proforma Attachment (V2)',
+				action: 'Get Proforma Attachment',
 			},
 			{
 				name: 'Get Proforma PDF',
 				value: 'getProformaPdf',
-				action: 'Get Proforma PDF (V2)',
+				action: 'Get Proforma PDF',
 			},
 			{
 				name: 'List Proforma Attachments',
 				value: 'listProformaAttachments',
-				action: 'List Proforma Attachments (V2)',
+				action: 'List Proforma Attachments',
 			},
 			{
 				name: 'Send Proforma',
 				value: 'send',
-				action: 'Send Proforma (V2)',
+				action: 'Send Proforma',
 			},
 			{
 				name: 'Set Proforma Pipeline',
 				value: 'setProformaPipeline',
-				action: 'Set Proforma Pipeline (V2)',
+				action: 'Set Proforma Pipeline',
 			},
 		],
 		default: 'create',
@@ -15519,7 +15090,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['create'],
 			},
@@ -15534,7 +15104,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['create'],
 			},
@@ -15548,7 +15117,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['create'],
 			},
@@ -15656,7 +15224,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['get'],
 			},
@@ -15670,7 +15237,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['getAll'],
 			},
@@ -15716,7 +15282,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['getAll'],
 			},
@@ -15731,7 +15296,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -15746,7 +15310,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['update'],
 			},
@@ -15760,7 +15323,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['update'],
 			},
@@ -15794,7 +15356,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['delete'],
 			},
@@ -15808,7 +15369,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['approve'],
 			},
@@ -15822,7 +15382,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['attachProformaFile'],
 			},
@@ -15836,7 +15395,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['attachProformaFile'],
 			},
@@ -15858,7 +15416,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['getProformaAttachment'],
 			},
@@ -15872,7 +15429,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['getProformaAttachment'],
 			},
@@ -15886,7 +15442,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['getProformaPdf'],
 			},
@@ -15900,7 +15455,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['getProformaPdf'],
 			},
@@ -15915,7 +15469,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['getProformaPdf'],
 				returnAll: [false],
@@ -15930,7 +15483,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['listProformaAttachments'],
 			},
@@ -15944,7 +15496,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['listProformaAttachments'],
 			},
@@ -15959,7 +15510,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['listProformaAttachments'],
 				returnAll: [false],
@@ -15974,7 +15524,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['send'],
 			},
@@ -15989,7 +15538,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Comma-separated.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['send'],
 			},
@@ -16003,7 +15551,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['send'],
 			},
@@ -16051,7 +15598,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['setProformaPipeline'],
 			},
@@ -16065,7 +15611,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['proforma'],
 				operation: ['setProformaPipeline'],
 			},
@@ -16078,7 +15623,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 			},
 		},
@@ -16086,32 +15630,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Projects',
 				value: 'create',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'get',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'getAll',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'update',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'delete',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'get2',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 		],
 		default: 'create',
@@ -16124,7 +15668,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['create'],
 			},
@@ -16138,7 +15681,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['create'],
 			},
@@ -16172,7 +15714,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['get'],
 			},
@@ -16186,7 +15727,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['getAll'],
 			},
@@ -16208,7 +15748,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['getAll'],
 			},
@@ -16223,7 +15762,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -16238,7 +15776,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['update'],
 			},
@@ -16252,7 +15789,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['update'],
 			},
@@ -16330,7 +15866,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['delete'],
 			},
@@ -16344,7 +15879,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['get2'],
 			},
@@ -16358,7 +15892,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['get2'],
 			},
@@ -16373,7 +15906,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['project'],
 				operation: ['get2'],
 				returnAll: [false],
@@ -16387,7 +15919,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 			},
 		},
@@ -16395,32 +15926,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Projects',
 				value: 'projects',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'projects2',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'projects3',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'projects4',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'projects5',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'projects6',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 		],
 		default: 'projects',
@@ -16433,7 +15964,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects'],
 			},
@@ -16447,7 +15977,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects'],
 			},
@@ -16461,7 +15990,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects2'],
 			},
@@ -16475,7 +16003,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects2'],
 			},
@@ -16489,7 +16016,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects3'],
 			},
@@ -16504,7 +16030,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects3'],
 				returnAll: [false],
@@ -16519,7 +16044,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects4'],
 			},
@@ -16533,7 +16057,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects4'],
 			},
@@ -16548,7 +16071,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects4'],
 				returnAll: [false],
@@ -16563,7 +16085,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects5'],
 			},
@@ -16577,7 +16098,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects5'],
 			},
@@ -16591,7 +16111,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects5'],
 			},
@@ -16605,7 +16124,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects5'],
 			},
@@ -16651,7 +16169,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects6'],
 			},
@@ -16665,7 +16182,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects6'],
 			},
@@ -16679,7 +16195,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['projectTimeTracking'],
 				operation: ['projects6'],
 			},
@@ -16736,7 +16251,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 			},
 		},
@@ -16744,62 +16258,62 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Purchase',
 				value: 'create',
-				action: 'Create Purchase (V2)',
+				action: 'Create Purchase',
 			},
 			{
 				name: 'Get Purchase',
 				value: 'get',
-				action: 'Get Purchase (V2)',
+				action: 'Get Purchase',
 			},
 			{
 				name: 'List Purchases',
 				value: 'getAll',
-				action: 'List Purchases (V2)',
+				action: 'List Purchases',
 			},
 			{
 				name: 'Update Purchase',
 				value: 'update',
-				action: 'Update Purchase (V2)',
+				action: 'Update Purchase',
 			},
 			{
 				name: 'Delete Purchase',
 				value: 'delete',
-				action: 'Delete Purchase (V2)',
+				action: 'Delete Purchase',
 			},
 			{
 				name: 'Approve Purchase',
 				value: 'approve',
-				action: 'Approve Purchase (V2)',
+				action: 'Approve Purchase',
 			},
 			{
 				name: 'Attach Purchase File',
 				value: 'attachPurchaseFile',
-				action: 'Attach Purchase File (V2)',
+				action: 'Attach Purchase File',
 			},
 			{
 				name: 'Create Purchase Payment',
 				value: 'createPurchasePayment',
-				action: 'Create Purchase Payment (V2)',
+				action: 'Create Purchase Payment',
 			},
 			{
 				name: 'Create Purchase Refund',
 				value: 'createPurchaseRefund',
-				action: 'Create Purchase Refund (V2)',
+				action: 'Create Purchase Refund',
 			},
 			{
 				name: 'Get Purchase Attachment',
 				value: 'getPurchaseAttachment',
-				action: 'Get Purchase Attachment (V2)',
+				action: 'Get Purchase Attachment',
 			},
 			{
 				name: 'List Purchase Attachments',
 				value: 'listPurchaseAttachments',
-				action: 'List Purchase Attachments (V2)',
+				action: 'List Purchase Attachments',
 			},
 			{
 				name: 'Set Purchase Pipeline',
 				value: 'setPurchasePipeline',
-				action: 'Set Purchase Pipeline (V2)',
+				action: 'Set Purchase Pipeline',
 			},
 		],
 		default: 'create',
@@ -16812,7 +16326,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['create'],
 			},
@@ -16827,7 +16340,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['create'],
 			},
@@ -16841,7 +16353,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['create'],
 			},
@@ -16949,7 +16460,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['get'],
 			},
@@ -16963,7 +16473,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['getAll'],
 			},
@@ -17015,7 +16524,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['getAll'],
 			},
@@ -17030,7 +16538,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -17045,7 +16552,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['update'],
 			},
@@ -17059,7 +16565,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['update'],
 			},
@@ -17093,7 +16598,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['delete'],
 			},
@@ -17107,7 +16611,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['approve'],
 			},
@@ -17121,7 +16624,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['attachPurchaseFile'],
 			},
@@ -17135,7 +16637,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['attachPurchaseFile'],
 			},
@@ -17157,7 +16658,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['createPurchasePayment'],
 			},
@@ -17171,7 +16671,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['createPurchasePayment'],
 			},
@@ -17185,7 +16684,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['createPurchasePayment'],
 			},
@@ -17219,7 +16717,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['createPurchaseRefund'],
 			},
@@ -17234,7 +16731,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['createPurchaseRefund'],
 			},
@@ -17248,7 +16744,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['createPurchaseRefund'],
 			},
@@ -17350,7 +16845,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['getPurchaseAttachment'],
 			},
@@ -17364,7 +16858,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['getPurchaseAttachment'],
 			},
@@ -17378,7 +16871,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['listPurchaseAttachments'],
 			},
@@ -17392,7 +16884,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['listPurchaseAttachments'],
 			},
@@ -17407,7 +16898,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['listPurchaseAttachments'],
 				returnAll: [false],
@@ -17422,7 +16912,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['setPurchasePipeline'],
 			},
@@ -17436,7 +16925,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchase'],
 				operation: ['setPurchasePipeline'],
 			},
@@ -17449,7 +16937,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 			},
 		},
@@ -17457,32 +16944,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Approve Purchase Shipment',
 				value: 'approvePurchaseShipment',
-				action: 'Approve Purchase Shipment (V2)',
+				action: 'Approve Purchase Shipment',
 			},
 			{
 				name: 'Create Purchase Shipment',
 				value: 'createPurchaseShipment',
-				action: 'Create Purchase Shipment (V2)',
+				action: 'Create Purchase Shipment',
 			},
 			{
 				name: 'Delete Purchase Shipment',
 				value: 'deletePurchaseShipment',
-				action: 'Delete Purchase Shipment (V2)',
+				action: 'Delete Purchase Shipment',
 			},
 			{
 				name: 'Get Purchase Shipment',
 				value: 'getPurchaseShipment',
-				action: 'Get Purchase Shipment (V2)',
+				action: 'Get Purchase Shipment',
 			},
 			{
 				name: 'List Purchase Shipments',
 				value: 'listPurchaseShipments',
-				action: 'List Purchase Shipments (V2)',
+				action: 'List Purchase Shipments',
 			},
 			{
 				name: 'Update Purchase Shipment',
 				value: 'updatePurchaseShipment',
-				action: 'Update Purchase Shipment (V2)',
+				action: 'Update Purchase Shipment',
 			},
 		],
 		default: 'approvePurchaseShipment',
@@ -17495,7 +16982,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 				operation: ['approvePurchaseShipment'],
 			},
@@ -17509,7 +16995,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 				operation: ['createPurchaseShipment'],
 			},
@@ -17524,7 +17009,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 				operation: ['createPurchaseShipment'],
 			},
@@ -17538,7 +17022,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 				operation: ['createPurchaseShipment'],
 			},
@@ -17646,7 +17129,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 				operation: ['deletePurchaseShipment'],
 			},
@@ -17660,7 +17142,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 				operation: ['getPurchaseShipment'],
 			},
@@ -17674,7 +17155,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 				operation: ['listPurchaseShipments'],
 			},
@@ -17720,7 +17200,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 				operation: ['listPurchaseShipments'],
 			},
@@ -17735,7 +17214,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 				operation: ['listPurchaseShipments'],
 				returnAll: [false],
@@ -17750,7 +17228,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 				operation: ['updatePurchaseShipment'],
 			},
@@ -17764,7 +17241,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseDeliveryNote'],
 				operation: ['updatePurchaseShipment'],
 			},
@@ -17803,7 +17279,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 			},
 		},
@@ -17811,72 +17286,72 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Purchase Order',
 				value: 'create',
-				action: 'Create Purchase Order (V2)',
+				action: 'Create Purchase Order',
 			},
 			{
 				name: 'Get Purchase Order',
 				value: 'get',
-				action: 'Get Purchase Order (V2)',
+				action: 'Get Purchase Order',
 			},
 			{
 				name: 'List Purchase Orders',
 				value: 'getAll',
-				action: 'List Purchase Orders (V2)',
+				action: 'List Purchase Orders',
 			},
 			{
 				name: 'Update Purchase Order',
 				value: 'update',
-				action: 'Update Purchase Order (V2)',
+				action: 'Update Purchase Order',
 			},
 			{
 				name: 'Delete Purchase Order',
 				value: 'delete',
-				action: 'Delete Purchase Order (V2)',
+				action: 'Delete Purchase Order',
 			},
 			{
 				name: 'Approve Purchase Order',
 				value: 'approve',
-				action: 'Approve Purchase Order (V2)',
+				action: 'Approve Purchase Order',
 			},
 			{
 				name: 'Attach Purchase Order File',
 				value: 'attachPurchaseOrderFile',
-				action: 'Attach Purchase Order File (V2)',
+				action: 'Attach Purchase Order File',
 			},
 			{
 				name: 'Get Purchase Order Attachment',
 				value: 'getPurchaseOrderAttachment',
-				action: 'Get Purchase Order Attachment (V2)',
+				action: 'Get Purchase Order Attachment',
 			},
 			{
 				name: 'Get Purchase Order PDF',
 				value: 'getPurchaseOrderPdf',
-				action: 'Get Purchase Order PDF (V2)',
+				action: 'Get Purchase Order PDF',
 			},
 			{
 				name: 'Get Purchase Order Received Items',
 				value: 'getPurchaseOrderReceivedItems',
-				action: 'Get Purchase Order Received Items (V2)',
+				action: 'Get Purchase Order Received Items',
 			},
 			{
 				name: 'List Purchase Order Attachments',
 				value: 'listPurchaseOrderAttachments',
-				action: 'List Purchase Order Attachments (V2)',
+				action: 'List Purchase Order Attachments',
 			},
 			{
 				name: 'Receive Purchase Order',
 				value: 'receive',
-				action: 'Receive Purchase Order (V2)',
+				action: 'Receive Purchase Order',
 			},
 			{
 				name: 'Send Purchase Order',
 				value: 'send',
-				action: 'Send Purchase Order (V2)',
+				action: 'Send Purchase Order',
 			},
 			{
 				name: 'Set Purchase Order Pipeline',
 				value: 'setPurchaseOrderPipeline',
-				action: 'Set Purchase Order Pipeline (V2)',
+				action: 'Set Purchase Order Pipeline',
 			},
 		],
 		default: 'create',
@@ -17889,7 +17364,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['create'],
 			},
@@ -17904,7 +17378,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['create'],
 			},
@@ -17918,7 +17391,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['create'],
 			},
@@ -18020,7 +17492,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['get'],
 			},
@@ -18034,7 +17505,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['getAll'],
 			},
@@ -18080,7 +17550,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['getAll'],
 			},
@@ -18095,7 +17564,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -18110,7 +17578,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['update'],
 			},
@@ -18124,7 +17591,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['update'],
 			},
@@ -18158,7 +17624,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['delete'],
 			},
@@ -18172,7 +17637,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['approve'],
 			},
@@ -18186,7 +17650,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['attachPurchaseOrderFile'],
 			},
@@ -18200,7 +17663,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['attachPurchaseOrderFile'],
 			},
@@ -18222,7 +17684,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['getPurchaseOrderAttachment'],
 			},
@@ -18236,7 +17697,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['getPurchaseOrderAttachment'],
 			},
@@ -18250,7 +17710,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['getPurchaseOrderPdf'],
 			},
@@ -18264,7 +17723,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['getPurchaseOrderPdf'],
 			},
@@ -18279,7 +17737,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['getPurchaseOrderPdf'],
 				returnAll: [false],
@@ -18294,7 +17751,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['getPurchaseOrderReceivedItems'],
 			},
@@ -18308,7 +17764,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['getPurchaseOrderReceivedItems'],
 			},
@@ -18323,7 +17778,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['getPurchaseOrderReceivedItems'],
 				returnAll: [false],
@@ -18338,7 +17792,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['listPurchaseOrderAttachments'],
 			},
@@ -18352,7 +17805,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['listPurchaseOrderAttachments'],
 			},
@@ -18367,7 +17819,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['listPurchaseOrderAttachments'],
 				returnAll: [false],
@@ -18382,7 +17833,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['receive'],
 			},
@@ -18397,7 +17847,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['receive'],
 			},
@@ -18411,7 +17860,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['receive'],
 			},
@@ -18439,7 +17887,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['send'],
 			},
@@ -18454,7 +17901,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Comma-separated.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['send'],
 			},
@@ -18468,7 +17914,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['send'],
 			},
@@ -18516,7 +17961,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['setPurchaseOrderPipeline'],
 			},
@@ -18530,7 +17974,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['purchaseOrder'],
 				operation: ['setPurchaseOrderPipeline'],
 			},
@@ -18543,7 +17986,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 			},
 		},
@@ -18551,37 +17993,37 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Invoice Recurring',
 				value: 'createInvoiceRecurring',
-				action: 'Create Invoice Recurring (V2)',
+				action: 'Create Invoice Recurring',
 			},
 			{
 				name: 'Delete Invoice Recurring',
 				value: 'deleteInvoiceRecurring',
-				action: 'Delete Invoice Recurring (V2)',
+				action: 'Delete Invoice Recurring',
 			},
 			{
 				name: 'Get Invoice Recurring',
 				value: 'getInvoiceRecurring',
-				action: 'Get Invoice Recurring (V2)',
+				action: 'Get Invoice Recurring',
 			},
 			{
 				name: 'Get Recurring Schedule',
 				value: 'getRecurringSchedule',
-				action: 'Get Recurring Schedule (V2)',
+				action: 'Get Recurring Schedule',
 			},
 			{
 				name: 'List Invoice Recurrings',
 				value: 'listInvoiceRecurrings',
-				action: 'List Invoice Recurrings (V2)',
+				action: 'List Invoice Recurrings',
 			},
 			{
 				name: 'Skip Recurring Occurrence',
 				value: 'skipRecurringOccurrence',
-				action: 'Skip Recurring Occurrence (V2)',
+				action: 'Skip Recurring Occurrence',
 			},
 			{
 				name: 'Update Invoice Recurring',
 				value: 'updateInvoiceRecurring',
-				action: 'Update Invoice Recurring (V2)',
+				action: 'Update Invoice Recurring',
 			},
 		],
 		default: 'createInvoiceRecurring',
@@ -18594,7 +18036,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['createInvoiceRecurring'],
 			},
@@ -18608,7 +18049,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['createInvoiceRecurring'],
 			},
@@ -18623,7 +18063,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['createInvoiceRecurring'],
 			},
@@ -18637,7 +18076,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['createInvoiceRecurring'],
 			},
@@ -18750,7 +18188,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['deleteInvoiceRecurring'],
 			},
@@ -18764,7 +18201,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['getInvoiceRecurring'],
 			},
@@ -18778,7 +18214,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['getRecurringSchedule'],
 			},
@@ -18792,7 +18227,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['getRecurringSchedule'],
 			},
@@ -18814,7 +18248,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['getRecurringSchedule'],
 			},
@@ -18829,7 +18262,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['getRecurringSchedule'],
 				returnAll: [false],
@@ -18844,7 +18276,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['listInvoiceRecurrings'],
 			},
@@ -18866,7 +18297,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['listInvoiceRecurrings'],
 			},
@@ -18881,7 +18311,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['listInvoiceRecurrings'],
 				returnAll: [false],
@@ -18896,7 +18325,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['skipRecurringOccurrence'],
 			},
@@ -18910,7 +18338,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['skipRecurringOccurrence'],
 			},
@@ -18924,7 +18351,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['updateInvoiceRecurring'],
 			},
@@ -18938,7 +18364,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['recurringInvoice'],
 				operation: ['updateInvoiceRecurring'],
 			},
@@ -19039,7 +18464,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['remittance'],
 			},
 		},
@@ -19047,12 +18471,12 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Get Remittance',
 				value: 'get',
-				action: 'Get Remittance (V2)',
+				action: 'Get Remittance',
 			},
 			{
 				name: 'List Remittances',
 				value: 'getAll',
-				action: 'List Remittances (V2)',
+				action: 'List Remittances',
 			},
 		],
 		default: 'get',
@@ -19065,7 +18489,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['remittance'],
 				operation: ['get'],
 			},
@@ -19079,7 +18502,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['remittance'],
 				operation: ['getAll'],
 			},
@@ -19149,7 +18571,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['remittance'],
 				operation: ['getAll'],
 			},
@@ -19164,7 +18585,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['remittance'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -19178,7 +18598,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesChannel'],
 			},
 		},
@@ -19186,27 +18605,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Sales Channel',
 				value: 'create',
-				action: 'Sales Channel (V2)',
+				action: 'Sales Channel',
 			},
 			{
 				name: 'Sales Channel',
 				value: 'get',
-				action: 'Sales Channel (V2)',
+				action: 'Sales Channel',
 			},
 			{
 				name: 'Sales Channel',
 				value: 'getAll',
-				action: 'Sales Channel (V2)',
+				action: 'Sales Channel',
 			},
 			{
 				name: 'Sales Channel',
 				value: 'update',
-				action: 'Sales Channel (V2)',
+				action: 'Sales Channel',
 			},
 			{
 				name: 'Sales Channel',
 				value: 'delete',
-				action: 'Sales Channel (V2)',
+				action: 'Sales Channel',
 			},
 		],
 		default: 'create',
@@ -19219,7 +18638,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesChannel'],
 				operation: ['create'],
 			},
@@ -19233,7 +18651,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesChannel'],
 				operation: ['create'],
 			},
@@ -19247,7 +18664,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesChannel'],
 				operation: ['create'],
 			},
@@ -19269,7 +18685,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesChannel'],
 				operation: ['get'],
 			},
@@ -19283,7 +18698,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesChannel'],
 				operation: ['getAll'],
 			},
@@ -19298,7 +18712,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesChannel'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -19313,7 +18726,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesChannel'],
 				operation: ['update'],
 			},
@@ -19327,7 +18739,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesChannel'],
 				operation: ['update'],
 			},
@@ -19355,7 +18766,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesChannel'],
 				operation: ['delete'],
 			},
@@ -19368,7 +18778,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 			},
 		},
@@ -19376,67 +18785,67 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Approve Receiptnote',
 				value: 'approveReceiptnote',
-				action: 'Approve Receiptnote (V2)',
+				action: 'Approve Receiptnote',
 			},
 			{
 				name: 'Attach Receiptnote File',
 				value: 'attachReceiptnoteFile',
-				action: 'Attach Receiptnote File (V2)',
+				action: 'Attach Receiptnote File',
 			},
 			{
 				name: 'Create Receiptnote',
 				value: 'createReceiptnote',
-				action: 'Create Receiptnote (V2)',
+				action: 'Create Receiptnote',
 			},
 			{
 				name: 'Create Receiptnote Payment',
 				value: 'createReceiptnotePayment',
-				action: 'Create Receiptnote Payment (V2)',
+				action: 'Create Receiptnote Payment',
 			},
 			{
 				name: 'Delete Receiptnote',
 				value: 'deleteReceiptnote',
-				action: 'Delete Receiptnote (V2)',
+				action: 'Delete Receiptnote',
 			},
 			{
 				name: 'Get Receiptnote',
 				value: 'getReceiptnote',
-				action: 'Get Receiptnote (V2)',
+				action: 'Get Receiptnote',
 			},
 			{
 				name: 'Get Receiptnote Attachment',
 				value: 'getReceiptnoteAttachment',
-				action: 'Get Receiptnote Attachment (V2)',
+				action: 'Get Receiptnote Attachment',
 			},
 			{
 				name: 'Get Receiptnote PDF',
 				value: 'getReceiptnotePdf',
-				action: 'Get Receiptnote PDF (V2)',
+				action: 'Get Receiptnote PDF',
 			},
 			{
 				name: 'List Receiptnote Attachments',
 				value: 'listReceiptnoteAttachments',
-				action: 'List Receiptnote Attachments (V2)',
+				action: 'List Receiptnote Attachments',
 			},
 			{
 				name: 'List Receiptnotes',
 				value: 'listReceiptnotes',
-				action: 'List Receiptnotes (V2)',
+				action: 'List Receiptnotes',
 			},
 			{
 				name: 'Send Receiptnote',
 				value: 'sendReceiptnote',
-				action: 'Send Receiptnote (V2)',
+				action: 'Send Receiptnote',
 			},
 			{
 				name: 'Set Receiptnote Pipeline',
 				value: 'setReceiptnotePipeline',
-				action: 'Set Receiptnote Pipeline (V2)',
+				action: 'Set Receiptnote Pipeline',
 			},
 			{
 				name: 'Update Receiptnote',
 				value: 'updateReceiptnote',
-				action: 'Update Receiptnote (V2)',
+				action: 'Update Receiptnote',
 			},
 		],
 		default: 'approveReceiptnote',
@@ -19449,7 +18858,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['approveReceiptnote'],
 			},
@@ -19463,7 +18871,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['attachReceiptnoteFile'],
 			},
@@ -19477,7 +18884,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['attachReceiptnoteFile'],
 			},
@@ -19499,7 +18905,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['createReceiptnote'],
 			},
@@ -19514,7 +18919,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['createReceiptnote'],
 			},
@@ -19528,7 +18932,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['createReceiptnote'],
 			},
@@ -19648,7 +19051,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['createReceiptnotePayment'],
 			},
@@ -19662,7 +19064,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['createReceiptnotePayment'],
 			},
@@ -19702,7 +19103,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['deleteReceiptnote'],
 			},
@@ -19716,7 +19116,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['getReceiptnote'],
 			},
@@ -19730,7 +19129,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['getReceiptnoteAttachment'],
 			},
@@ -19744,7 +19142,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['getReceiptnoteAttachment'],
 			},
@@ -19758,7 +19155,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['getReceiptnotePdf'],
 			},
@@ -19772,7 +19168,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['getReceiptnotePdf'],
 			},
@@ -19787,7 +19182,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['getReceiptnotePdf'],
 				returnAll: [false],
@@ -19802,7 +19196,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['listReceiptnoteAttachments'],
 			},
@@ -19816,7 +19209,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['listReceiptnoteAttachments'],
 			},
@@ -19831,7 +19223,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['listReceiptnoteAttachments'],
 				returnAll: [false],
@@ -19846,7 +19237,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['listReceiptnotes'],
 			},
@@ -19898,7 +19288,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['listReceiptnotes'],
 			},
@@ -19913,7 +19302,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['listReceiptnotes'],
 				returnAll: [false],
@@ -19928,7 +19316,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['sendReceiptnote'],
 			},
@@ -19943,7 +19330,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Comma-separated.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['sendReceiptnote'],
 			},
@@ -19957,7 +19343,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['sendReceiptnote'],
 			},
@@ -20005,7 +19390,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['setReceiptnotePipeline'],
 			},
@@ -20019,7 +19403,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['setReceiptnotePipeline'],
 			},
@@ -20033,7 +19416,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['updateReceiptnote'],
 			},
@@ -20047,7 +19429,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesCreditNote'],
 				operation: ['updateReceiptnote'],
 			},
@@ -20080,7 +19461,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 			},
 		},
@@ -20088,82 +19468,82 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Sales Order',
 				value: 'create',
-				action: 'Create Sales Order (V2)',
+				action: 'Create Sales Order',
 			},
 			{
 				name: 'Get Sales Order',
 				value: 'get',
-				action: 'Get Sales Order (V2)',
+				action: 'Get Sales Order',
 			},
 			{
 				name: 'List Sales Orders',
 				value: 'getAll',
-				action: 'List Sales Orders (V2)',
+				action: 'List Sales Orders',
 			},
 			{
 				name: 'Update Sales Order',
 				value: 'update',
-				action: 'Update Sales Order (V2)',
+				action: 'Update Sales Order',
 			},
 			{
 				name: 'Delete Sales Order',
 				value: 'delete',
-				action: 'Delete Sales Order (V2)',
+				action: 'Delete Sales Order',
 			},
 			{
 				name: 'Approve Sales Order',
 				value: 'approve',
-				action: 'Approve Sales Order (V2)',
+				action: 'Approve Sales Order',
 			},
 			{
 				name: 'Attach Sales Order File',
 				value: 'attachSalesOrderFile',
-				action: 'Attach Sales Order File (V2)',
+				action: 'Attach Sales Order File',
 			},
 			{
 				name: 'Get Sales Order Attachment',
 				value: 'getSalesOrderAttachment',
-				action: 'Get Sales Order Attachment (V2)',
+				action: 'Get Sales Order Attachment',
 			},
 			{
 				name: 'Get Sales Order PDF',
 				value: 'getSalesOrderPdf',
-				action: 'Get Sales Order PDF (V2)',
+				action: 'Get Sales Order PDF',
 			},
 			{
 				name: 'Get Sales Order Shipped Items',
 				value: 'getSalesOrderShippedItems',
-				action: 'Get Sales Order Shipped Items (V2)',
+				action: 'Get Sales Order Shipped Items',
 			},
 			{
 				name: 'List Sales Order Attachments',
 				value: 'listSalesOrderAttachments',
-				action: 'List Sales Order Attachments (V2)',
+				action: 'List Sales Order Attachments',
 			},
 			{
 				name: 'Send Sales Order',
 				value: 'send',
-				action: 'Send Sales Order (V2)',
+				action: 'Send Sales Order',
 			},
 			{
 				name: 'Set Sales Order Pipeline',
 				value: 'setSalesOrderPipeline',
-				action: 'Set Sales Order Pipeline (V2)',
+				action: 'Set Sales Order Pipeline',
 			},
 			{
 				name: 'Ship Sales Order',
 				value: 'ship',
-				action: 'Ship Sales Order (V2)',
+				action: 'Ship Sales Order',
 			},
 			{
 				name: 'Ship Sales Order By Lines',
 				value: 'shipSalesOrderByLines',
-				action: 'Ship Sales Order By Lines (V2)',
+				action: 'Ship Sales Order By Lines',
 			},
 			{
 				name: 'Update Sales Order Tracking',
 				value: 'updateSalesOrderTracking',
-				action: 'Update Sales Order Tracking (V2)',
+				action: 'Update Sales Order Tracking',
 			},
 		],
 		default: 'create',
@@ -20176,7 +19556,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['create'],
 			},
@@ -20191,7 +19570,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['create'],
 			},
@@ -20205,7 +19583,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['create'],
 			},
@@ -20313,7 +19690,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['get'],
 			},
@@ -20327,7 +19703,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['getAll'],
 			},
@@ -20373,7 +19748,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['getAll'],
 			},
@@ -20388,7 +19762,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -20403,7 +19776,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['update'],
 			},
@@ -20417,7 +19789,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['update'],
 			},
@@ -20451,7 +19822,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['delete'],
 			},
@@ -20465,7 +19835,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['approve'],
 			},
@@ -20479,7 +19848,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['attachSalesOrderFile'],
 			},
@@ -20493,7 +19861,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['attachSalesOrderFile'],
 			},
@@ -20515,7 +19882,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['getSalesOrderAttachment'],
 			},
@@ -20529,7 +19895,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['getSalesOrderAttachment'],
 			},
@@ -20543,7 +19908,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['getSalesOrderPdf'],
 			},
@@ -20557,7 +19921,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['getSalesOrderPdf'],
 			},
@@ -20572,7 +19935,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['getSalesOrderPdf'],
 				returnAll: [false],
@@ -20587,7 +19949,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['getSalesOrderShippedItems'],
 			},
@@ -20601,7 +19962,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['getSalesOrderShippedItems'],
 			},
@@ -20616,7 +19976,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['getSalesOrderShippedItems'],
 				returnAll: [false],
@@ -20631,7 +19990,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['listSalesOrderAttachments'],
 			},
@@ -20645,7 +20003,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['listSalesOrderAttachments'],
 			},
@@ -20660,7 +20017,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['listSalesOrderAttachments'],
 				returnAll: [false],
@@ -20675,7 +20031,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['send'],
 			},
@@ -20690,7 +20045,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Comma-separated.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['send'],
 			},
@@ -20704,7 +20058,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['send'],
 			},
@@ -20752,7 +20105,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['setSalesOrderPipeline'],
 			},
@@ -20766,7 +20118,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['setSalesOrderPipeline'],
 			},
@@ -20780,7 +20131,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['ship'],
 			},
@@ -20794,7 +20144,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['shipSalesOrderByLines'],
 			},
@@ -20808,7 +20157,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['shipSalesOrderByLines'],
 			},
@@ -20831,7 +20179,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['updateSalesOrderTracking'],
 			},
@@ -20845,7 +20192,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesOrder'],
 				operation: ['updateSalesOrderTracking'],
 			},
@@ -20896,7 +20242,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 			},
 		},
@@ -20904,67 +20249,67 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Sales Receipt',
 				value: 'create',
-				action: 'Create Sales Receipt (V2)',
+				action: 'Create Sales Receipt',
 			},
 			{
 				name: 'Get Sales Receipt',
 				value: 'get',
-				action: 'Get Sales Receipt (V2)',
+				action: 'Get Sales Receipt',
 			},
 			{
 				name: 'List Sales Receipts',
 				value: 'getAll',
-				action: 'List Sales Receipts (V2)',
+				action: 'List Sales Receipts',
 			},
 			{
 				name: 'Update Sales Receipt',
 				value: 'update',
-				action: 'Update Sales Receipt (V2)',
+				action: 'Update Sales Receipt',
 			},
 			{
 				name: 'Delete Sales Receipt',
 				value: 'delete',
-				action: 'Delete Sales Receipt (V2)',
+				action: 'Delete Sales Receipt',
 			},
 			{
 				name: 'Approve Sales Receipt',
 				value: 'approve',
-				action: 'Approve Sales Receipt (V2)',
+				action: 'Approve Sales Receipt',
 			},
 			{
 				name: 'Attach Sales Receipt File',
 				value: 'attachSalesReceiptFile',
-				action: 'Attach Sales Receipt File (V2)',
+				action: 'Attach Sales Receipt File',
 			},
 			{
 				name: 'Create Sales Receipt Payment',
 				value: 'createSalesReceiptPayment',
-				action: 'Create Sales Receipt Payment (V2)',
+				action: 'Create Sales Receipt Payment',
 			},
 			{
 				name: 'Get Sales Receipt Attachment',
 				value: 'getSalesReceiptAttachment',
-				action: 'Get Sales Receipt Attachment (V2)',
+				action: 'Get Sales Receipt Attachment',
 			},
 			{
 				name: 'Get Sales Receipt PDF',
 				value: 'getSalesReceiptPdf',
-				action: 'Get Sales Receipt PDF (V2)',
+				action: 'Get Sales Receipt PDF',
 			},
 			{
 				name: 'List Sales Receipt Attachments',
 				value: 'listSalesReceiptAttachments',
-				action: 'List Sales Receipt Attachments (V2)',
+				action: 'List Sales Receipt Attachments',
 			},
 			{
 				name: 'Send Sales Receipt',
 				value: 'send',
-				action: 'Send Sales Receipt (V2)',
+				action: 'Send Sales Receipt',
 			},
 			{
 				name: 'Set Sales Receipt Pipeline',
 				value: 'setSalesReceiptPipeline',
-				action: 'Set Sales Receipt Pipeline (V2)',
+				action: 'Set Sales Receipt Pipeline',
 			},
 		],
 		default: 'create',
@@ -20977,7 +20322,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['create'],
 			},
@@ -20992,7 +20336,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Send as JSON.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['create'],
 			},
@@ -21006,7 +20349,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['create'],
 			},
@@ -21126,7 +20468,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['get'],
 			},
@@ -21140,7 +20481,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['getAll'],
 			},
@@ -21192,7 +20532,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['getAll'],
 			},
@@ -21207,7 +20546,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -21222,7 +20560,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['update'],
 			},
@@ -21236,7 +20573,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['update'],
 			},
@@ -21270,7 +20606,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['delete'],
 			},
@@ -21284,7 +20619,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['approve'],
 			},
@@ -21298,7 +20632,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['attachSalesReceiptFile'],
 			},
@@ -21312,7 +20645,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['attachSalesReceiptFile'],
 			},
@@ -21334,7 +20666,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['createSalesReceiptPayment'],
 			},
@@ -21348,7 +20679,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['createSalesReceiptPayment'],
 			},
@@ -21388,7 +20718,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['getSalesReceiptAttachment'],
 			},
@@ -21402,7 +20731,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['getSalesReceiptAttachment'],
 			},
@@ -21416,7 +20744,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['getSalesReceiptPdf'],
 			},
@@ -21430,7 +20757,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['getSalesReceiptPdf'],
 			},
@@ -21445,7 +20771,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['getSalesReceiptPdf'],
 				returnAll: [false],
@@ -21460,7 +20785,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['listSalesReceiptAttachments'],
 			},
@@ -21474,7 +20798,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['listSalesReceiptAttachments'],
 			},
@@ -21489,7 +20812,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['listSalesReceiptAttachments'],
 				returnAll: [false],
@@ -21504,7 +20826,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['send'],
 			},
@@ -21519,7 +20840,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Comma-separated.',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['send'],
 			},
@@ -21533,7 +20853,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['send'],
 			},
@@ -21581,7 +20900,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['setSalesReceiptPipeline'],
 			},
@@ -21595,7 +20913,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['salesReceipt'],
 				operation: ['setSalesReceiptPipeline'],
 			},
@@ -21608,7 +20925,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['service'],
 			},
 		},
@@ -21616,27 +20932,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Service',
 				value: 'create',
-				action: 'Create Service (V2)',
+				action: 'Create Service',
 			},
 			{
 				name: 'Get Service',
 				value: 'get',
-				action: 'Get Service (V2)',
+				action: 'Get Service',
 			},
 			{
 				name: 'List Services',
 				value: 'getAll',
-				action: 'List Services (V2)',
+				action: 'List Services',
 			},
 			{
 				name: 'Update Service',
 				value: 'update',
-				action: 'Update Service (V2)',
+				action: 'Update Service',
 			},
 			{
 				name: 'Delete Service',
 				value: 'delete',
-				action: 'Delete Service (V2)',
+				action: 'Delete Service',
 			},
 		],
 		default: 'create',
@@ -21649,7 +20965,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['service'],
 				operation: ['create'],
 			},
@@ -21663,7 +20978,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['service'],
 				operation: ['create'],
 			},
@@ -21741,7 +21055,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['service'],
 				operation: ['get'],
 			},
@@ -21755,7 +21068,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['service'],
 				operation: ['getAll'],
 			},
@@ -21777,7 +21089,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['service'],
 				operation: ['getAll'],
 			},
@@ -21792,7 +21103,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['service'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -21807,7 +21117,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['service'],
 				operation: ['update'],
 			},
@@ -21821,7 +21130,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['service'],
 				operation: ['update'],
 			},
@@ -21905,7 +21213,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['service'],
 				operation: ['delete'],
 			},
@@ -21918,7 +21225,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['tag'],
 			},
 		},
@@ -21926,17 +21232,17 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Tag',
 				value: 'create',
-				action: 'Create Tag (V2)',
+				action: 'Create Tag',
 			},
 			{
 				name: 'List Tags',
 				value: 'getAll',
-				action: 'List Tags (V2)',
+				action: 'List Tags',
 			},
 			{
 				name: 'Delete Tag',
 				value: 'delete',
-				action: 'Delete Tag (V2)',
+				action: 'Delete Tag',
 			},
 		],
 		default: 'create',
@@ -21949,7 +21255,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['tag'],
 				operation: ['create'],
 			},
@@ -21963,7 +21268,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['tag'],
 				operation: ['getAll'],
 			},
@@ -21978,7 +21282,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['tag'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -21993,7 +21296,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['tag'],
 				operation: ['delete'],
 			},
@@ -22006,7 +21308,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['task'],
 			},
 		},
@@ -22014,27 +21315,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Projects',
 				value: 'projects',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'projects2',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'projects3',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'projects4',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 			{
 				name: 'Projects',
 				value: 'projects5',
-				action: 'Projects (V2)',
+				action: 'Projects',
 			},
 		],
 		default: 'projects',
@@ -22047,7 +21348,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['task'],
 				operation: ['projects'],
 			},
@@ -22061,7 +21361,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['task'],
 				operation: ['projects2'],
 			},
@@ -22075,7 +21374,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['task'],
 				operation: ['projects3'],
 			},
@@ -22090,7 +21388,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['task'],
 				operation: ['projects3'],
 				returnAll: [false],
@@ -22105,7 +21402,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['task'],
 				operation: ['projects4'],
 			},
@@ -22119,7 +21415,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['task'],
 				operation: ['projects4'],
 			},
@@ -22133,7 +21428,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['task'],
 				operation: ['projects4'],
 			},
@@ -22180,7 +21474,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['task'],
 				operation: ['projects5'],
 			},
@@ -22194,7 +21487,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['task'],
 				operation: ['projects5'],
 			},
@@ -22252,7 +21544,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['tax'],
 			},
 		},
@@ -22260,7 +21551,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'List Taxes',
 				value: 'getAll',
-				action: 'List Taxes (V2)',
+				action: 'List Taxes',
 			},
 		],
 		default: 'getAll',
@@ -22273,7 +21564,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['tax'],
 				operation: ['getAll'],
 			},
@@ -22288,7 +21578,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['tax'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -22302,7 +21591,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		noDataExpression: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 			},
 		},
@@ -22310,32 +21598,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Warehouse',
 				value: 'create',
-				action: 'Create Warehouse (V2)',
+				action: 'Create Warehouse',
 			},
 			{
 				name: 'Get Warehouse',
 				value: 'get',
-				action: 'Get Warehouse (V2)',
+				action: 'Get Warehouse',
 			},
 			{
 				name: 'List Warehouses',
 				value: 'getAll',
-				action: 'List Warehouses (V2)',
+				action: 'List Warehouses',
 			},
 			{
 				name: 'Update Warehouse',
 				value: 'update',
-				action: 'Update Warehouse (V2)',
+				action: 'Update Warehouse',
 			},
 			{
 				name: 'Delete Warehouse',
 				value: 'delete',
-				action: 'Delete Warehouse (V2)',
+				action: 'Delete Warehouse',
 			},
 			{
 				name: 'Get Warehouse Stock',
 				value: 'getWarehouseStock',
-				action: 'Get Warehouse Stock (V2)',
+				action: 'Get Warehouse Stock',
 			},
 		],
 		default: 'create',
@@ -22348,7 +21636,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 				operation: ['create'],
 			},
@@ -22362,7 +21649,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 				operation: ['create'],
 			},
@@ -22409,7 +21695,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 				operation: ['get'],
 			},
@@ -22423,7 +21708,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 				operation: ['getAll'],
 			},
@@ -22438,7 +21722,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 				operation: ['getAll'],
 				returnAll: [false],
@@ -22453,7 +21736,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 				operation: ['update'],
 			},
@@ -22467,7 +21749,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		default: {},
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 				operation: ['update'],
 			},
@@ -22520,7 +21801,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 				operation: ['delete'],
 			},
@@ -22534,7 +21814,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 				operation: ['getWarehouseStock'],
 			},
@@ -22548,7 +21827,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Whether to return all results or only up to a given limit',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 				operation: ['getWarehouseStock'],
 			},
@@ -22563,7 +21841,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
-				apiVersion: ['v2'],
 				resource: ['warehouse'],
 				operation: ['getWarehouseStock'],
 				returnAll: [false],

@@ -8,16 +8,12 @@ import type {
 import { NodeOperationError } from 'n8n-workflow';
 import { Buffer } from 'buffer';
 
-import { contactFields, contactOperations } from './descriptions/ContactDescription';
 import { contactV2Fields, contactV2Operations } from './descriptions/ContactV2Description';
-import { holdedApiRequest, holdedApiRequestAllItems } from './GenericFunctions';
 import {
 	holdedV2ApiRequest,
 	holdedV2ApiRequestAllItems,
 	holdedV2ApiRequestRaw,
 } from './GenericFunctionsV2';
-import { dispatchV1Generic } from './v1/dispatcher';
-import { V1_RESOURCE_OPTIONS, v1GeneratedProperties } from './v1/V1Generated';
 import { dispatchV2Generic } from './v2/dispatcher';
 import { V2_RESOURCE_OPTIONS, v2GeneratedProperties } from './v2/V2Generated';
 
@@ -108,7 +104,7 @@ export class Holded implements INodeType {
 		version: 1,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 		description:
-			'Interact with the Holded ERP API (contacts, invoices, products and more)',
+			'Interact with the Holded ERP API v2 (contacts, invoices, sales orders, products and more)',
 		defaults: {
 			name: 'Holded',
 		},
@@ -116,77 +112,23 @@ export class Holded implements INodeType {
 		outputs: ['main'],
 		credentials: [
 			{
-				name: 'holdedApi',
-				required: true,
-				displayOptions: { show: { apiVersion: ['v1'] } },
-			},
-			{
 				name: 'holdedV2Api',
 				required: true,
-				displayOptions: { show: { apiVersion: ['v2'] } },
 			},
 		],
 		properties: [
 			{
-				displayName: 'API Version',
-				name: 'apiVersion',
-				type: 'options',
-				noDataExpression: true,
-				options: [
-					{
-						name: 'V1 (Legacy)',
-						value: 'v1',
-						description:
-							'Header auth (key), offset pagination, area-prefixed URLs (invoicing/v1, crm/v1, ...). Resources are a subset of V2 with different field shapes — prefer V2 for new integrations.',
-					},
-					{
-						name: 'V2 (Current)',
-						value: 'v2',
-						description:
-							'Bearer auth, cursor pagination, RFC 7807 errors, full ERP coverage (invoices, sales orders, purchase orders, estimates, etc.). Recommended for new integrations.',
-					},
-				],
-				default: 'v2',
-				description:
-					'Each version requires its own credential. Resources and operations available differ — switching versions reveals a different set of resources below.',
-			},
-			{
 				displayName: 'Resource',
 				name: 'resource',
 				type: 'options',
 				noDataExpression: true,
-				displayOptions: { show: { apiVersion: ['v1'] } },
-				options: [
-					{
-						name: 'Contact (V1)',
-						value: 'contact',
-						description: 'Available in both V1 and V2 — schemas differ between versions',
-					},
-					...V1_RESOURCE_OPTIONS,
-				].sort((a, b) => a.name.localeCompare(b.name)),
+				options: [{ name: 'Contact', value: 'contact' }, ...V2_RESOURCE_OPTIONS].sort((a, b) =>
+					a.name.localeCompare(b.name),
+				),
 				default: 'contact',
 			},
-			{
-				displayName: 'Resource',
-				name: 'resource',
-				type: 'options',
-				noDataExpression: true,
-				displayOptions: { show: { apiVersion: ['v2'] } },
-				options: [
-					{
-						name: 'Contact (V2)',
-						value: 'contact',
-						description: 'Available in both V1 and V2 — schemas differ between versions',
-					},
-					...V2_RESOURCE_OPTIONS,
-				].sort((a, b) => a.name.localeCompare(b.name)),
-				default: 'contact',
-			},
-			...contactOperations,
-			...contactFields,
 			...contactV2Operations,
 			...contactV2Fields,
-			...v1GeneratedProperties,
 			...v2GeneratedProperties,
 		],
 	};
@@ -195,7 +137,6 @@ export class Holded implements INodeType {
 		const items = this.getInputData();
 		const returnData: INodeExecutionData[] = [];
 
-		const apiVersion = this.getNodeParameter('apiVersion', 0, 'v1') as string;
 		const resource = this.getNodeParameter('resource', 0) as string;
 		const operation = this.getNodeParameter('operation', 0) as string;
 
@@ -203,87 +144,7 @@ export class Holded implements INodeType {
 			try {
 				let responseData: IDataObject | IDataObject[] = {};
 
-				if (apiVersion === 'v1' && resource === 'contact') {
-					if (operation === 'create') {
-						const name = this.getNodeParameter('name', i) as string;
-						const type = this.getNodeParameter('type', i) as string;
-						const additionalFields = this.getNodeParameter(
-							'additionalFields',
-							i,
-							{},
-						) as IDataObject;
-
-						const body: IDataObject = {
-							name,
-							type,
-							...additionalFields,
-						};
-
-						responseData = (await holdedApiRequest.call(
-							this,
-							'POST',
-							'/invoicing/v1/contacts',
-							body,
-						)) as IDataObject;
-					}
-
-					if (operation === 'get') {
-						const contactId = this.getNodeParameter('contactId', i) as string;
-						responseData = (await holdedApiRequest.call(
-							this,
-							'GET',
-							`/invoicing/v1/contacts/${contactId}`,
-						)) as IDataObject;
-					}
-
-					if (operation === 'getAll') {
-						const returnAll = this.getNodeParameter('returnAll', i) as boolean;
-						const filters = this.getNodeParameter('filters', i, {}) as IDataObject;
-						const qs: IDataObject = {};
-						if (filters.type) qs.type = filters.type;
-
-						if (returnAll) {
-							responseData = await holdedApiRequestAllItems.call(
-								this,
-								'/invoicing/v1/contacts',
-								qs,
-							);
-						} else {
-							const limit = this.getNodeParameter('limit', i) as number;
-							qs.limit = limit;
-							const response = (await holdedApiRequest.call(
-								this,
-								'GET',
-								'/invoicing/v1/contacts',
-								{},
-								qs,
-							)) as IDataObject[] | IDataObject;
-							responseData = Array.isArray(response) ? response : [response];
-						}
-					}
-
-					if (operation === 'update') {
-						const contactId = this.getNodeParameter('contactId', i) as string;
-						const updateFields = this.getNodeParameter('updateFields', i, {}) as IDataObject;
-						responseData = (await holdedApiRequest.call(
-							this,
-							'PUT',
-							`/invoicing/v1/contacts/${contactId}`,
-							updateFields,
-						)) as IDataObject;
-					}
-
-					if (operation === 'delete') {
-						const contactId = this.getNodeParameter('contactId', i) as string;
-						responseData = (await holdedApiRequest.call(
-							this,
-							'DELETE',
-							`/invoicing/v1/contacts/${contactId}`,
-						)) as IDataObject;
-					}
-				}
-
-				if (apiVersion === 'v2' && resource === 'contact') {
+				if (resource === 'contact') {
 					if (operation === 'create') {
 						const name = this.getNodeParameter('name', i) as string;
 						const type = this.getNodeParameter('type', i) as string;
@@ -467,11 +328,7 @@ export class Holded implements INodeType {
 					}
 				}
 
-				if (apiVersion === 'v1' && resource !== 'contact') {
-					responseData = await dispatchV1Generic.call(this, i, resource, operation);
-				}
-
-				if (apiVersion === 'v2' && resource !== 'contact') {
+				if (resource !== 'contact') {
 					responseData = await dispatchV2Generic.call(this, i, resource, operation);
 				}
 

@@ -565,13 +565,10 @@ def emit_resource(
     ordered.sort(key=sort_key)
 
     # 1. Operations selector — names in English derived from operationId.
-    # `name` stays clean for the in-node dropdown (already scoped to V2 via
-    # the resource selector); `action` carries a (V2) suffix so the global
-    # Actions search panel disambiguates v1 vs v2 entries that share names.
     op_options_src = []
     for op, ep in ordered:
         name = english_display_from_endpoint(ep) or to_title(op)
-        action_label = f"{name} (V2)"
+        action_label = name
         method = (ep.get("method") or "GET").upper()
         block = (
             "\t\t\t{\n"
@@ -591,7 +588,6 @@ def emit_resource(
         "\t\tnoDataExpression: true,\n"
         "\t\tdisplayOptions: {\n"
         "\t\t\tshow: {\n"
-        f"\t\t\t\tapiVersion: ['v2'],\n"
         f"\t\t\t\tresource: [{js_string(resource_value)}],\n"
         "\t\t\t},\n"
         "\t\t},\n"
@@ -605,7 +601,7 @@ def emit_resource(
 
     # 2. For each operation: fields
     for op, ep, method in [(d["op"], d["ep"], d["method"]) for d in ops_emitted]:
-        show = {"apiVersion": ["v2"], "resource": [resource_value], "operation": [op]}
+        show = {"resource": [resource_value], "operation": [op]}
         path = ep.get("path") or ""
         coll_get = is_collection_get(ep)
 
@@ -756,7 +752,6 @@ def emit_resource(
                 "\t\tdescription: 'Whether to return all results or only up to a given limit',\n"
                 "\t\tdisplayOptions: {\n"
                 "\t\t\tshow: {\n"
-                "\t\t\t\tapiVersion: ['v2'],\n"
                 f"\t\t\t\tresource: [{js_string(resource_value)}],\n"
                 f"\t\t\t\toperation: [{js_string(op)}],\n"
                 "\t\t\t},\n"
@@ -773,7 +768,6 @@ def emit_resource(
                 "\t\tdescription: 'Max number of results to return',\n"
                 "\t\tdisplayOptions: {\n"
                 "\t\t\tshow: {\n"
-                "\t\t\t\tapiVersion: ['v2'],\n"
                 f"\t\t\t\tresource: [{js_string(resource_value)}],\n"
                 f"\t\t\t\toperation: [{js_string(op)}],\n"
                 "\t\t\t\treturnAll: [false],\n"
@@ -820,21 +814,8 @@ def main() -> None:
         all_field_chunks.extend(chunks)
 
     # Resource selector options. Each gets a description indicating whether
-    # the resource is V2-only or also exists in V1 with different fields.
-    def desc_for(value: str) -> str:
-        if value in V1_VALUES:
-            return "Available in both V1 and V2 — schemas differ between versions"
-        hint = V2_ONLY_HINT.get(value)
-        return "V2 only" + (f". {hint}" if hint else "")
-
     sel_options = ",\n".join(
-        "\t{ name: "
-        + js_string(title + " (V2)")
-        + ", value: "
-        + js_string(value)
-        + ", description: "
-        + js_string(desc_for(value))
-        + " }"
+        "\t{ name: " + js_string(title) + ", value: " + js_string(value) + " }"
         for _slug, value, title in resource_options
     )
 
@@ -856,7 +837,7 @@ def main() -> None:
     )
 
     res_opts_block = (
-        "export const V2_RESOURCE_OPTIONS: Array<{ name: string; value: string; description?: string }> = [\n"
+        "export const V2_RESOURCE_OPTIONS: Array<{ name: string; value: string }> = [\n"
         + sel_options
         + ",\n];\n\n"
     )

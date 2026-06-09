@@ -79,7 +79,6 @@ export const contactV2Operations: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['contact'],
-				apiVersion: ['v2'],
 			},
 		},
 		options: [
@@ -87,73 +86,73 @@ export const contactV2Operations: INodeProperties[] = [
 				name: 'Bulk Archive',
 				value: 'bulkArchive',
 				description: 'Archive multiple contacts at once',
-				action: 'Archive contacts in bulk (V2)',
+				action: 'Archive contacts in bulk',
 			},
 			{
 				name: 'Bulk Delete',
 				value: 'bulkDelete',
 				description: 'Permanently delete multiple contacts at once',
-				action: 'Delete contacts in bulk (V2)',
+				action: 'Delete contacts in bulk',
 			},
 			{
 				name: 'Create',
 				value: 'create',
 				description: 'Create a new contact',
-				action: 'Create a contact (V2)',
+				action: 'Create a contact',
 			},
 			{
 				name: 'Delete',
 				value: 'delete',
 				description: 'Delete a contact',
-				action: 'Delete a contact (V2)',
+				action: 'Delete a contact',
 			},
 			{
 				name: 'Get',
 				value: 'get',
 				description: 'Get a contact by ID',
-				action: 'Get a contact (V2)',
+				action: 'Get a contact',
 			},
 			{
 				name: 'Get Attachment',
 				value: 'getAttachment',
 				description: 'Download a single attachment file from a contact',
-				action: 'Get a contact attachment (V2)',
+				action: 'Get a contact attachment',
 			},
 			{
 				name: 'Get Many',
 				value: 'getAll',
 				description: 'Get many contacts',
-				action: 'Get many contacts (V2)',
+				action: 'Get many contacts',
 			},
 			{
 				name: 'Get Portal Link',
 				value: 'getPortalLink',
 				description: 'Get the customer portal URL for a contact',
-				action: 'Get the customer portal link (V2)',
+				action: 'Get the customer portal link',
 			},
 			{
 				name: 'List Attachments',
 				value: 'listAttachments',
 				description: 'List every file attached to a contact',
-				action: 'List contact attachments (V2)',
+				action: 'List contact attachments',
 			},
 			{
 				name: 'Search',
 				value: 'search',
 				description: 'Search contacts by name (prefix match)',
-				action: 'Search contacts (V2)',
+				action: 'Search contacts',
 			},
 			{
 				name: 'Update',
 				value: 'update',
 				description: 'Update an existing contact (full replacement)',
-				action: 'Update a contact (V2)',
+				action: 'Update a contact',
 			},
 			{
 				name: 'Upload Attachment',
 				value: 'uploadAttachment',
 				description: 'Attach a file (from a previous node\'s binary output) to a contact',
-				action: 'Upload an attachment to a contact (V2)',
+				action: 'Upload an attachment to a contact',
 			},
 		],
 		default: 'getAll',
@@ -169,7 +168,7 @@ export const contactV2Fields: INodeProperties[] = [
 		required: true,
 		default: '',
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['create'] },
+			show: { resource: ['contact'], operation: ['create'] },
 		},
 		description: 'Display name of the contact (person or company)',
 	},
@@ -179,7 +178,7 @@ export const contactV2Fields: INodeProperties[] = [
 		type: 'options',
 		default: 'client',
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['create'] },
+			show: { resource: ['contact'], operation: ['create'] },
 		},
 		options: TYPE_OPTIONS,
 		description: 'Role of this contact in your accounting',
@@ -191,7 +190,7 @@ export const contactV2Fields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		default: {},
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['create'] },
+			show: { resource: ['contact'], operation: ['create'] },
 		},
 		options: [
 			{
@@ -255,7 +254,7 @@ export const contactV2Fields: INodeProperties[] = [
 		typeOptions: { multipleValues: false },
 		placeholder: 'Add Billing Address',
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['create', 'update'] },
+			show: { resource: ['contact'], operation: ['create', 'update'] },
 		},
 		options: [
 			{
@@ -273,7 +272,7 @@ export const contactV2Fields: INodeProperties[] = [
 		typeOptions: { multipleValues: false },
 		placeholder: 'Add Defaults',
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['create', 'update'] },
+			show: { resource: ['contact'], operation: ['create', 'update'] },
 		},
 		options: [
 			{
@@ -294,7 +293,6 @@ export const contactV2Fields: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['contact'],
-				apiVersion: ['v2'],
 				operation: [
 					'get',
 					'update',
@@ -315,7 +313,7 @@ export const contactV2Fields: INodeProperties[] = [
 		required: true,
 		default: '',
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['getAttachment'] },
+			show: { resource: ['contact'], operation: ['getAttachment'] },
 		},
 		description: 'Exact filename of the attachment to download (as returned by List Attachments)',
 	},
@@ -326,7 +324,7 @@ export const contactV2Fields: INodeProperties[] = [
 		required: true,
 		default: 'data',
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['uploadAttachment'] },
+			show: { resource: ['contact'], operation: ['uploadAttachment'] },
 		},
 		description:
 			'Name of the binary property on the incoming item that contains the file to upload (multipart/form-data field "file")',
@@ -340,7 +338,7 @@ export const contactV2Fields: INodeProperties[] = [
 		required: true,
 		default: '',
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['update'] },
+			show: { resource: ['contact'], operation: ['update'] },
 		},
 		description:
 			'Name of the contact. Required because v2 update is a full replacement (PUT), not a partial patch.',
@@ -352,7 +350,7 @@ export const contactV2Fields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		default: {},
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['update'] },
+			show: { resource: ['contact'], operation: ['update'] },
 		},
 		options: [
 			{ displayName: 'Code', name: 'code', type: 'string', default: '' },
@@ -398,7 +396,7 @@ export const contactV2Fields: INodeProperties[] = [
 		type: 'boolean',
 		default: false,
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['getAll', 'search'] },
+			show: { resource: ['contact'], operation: ['getAll', 'search'] },
 		},
 		description: 'Whether to return all results or only up to a given limit',
 	},
@@ -411,7 +409,6 @@ export const contactV2Fields: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['contact'],
-				apiVersion: ['v2'],
 				operation: ['getAll', 'search'],
 				returnAll: [false],
 			},
@@ -425,7 +422,7 @@ export const contactV2Fields: INodeProperties[] = [
 		placeholder: 'Add Filter',
 		default: {},
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['getAll'] },
+			show: { resource: ['contact'], operation: ['getAll'] },
 		},
 		options: [
 			{
@@ -475,7 +472,7 @@ export const contactV2Fields: INodeProperties[] = [
 		required: true,
 		default: '',
 		displayOptions: {
-			show: { resource: ['contact'], apiVersion: ['v2'], operation: ['search'] },
+			show: { resource: ['contact'], operation: ['search'] },
 		},
 		description:
 			'Search term matched as a prefix against the contact name. Token-aware, case- and diacritic-insensitive.',
@@ -491,7 +488,6 @@ export const contactV2Fields: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['contact'],
-				apiVersion: ['v2'],
 				operation: ['bulkArchive', 'bulkDelete'],
 			},
 		},

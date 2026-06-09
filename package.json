@@ -1,7 +1,7 @@
 {
   "name": "@francodesystems-npm/n8n-nodes-holded",
-  "version": "0.3.8",
-  "description": "n8n community node for Holded — the Spanish ERP / accounting platform. Full coverage of both API versions: v2 (42 resources, 323 operations) and legacy v1 (24 resources, 134 operations).",
+  "version": "0.4.0",
+  "description": "n8n community node for Holded \u2014 the Spanish ERP / accounting platform. Full coverage of the Holded API v2 (42 resources, 323 operations).",
   "keywords": [
     "n8n-community-node-package",
     "n8n",
@@ -48,7 +48,6 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/HoldedApi.credentials.js",
       "dist/credentials/HoldedV2Api.credentials.js"
     ],
     "nodes": [
