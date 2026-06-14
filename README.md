@@ -7,6 +7,8 @@
 
 This is an [n8n](https://n8n.io) community node that lets you use **Holded** in your n8n workflows. Built and maintained by [Francodesystems](https://francodesystems.com), Spanish integrations specialists.
 
+📖 **Project landing**: [francodesystems.com/open-source/n8n-nodes-holded](https://francodesystems.com/open-source/n8n-nodes-holded) — coverage matrix, use cases, technical details.
+
 > **Disclaimer**: This is an unofficial community integration. "Holded" and the Holded logo are trademarks of Holded Technologies S.L. and are used here under nominative fair use to identify the third-party service this node integrates with. This package is not affiliated with, endorsed by, or sponsored by Holded.
 
 [Installation](#installation) · [Operations](#operations) · [Credentials](#credentials) · [Compatibility](#compatibility) · [Usage](#usage) · [Resources](#resources)
@@ -126,10 +128,13 @@ To get the "Verified" badge in n8n's nodes panel (so users can install the packa
 
 ## Resources
 
-- [Holded API v2 documentation](https://www.holded.com/es/desarrolladores) — current
+- [Project landing on francodesystems.com](https://francodesystems.com/open-source/n8n-nodes-holded) — coverage matrix, use cases, FAQ
+- [Holded API v2 — Francodesystems analysis](https://francodesystems.com/holded-api-v2) — v1→v2 migration guide, MCP, technical changes
+- [Holded API v2 documentation (official)](https://www.holded.com/es/desarrolladores)
+- [Francodesystems Holded integrations catalog](https://francodesystems.com/integraciones)
+- [Francodesystems open source contributions](https://francodesystems.com/open-source)
 - [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
 - [n8n verified node guidelines](https://docs.n8n.io/integrations/creating-nodes/deploy/submit-community-nodes/)
-- [Francodesystems — Holded integration services](https://francodesystems.com/integraciones/holded-shopify)
 
 ## About
 
