@@ -1,7 +1,7 @@
 {
   "name": "@francodesystems-npm/n8n-nodes-holded",
-  "version": "0.4.1",
-  "description": "n8n community node for Holded \u2014 the Spanish ERP / accounting platform. Full coverage of the Holded API v2 (42 resources, 323 operations).",
+  "version": "0.5.0",
+  "description": "n8n community node for Holded — the Spanish ERP / accounting platform. Full coverage of the Holded API v2 (43 resources, 327 operations) plus a webhook trigger.",
   "keywords": [
     "n8n-community-node-package",
     "n8n",
@@ -48,14 +48,17 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/HoldedV2Api.credentials.js"
+      "dist/credentials/HoldedV2Api.credentials.js",
+      "dist/credentials/HoldedWebhookApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/Holded/Holded.node.js"
+      "dist/nodes/Holded/Holded.node.js",
+      "dist/nodes/Holded/HoldedTrigger.node.js"
     ]
   },
   "devDependencies": {
     "@n8n/node-cli": "^0.23.0",
+    "@types/node": "^20.19.43",
     "@typescript-eslint/parser": "~8.32.0",
     "eslint": "^8.57.0",
     "eslint-plugin-n8n-nodes-base": "^1.16.3",

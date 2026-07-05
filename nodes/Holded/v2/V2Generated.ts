@@ -45,6 +45,7 @@ export const V2_RESOURCE_OPTIONS: Array<{ name: string; value: string }> = [
 	{ name: 'Tag', value: 'tag' },
 	{ name: 'Task', value: 'task' },
 	{ name: 'Tax', value: 'tax' },
+	{ name: 'Usage', value: 'usage' },
 	{ name: 'Warehouse', value: 'warehouse' },
 ];
 
@@ -1092,47 +1093,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	  }
 	},
 	'employee': {
-	  "team": {
-	    "method": "DELETE",
-	    "path": "/api/v2/employees/{employeeId}",
-	    "pathParams": [
-	      {
-	        "name": "employeeId",
-	        "key": "employeeId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "team2": {
-	    "method": "GET",
-	    "path": "/api/v2/employees/{employeeId}",
-	    "pathParams": [
-	      {
-	        "name": "employeeId",
-	        "key": "employeeId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "team3": {
-	    "method": "GET",
-	    "path": "/api/v2/employees",
-	    "pathParams": [],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": true
-	  },
-	  "team4": {
+	  "create": {
 	    "method": "POST",
 	    "path": "/api/v2/employees",
 	    "pathParams": [],
@@ -1160,7 +1121,32 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    ],
 	    "collectionGet": false
 	  },
-	  "team5": {
+	  "get": {
+	    "method": "GET",
+	    "path": "/api/v2/employees/{employeeId}",
+	    "pathParams": [
+	      {
+	        "name": "employeeId",
+	        "key": "employeeId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "getAll": {
+	    "method": "GET",
+	    "path": "/api/v2/employees",
+	    "pathParams": [],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": true
+	  },
+	  "update": {
 	    "method": "PUT",
 	    "path": "/api/v2/employees/{employeeId}",
 	    "pathParams": [
@@ -1192,70 +1178,10 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	      "teamIds"
 	    ],
 	    "collectionGet": false
-	  }
-	},
-	'employeeTimeTracking': {
-	  "team": {
+	  },
+	  "delete": {
 	    "method": "DELETE",
-	    "path": "/api/v2/employee-times/{timeId}",
-	    "pathParams": [
-	      {
-	        "name": "timeId",
-	        "key": "timeId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "team10": {
-	    "method": "PUT",
-	    "path": "/api/v2/employee-times/{timeId}",
-	    "pathParams": [
-	      {
-	        "name": "timeId",
-	        "key": "timeId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {
-	      "startAt": "start_at",
-	      "endAt": "end_at"
-	    },
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "team2": {
-	    "method": "GET",
-	    "path": "/api/v2/employee-times/{timeId}",
-	    "pathParams": [
-	      {
-	        "name": "timeId",
-	        "key": "timeId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "team3": {
-	    "method": "GET",
-	    "path": "/api/v2/employee-times",
-	    "pathParams": [],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": true
-	  },
-	  "team4": {
-	    "method": "GET",
-	    "path": "/api/v2/employees/{employeeId}/times",
+	    "path": "/api/v2/employees/{employeeId}",
 	    "pathParams": [
 	      {
 	        "name": "employeeId",
@@ -1266,9 +1192,26 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyMap": {},
 	    "bodyJsonKeys": [],
 	    "bodyCsvKeys": [],
-	    "collectionGet": true
+	    "collectionGet": false
 	  },
-	  "team5": {
+	  "getContract": {
+	    "method": "GET",
+	    "path": "/api/v2/employees/{employeeId}/contract",
+	    "pathParams": [
+	      {
+	        "name": "employeeId",
+	        "key": "employeeId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  }
+	},
+	'employeeTimeTracking': {
+	  "clockin": {
 	    "method": "POST",
 	    "path": "/api/v2/employees/{employeeId}/clock-in",
 	    "pathParams": [
@@ -1286,7 +1229,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "team6": {
+	  "clockout": {
 	    "method": "POST",
 	    "path": "/api/v2/employees/{employeeId}/clock-out",
 	    "pathParams": [
@@ -1304,7 +1247,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "team7": {
+	  "createEmployeeTime": {
 	    "method": "POST",
 	    "path": "/api/v2/employees/{employeeId}/times",
 	    "pathParams": [
@@ -1322,7 +1265,62 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "team8": {
+	  "deleteEmployeeTime": {
+	    "method": "DELETE",
+	    "path": "/api/v2/employee-times/{timeId}",
+	    "pathParams": [
+	      {
+	        "name": "timeId",
+	        "key": "timeId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "getEmployeeTime": {
+	    "method": "GET",
+	    "path": "/api/v2/employee-times/{timeId}",
+	    "pathParams": [
+	      {
+	        "name": "timeId",
+	        "key": "timeId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "listAllEmployeeTimes": {
+	    "method": "GET",
+	    "path": "/api/v2/employee-times",
+	    "pathParams": [],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": true
+	  },
+	  "listEmployeeTimes": {
+	    "method": "GET",
+	    "path": "/api/v2/employees/{employeeId}/times",
+	    "pathParams": [
+	      {
+	        "name": "employeeId",
+	        "key": "employeeId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": true
+	  },
+	  "pause": {
 	    "method": "POST",
 	    "path": "/api/v2/employees/{employeeId}/pause",
 	    "pathParams": [
@@ -1340,7 +1338,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "team9": {
+	  "unpause": {
 	    "method": "POST",
 	    "path": "/api/v2/employees/{employeeId}/unpause",
 	    "pathParams": [
@@ -1353,6 +1351,24 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyMap": {
 	      "latitude": "latitude",
 	      "longitude": "longitude"
+	    },
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "updateEmployeeTime": {
+	    "method": "PUT",
+	    "path": "/api/v2/employee-times/{timeId}",
+	    "pathParams": [
+	      {
+	        "name": "timeId",
+	        "key": "timeId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {
+	      "startAt": "start_at",
+	      "endAt": "end_at"
 	    },
 	    "bodyJsonKeys": [],
 	    "bodyCsvKeys": [],
@@ -1706,7 +1722,21 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	  }
 	},
 	'expenseAccount': {
-	  "expensesAccount": {
+	  "createExpensesAccount": {
+	    "method": "POST",
+	    "path": "/api/v2/expenses-accounts",
+	    "pathParams": [],
+	    "queryMap": {},
+	    "bodyMap": {
+	      "name": "name",
+	      "accountNum": "account_num",
+	      "color": "color"
+	    },
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "deleteExpensesAccount": {
 	    "method": "DELETE",
 	    "path": "/api/v2/expenses-accounts/{expensesAccountId}",
 	    "pathParams": [
@@ -1721,7 +1751,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "expensesAccount2": {
+	  "getExpensesAccount": {
 	    "method": "GET",
 	    "path": "/api/v2/expenses-accounts/{expensesAccountId}",
 	    "pathParams": [
@@ -1736,7 +1766,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "expensesAccount3": {
+	  "listExpensesAccounts": {
 	    "method": "GET",
 	    "path": "/api/v2/expenses-accounts",
 	    "pathParams": [],
@@ -1746,21 +1776,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": true
 	  },
-	  "expensesAccount4": {
-	    "method": "POST",
-	    "path": "/api/v2/expenses-accounts",
-	    "pathParams": [],
-	    "queryMap": {},
-	    "bodyMap": {
-	      "name": "name",
-	      "accountNum": "account_num",
-	      "color": "color"
-	    },
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "expensesAccount5": {
+	  "updateExpensesAccount": {
 	    "method": "PUT",
 	    "path": "/api/v2/expenses-accounts/{expensesAccountId}",
 	    "pathParams": [
@@ -1780,47 +1796,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	  }
 	},
 	'funnel': {
-	  "crm": {
-	    "method": "DELETE",
-	    "path": "/api/v2/funnels/{funnelId}",
-	    "pathParams": [
-	      {
-	        "name": "funnelId",
-	        "key": "funnelId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "crm2": {
-	    "method": "GET",
-	    "path": "/api/v2/funnels/{funnelId}",
-	    "pathParams": [
-	      {
-	        "name": "funnelId",
-	        "key": "funnelId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "crm3": {
-	    "method": "GET",
-	    "path": "/api/v2/funnels",
-	    "pathParams": [],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": true
-	  },
-	  "crm4": {
+	  "create": {
 	    "method": "POST",
 	    "path": "/api/v2/funnels",
 	    "pathParams": [],
@@ -1835,7 +1811,32 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "crm5": {
+	  "get": {
+	    "method": "GET",
+	    "path": "/api/v2/funnels/{funnelId}",
+	    "pathParams": [
+	      {
+	        "name": "funnelId",
+	        "key": "funnelId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "getAll": {
+	    "method": "GET",
+	    "path": "/api/v2/funnels",
+	    "pathParams": [],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": true
+	  },
+	  "update": {
 	    "method": "PUT",
 	    "path": "/api/v2/funnels/{funnelId}",
 	    "pathParams": [
@@ -1852,6 +1853,21 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyJsonKeys": [
 	      "stages"
 	    ],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "delete": {
+	    "method": "DELETE",
+	    "path": "/api/v2/funnels/{funnelId}",
+	    "pathParams": [
+	      {
+	        "name": "funnelId",
+	        "key": "funnelId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  }
@@ -2342,6 +2358,21 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
+	  "getAll": {
+	    "method": "GET",
+	    "path": "/api/v2/numbering-series/{type}",
+	    "pathParams": [
+	      {
+	        "name": "type",
+	        "key": "type"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
 	  "update": {
 	    "method": "PUT",
 	    "path": "/api/v2/numbering-series/{type}/{numberingSeriesId}",
@@ -2385,25 +2416,66 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyJsonKeys": [],
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
-	  },
-	  "listarSeriesDeNumeracionPorTipoDeDocumento": {
-	    "method": "GET",
-	    "path": "/api/v2/numbering-series/{type}",
-	    "pathParams": [
-	      {
-	        "name": "type",
-	        "key": "type"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
 	  }
 	},
 	'opportunity': {
-	  "crm": {
+	  "createLead": {
+	    "method": "POST",
+	    "path": "/api/v2/leads",
+	    "pathParams": [],
+	    "queryMap": {},
+	    "bodyMap": {
+	      "funnelId": "funnel_id",
+	      "contactId": "contact_id",
+	      "name": "name",
+	      "stageId": "stage_id",
+	      "value": "value",
+	      "potential": "potential",
+	      "dueDate": "due_date",
+	      "customFields": "custom_fields"
+	    },
+	    "bodyJsonKeys": [
+	      "customFields"
+	    ],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "createLeadNote": {
+	    "method": "POST",
+	    "path": "/api/v2/leads/{leadId}/notes",
+	    "pathParams": [
+	      {
+	        "name": "leadId",
+	        "key": "leadId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {
+	      "title": "title",
+	      "description": "description"
+	    },
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "createLeadTask": {
+	    "method": "POST",
+	    "path": "/api/v2/leads/{leadId}/tasks",
+	    "pathParams": [
+	      {
+	        "name": "leadId",
+	        "key": "leadId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {
+	      "name": "name"
+	    },
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "deleteLead": {
 	    "method": "DELETE",
 	    "path": "/api/v2/leads/{leadId}",
 	    "pathParams": [
@@ -2418,7 +2490,92 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "crm10": {
+	  "deleteLeadTask": {
+	    "method": "DELETE",
+	    "path": "/api/v2/leads/{leadId}/tasks",
+	    "pathParams": [
+	      {
+	        "name": "leadId",
+	        "key": "leadId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {
+	      "taskId": "task_id"
+	    },
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "getLead": {
+	    "method": "GET",
+	    "path": "/api/v2/leads/{leadId}",
+	    "pathParams": [
+	      {
+	        "name": "leadId",
+	        "key": "leadId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "listLeads": {
+	    "method": "GET",
+	    "path": "/api/v2/leads",
+	    "pathParams": [],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": true
+	  },
+	  "updateLead": {
+	    "method": "PUT",
+	    "path": "/api/v2/leads/{leadId}",
+	    "pathParams": [
+	      {
+	        "name": "leadId",
+	        "key": "leadId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {
+	      "funnelId": "funnel_id",
+	      "contactId": "contact_id",
+	      "name": "name",
+	      "stageId": "stage_id",
+	      "value": "value",
+	      "potential": "potential",
+	      "dueDate": "due_date",
+	      "customFields": "custom_fields"
+	    },
+	    "bodyJsonKeys": [
+	      "customFields"
+	    ],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "updateLeadDates": {
+	    "method": "PUT",
+	    "path": "/api/v2/leads/{leadId}/dates",
+	    "pathParams": [
+	      {
+	        "name": "leadId",
+	        "key": "leadId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {
+	      "date": "date"
+	    },
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "updateLeadNote": {
 	    "method": "PUT",
 	    "path": "/api/v2/leads/{leadId}/notes",
 	    "pathParams": [
@@ -2437,7 +2594,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "crm11": {
+	  "updateLeadStage": {
 	    "method": "PUT",
 	    "path": "/api/v2/leads/{leadId}/stage",
 	    "pathParams": [
@@ -2454,7 +2611,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "crm12": {
+	  "updateLeadTask": {
 	    "method": "PUT",
 	    "path": "/api/v2/leads/{leadId}/tasks",
 	    "pathParams": [
@@ -2467,147 +2624,6 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyMap": {
 	      "taskId": "task_id",
 	      "name": "name"
-	    },
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "crm2": {
-	    "method": "DELETE",
-	    "path": "/api/v2/leads/{leadId}/tasks",
-	    "pathParams": [
-	      {
-	        "name": "leadId",
-	        "key": "leadId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {
-	      "taskId": "task_id"
-	    },
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "crm3": {
-	    "method": "GET",
-	    "path": "/api/v2/leads/{leadId}",
-	    "pathParams": [
-	      {
-	        "name": "leadId",
-	        "key": "leadId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "crm4": {
-	    "method": "GET",
-	    "path": "/api/v2/leads",
-	    "pathParams": [],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": true
-	  },
-	  "crm5": {
-	    "method": "POST",
-	    "path": "/api/v2/leads",
-	    "pathParams": [],
-	    "queryMap": {},
-	    "bodyMap": {
-	      "funnelId": "funnel_id",
-	      "contactId": "contact_id",
-	      "name": "name",
-	      "stageId": "stage_id",
-	      "value": "value",
-	      "potential": "potential",
-	      "dueDate": "due_date",
-	      "customFields": "custom_fields"
-	    },
-	    "bodyJsonKeys": [
-	      "customFields"
-	    ],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "crm6": {
-	    "method": "POST",
-	    "path": "/api/v2/leads/{leadId}/notes",
-	    "pathParams": [
-	      {
-	        "name": "leadId",
-	        "key": "leadId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {
-	      "title": "title",
-	      "description": "description"
-	    },
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "crm7": {
-	    "method": "POST",
-	    "path": "/api/v2/leads/{leadId}/tasks",
-	    "pathParams": [
-	      {
-	        "name": "leadId",
-	        "key": "leadId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {
-	      "name": "name"
-	    },
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "crm8": {
-	    "method": "PUT",
-	    "path": "/api/v2/leads/{leadId}",
-	    "pathParams": [
-	      {
-	        "name": "leadId",
-	        "key": "leadId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {
-	      "funnelId": "funnel_id",
-	      "contactId": "contact_id",
-	      "name": "name",
-	      "stageId": "stage_id",
-	      "value": "value",
-	      "potential": "potential",
-	      "dueDate": "due_date",
-	      "customFields": "custom_fields"
-	    },
-	    "bodyJsonKeys": [
-	      "customFields"
-	    ],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "crm9": {
-	    "method": "PUT",
-	    "path": "/api/v2/leads/{leadId}/dates",
-	    "pathParams": [
-	      {
-	        "name": "leadId",
-	        "key": "leadId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {
-	      "date": "date"
 	    },
 	    "bodyJsonKeys": [],
 	    "bodyCsvKeys": [],
@@ -2777,51 +2793,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	  }
 	},
 	'payrollRecord': {
-	  "salaryRecord": {
-	    "method": "DELETE",
-	    "path": "/api/v2/salary-records/{salaryRecordId}",
-	    "pathParams": [
-	      {
-	        "name": "salaryRecordId",
-	        "key": "salaryRecordId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "salaryRecord2": {
-	    "method": "GET",
-	    "path": "/api/v2/salary-records/{salaryRecordId}",
-	    "pathParams": [
-	      {
-	        "name": "salaryRecordId",
-	        "key": "salaryRecordId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "salaryRecord3": {
-	    "method": "GET",
-	    "path": "/api/v2/salary-records",
-	    "pathParams": [],
-	    "queryMap": {
-	      "employeeId": "employee_id",
-	      "startDate": "start_date",
-	      "endDate": "end_date"
-	    },
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": true
-	  },
-	  "salaryRecord4": {
+	  "createSalaryRecord": {
 	    "method": "POST",
 	    "path": "/api/v2/salary-records",
 	    "pathParams": [],
@@ -2843,7 +2815,51 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    ],
 	    "collectionGet": false
 	  },
-	  "salaryRecord5": {
+	  "deleteSalaryRecord": {
+	    "method": "DELETE",
+	    "path": "/api/v2/salary-records/{salaryRecordId}",
+	    "pathParams": [
+	      {
+	        "name": "salaryRecordId",
+	        "key": "salaryRecordId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "getSalaryRecord": {
+	    "method": "GET",
+	    "path": "/api/v2/salary-records/{salaryRecordId}",
+	    "pathParams": [
+	      {
+	        "name": "salaryRecordId",
+	        "key": "salaryRecordId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "listSalaryRecords": {
+	    "method": "GET",
+	    "path": "/api/v2/salary-records",
+	    "pathParams": [],
+	    "queryMap": {
+	      "employeeId": "employee_id",
+	      "startDate": "start_date",
+	      "endDate": "end_date"
+	    },
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": true
+	  },
+	  "updateSalaryRecord": {
 	    "method": "PUT",
 	    "path": "/api/v2/salary-records/{salaryRecordId}",
 	    "pathParams": [
@@ -2872,7 +2888,20 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	  }
 	},
 	'priceList': {
-	  "pricelist": {
+	  "createPricelist": {
+	    "method": "POST",
+	    "path": "/api/v2/price-lists",
+	    "pathParams": [],
+	    "queryMap": {},
+	    "bodyMap": {
+	      "name": "name",
+	      "description": "description"
+	    },
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "deletePricelist": {
 	    "method": "DELETE",
 	    "path": "/api/v2/price-lists/{priceListId}",
 	    "pathParams": [
@@ -2887,7 +2916,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "pricelist2": {
+	  "getPricelist": {
 	    "method": "GET",
 	    "path": "/api/v2/price-lists/{priceListId}",
 	    "pathParams": [
@@ -2902,7 +2931,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "pricelist3": {
+	  "listPricelists": {
 	    "method": "GET",
 	    "path": "/api/v2/price-lists",
 	    "pathParams": [],
@@ -2912,7 +2941,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": true
 	  },
-	  "pricelist4": {
+	  "updatePricelist": {
 	    "method": "PATCH",
 	    "path": "/api/v2/price-lists/{priceListId}",
 	    "pathParams": [
@@ -2921,19 +2950,6 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	        "key": "priceListId"
 	      }
 	    ],
-	    "queryMap": {},
-	    "bodyMap": {
-	      "name": "name",
-	      "description": "description"
-	    },
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "pricelist5": {
-	    "method": "POST",
-	    "path": "/api/v2/price-lists",
-	    "pathParams": [],
 	    "queryMap": {},
 	    "bodyMap": {
 	      "name": "name",
@@ -3598,7 +3614,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "get2": {
+	  "getProjectSummary": {
 	    "method": "GET",
 	    "path": "/api/v2/projects/{projectId}/summary",
 	    "pathParams": [
@@ -3615,70 +3631,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	  }
 	},
 	'projectTimeTracking': {
-	  "projects": {
-	    "method": "DELETE",
-	    "path": "/api/v2/projects/{projectId}/times/{timeId}",
-	    "pathParams": [
-	      {
-	        "name": "projectId",
-	        "key": "projectId"
-	      },
-	      {
-	        "name": "timeId",
-	        "key": "timeId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "projects2": {
-	    "method": "GET",
-	    "path": "/api/v2/projects/{projectId}/times/{timeId}",
-	    "pathParams": [
-	      {
-	        "name": "projectId",
-	        "key": "projectId"
-	      },
-	      {
-	        "name": "timeId",
-	        "key": "timeId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "projects3": {
-	    "method": "GET",
-	    "path": "/api/v2/project-times",
-	    "pathParams": [],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": true
-	  },
-	  "projects4": {
-	    "method": "GET",
-	    "path": "/api/v2/projects/{projectId}/times",
-	    "pathParams": [
-	      {
-	        "name": "projectId",
-	        "key": "projectId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": true
-	  },
-	  "projects5": {
+	  "createProjectTime": {
 	    "method": "POST",
 	    "path": "/api/v2/projects/{projectId}/times",
 	    "pathParams": [
@@ -3701,7 +3654,70 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyCsvKeys": [],
 	    "collectionGet": false
 	  },
-	  "projects6": {
+	  "deleteProjectTime": {
+	    "method": "DELETE",
+	    "path": "/api/v2/projects/{projectId}/times/{timeId}",
+	    "pathParams": [
+	      {
+	        "name": "projectId",
+	        "key": "projectId"
+	      },
+	      {
+	        "name": "timeId",
+	        "key": "timeId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "getProjectTime": {
+	    "method": "GET",
+	    "path": "/api/v2/projects/{projectId}/times/{timeId}",
+	    "pathParams": [
+	      {
+	        "name": "projectId",
+	        "key": "projectId"
+	      },
+	      {
+	        "name": "timeId",
+	        "key": "timeId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "listAllProjectTimes": {
+	    "method": "GET",
+	    "path": "/api/v2/project-times",
+	    "pathParams": [],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": true
+	  },
+	  "listProjectTimes": {
+	    "method": "GET",
+	    "path": "/api/v2/projects/{projectId}/times",
+	    "pathParams": [
+	      {
+	        "name": "projectId",
+	        "key": "projectId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": true
+	  },
+	  "updateProjectTime": {
 	    "method": "PUT",
 	    "path": "/api/v2/projects/{projectId}/times/{timeId}",
 	    "pathParams": [
@@ -5525,47 +5541,7 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	  }
 	},
 	'task': {
-	  "projects": {
-	    "method": "DELETE",
-	    "path": "/api/v2/tasks/{taskId}",
-	    "pathParams": [
-	      {
-	        "name": "taskId",
-	        "key": "taskId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "projects2": {
-	    "method": "GET",
-	    "path": "/api/v2/tasks/{taskId}",
-	    "pathParams": [
-	      {
-	        "name": "taskId",
-	        "key": "taskId"
-	      }
-	    ],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": false
-	  },
-	  "projects3": {
-	    "method": "GET",
-	    "path": "/api/v2/tasks",
-	    "pathParams": [],
-	    "queryMap": {},
-	    "bodyMap": {},
-	    "bodyJsonKeys": [],
-	    "bodyCsvKeys": [],
-	    "collectionGet": true
-	  },
-	  "projects4": {
+	  "create": {
 	    "method": "POST",
 	    "path": "/api/v2/tasks",
 	    "pathParams": [],
@@ -5585,7 +5561,32 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    ],
 	    "collectionGet": false
 	  },
-	  "projects5": {
+	  "get": {
+	    "method": "GET",
+	    "path": "/api/v2/tasks/{taskId}",
+	    "pathParams": [
+	      {
+	        "name": "taskId",
+	        "key": "taskId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "getAll": {
+	    "method": "GET",
+	    "path": "/api/v2/tasks",
+	    "pathParams": [],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": true
+	  },
+	  "update": {
 	    "method": "PUT",
 	    "path": "/api/v2/tasks/{taskId}",
 	    "pathParams": [
@@ -5609,6 +5610,21 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	      "assignedTo"
 	    ],
 	    "collectionGet": false
+	  },
+	  "delete": {
+	    "method": "DELETE",
+	    "path": "/api/v2/tasks/{taskId}",
+	    "pathParams": [
+	      {
+	        "name": "taskId",
+	        "key": "taskId"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
 	  }
 	},
 	'tax': {
@@ -5621,6 +5637,46 @@ export const V2_CATALOG: Record<string, Record<string, V2EndpointMeta>> = {
 	    "bodyJsonKeys": [],
 	    "bodyCsvKeys": [],
 	    "collectionGet": true
+	  },
+	  "getKeysByCountry": {
+	    "method": "GET",
+	    "path": "/api/v2/taxes/keys-by-country",
+	    "pathParams": [],
+	    "queryMap": {
+	      "country": "country",
+	      "section": "section"
+	    },
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  }
+	},
+	'usage': {
+	  "get": {
+	    "method": "GET",
+	    "path": "/api/v2/usage",
+	    "pathParams": [],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
+	  },
+	  "getUsageByType": {
+	    "method": "GET",
+	    "path": "/api/v2/usage/{type}",
+	    "pathParams": [
+	      {
+	        "name": "type",
+	        "key": "type"
+	      }
+	    ],
+	    "queryMap": {},
+	    "bodyMap": {},
+	    "bodyJsonKeys": [],
+	    "bodyCsvKeys": [],
+	    "collectionGet": false
 	  }
 	},
 	'warehouse': {
@@ -8912,86 +8968,37 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Team',
-				value: 'team',
-				action: 'Team',
+				name: 'Create Employee',
+				value: 'create',
+				action: 'Create Employee',
 			},
 			{
-				name: 'Team',
-				value: 'team2',
-				action: 'Team',
+				name: 'Get Employee',
+				value: 'get',
+				action: 'Get Employee',
 			},
 			{
-				name: 'Team',
-				value: 'team3',
-				action: 'Team',
+				name: 'List Employees',
+				value: 'getAll',
+				action: 'List Employees',
 			},
 			{
-				name: 'Team',
-				value: 'team4',
-				action: 'Team',
+				name: 'Update Employee',
+				value: 'update',
+				action: 'Update Employee',
 			},
 			{
-				name: 'Team',
-				value: 'team5',
-				action: 'Team',
+				name: 'Delete Employee',
+				value: 'delete',
+				action: 'Delete Employee',
+			},
+			{
+				name: 'Get Contract',
+				value: 'getContract',
+				action: 'Get Contract',
 			},
 		],
-		default: 'team',
-	},
-	{
-		displayName: 'Employeeid',
-		name: 'employeeId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['employee'],
-				operation: ['team'],
-			},
-		},
-	},
-	{
-		displayName: 'Employeeid',
-		name: 'employeeId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['employee'],
-				operation: ['team2'],
-			},
-		},
-	},
-	{
-		displayName: 'Return All',
-		name: 'returnAll',
-		type: 'boolean',
-		default: false,
-		description: 'Whether to return all results or only up to a given limit',
-		displayOptions: {
-			show: {
-				resource: ['employee'],
-				operation: ['team3'],
-			},
-		},
-	},
-	{
-		displayName: 'Limit',
-		name: 'limit',
-		type: 'number',
-		typeOptions: { minValue: 1 },
-		default: 50,
-		description: 'Max number of results to return',
-		displayOptions: {
-			show: {
-				resource: ['employee'],
-				operation: ['team3'],
-				returnAll: [false],
-			},
-		},
+		default: 'create',
 	},
 	{
 		displayName: 'Name',
@@ -9002,7 +9009,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employee'],
-				operation: ['team4'],
+				operation: ['create'],
 			},
 		},
 	},
@@ -9015,7 +9022,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employee'],
-				operation: ['team4'],
+				operation: ['create'],
 			},
 		},
 	},
@@ -9028,7 +9035,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employee'],
-				operation: ['team4'],
+				operation: ['create'],
 			},
 		},
 	},
@@ -9041,7 +9048,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employee'],
-				operation: ['team4'],
+				operation: ['create'],
 			},
 		},
 		options: [
@@ -9129,7 +9136,48 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employee'],
-				operation: ['team5'],
+				operation: ['get'],
+			},
+		},
+	},
+	{
+		displayName: 'Return All',
+		name: 'returnAll',
+		type: 'boolean',
+		default: false,
+		description: 'Whether to return all results or only up to a given limit',
+		displayOptions: {
+			show: {
+				resource: ['employee'],
+				operation: ['getAll'],
+			},
+		},
+	},
+	{
+		displayName: 'Limit',
+		name: 'limit',
+		type: 'number',
+		typeOptions: { minValue: 1 },
+		default: 50,
+		description: 'Max number of results to return',
+		displayOptions: {
+			show: {
+				resource: ['employee'],
+				operation: ['getAll'],
+				returnAll: [false],
+			},
+		},
+	},
+	{
+		displayName: 'Employeeid',
+		name: 'employeeId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['employee'],
+				operation: ['update'],
 			},
 		},
 	},
@@ -9142,7 +9190,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employee'],
-				operation: ['team5'],
+				operation: ['update'],
 			},
 		},
 		options: [
@@ -9240,6 +9288,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		],
 	},
 	{
+		displayName: 'Employeeid',
+		name: 'employeeId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['employee'],
+				operation: ['delete'],
+			},
+		},
+	},
+	{
+		displayName: 'Employeeid',
+		name: 'employeeId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['employee'],
+				operation: ['getContract'],
+			},
+		},
+	},
+	{
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
@@ -9251,81 +9325,148 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Team',
-				value: 'team',
-				action: 'Team',
+				name: 'Clockin',
+				value: 'clockin',
+				action: 'Clockin',
 			},
 			{
-				name: 'Team',
-				value: 'team10',
-				action: 'Team',
+				name: 'Clockout',
+				value: 'clockout',
+				action: 'Clockout',
 			},
 			{
-				name: 'Team',
-				value: 'team2',
-				action: 'Team',
+				name: 'Create Employee Time',
+				value: 'createEmployeeTime',
+				action: 'Create Employee Time',
 			},
 			{
-				name: 'Team',
-				value: 'team3',
-				action: 'Team',
+				name: 'Delete Employee Time',
+				value: 'deleteEmployeeTime',
+				action: 'Delete Employee Time',
 			},
 			{
-				name: 'Team',
-				value: 'team4',
-				action: 'Team',
+				name: 'Get Employee Time',
+				value: 'getEmployeeTime',
+				action: 'Get Employee Time',
 			},
 			{
-				name: 'Team',
-				value: 'team5',
-				action: 'Team',
+				name: 'List All Employee Times',
+				value: 'listAllEmployeeTimes',
+				action: 'List All Employee Times',
 			},
 			{
-				name: 'Team',
-				value: 'team6',
-				action: 'Team',
+				name: 'List Employee Times',
+				value: 'listEmployeeTimes',
+				action: 'List Employee Times',
 			},
 			{
-				name: 'Team',
-				value: 'team7',
-				action: 'Team',
+				name: 'Pause',
+				value: 'pause',
+				action: 'Pause',
 			},
 			{
-				name: 'Team',
-				value: 'team8',
-				action: 'Team',
+				name: 'Unpause',
+				value: 'unpause',
+				action: 'Unpause',
 			},
 			{
-				name: 'Team',
-				value: 'team9',
-				action: 'Team',
+				name: 'Update Employee Time',
+				value: 'updateEmployeeTime',
+				action: 'Update Employee Time',
 			},
 		],
-		default: 'team',
+		default: 'clockin',
 	},
 	{
-		displayName: 'Timeid',
-		name: 'timeId',
+		displayName: 'Employeeid',
+		name: 'employeeId',
 		type: 'string',
 		default: '',
 		required: true,
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team'],
+				operation: ['clockin'],
 			},
 		},
 	},
 	{
-		displayName: 'Timeid',
-		name: 'timeId',
+		displayName: 'Additional Fields',
+		name: 'additionalFields',
+		type: 'collection',
+		placeholder: 'Add Field',
+		default: {},
+		displayOptions: {
+			show: {
+				resource: ['employeeTimeTracking'],
+				operation: ['clockin'],
+			},
+		},
+		options: [
+				{
+					displayName: 'Latitude',
+					name: 'latitude',
+					type: 'number',
+					default: 0
+				},
+				{
+					displayName: 'Longitude',
+					name: 'longitude',
+					type: 'number',
+					default: 0
+				}
+		],
+	},
+	{
+		displayName: 'Employeeid',
+		name: 'employeeId',
 		type: 'string',
 		default: '',
 		required: true,
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team10'],
+				operation: ['clockout'],
+			},
+		},
+	},
+	{
+		displayName: 'Additional Fields',
+		name: 'additionalFields',
+		type: 'collection',
+		placeholder: 'Add Field',
+		default: {},
+		displayOptions: {
+			show: {
+				resource: ['employeeTimeTracking'],
+				operation: ['clockout'],
+			},
+		},
+		options: [
+				{
+					displayName: 'Latitude',
+					name: 'latitude',
+					type: 'number',
+					default: 0
+				},
+				{
+					displayName: 'Longitude',
+					name: 'longitude',
+					type: 'number',
+					default: 0
+				}
+		],
+	},
+	{
+		displayName: 'Employeeid',
+		name: 'employeeId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['employeeTimeTracking'],
+				operation: ['createEmployeeTime'],
 			},
 		},
 	},
@@ -9338,7 +9479,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team10'],
+				operation: ['createEmployeeTime'],
 			},
 		},
 	},
@@ -9351,7 +9492,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team10'],
+				operation: ['createEmployeeTime'],
 			},
 		},
 	},
@@ -9364,7 +9505,20 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team2'],
+				operation: ['deleteEmployeeTime'],
+			},
+		},
+	},
+	{
+		displayName: 'Timeid',
+		name: 'timeId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['employeeTimeTracking'],
+				operation: ['getEmployeeTime'],
 			},
 		},
 	},
@@ -9377,7 +9531,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team3'],
+				operation: ['listAllEmployeeTimes'],
 			},
 		},
 	},
@@ -9391,7 +9545,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team3'],
+				operation: ['listAllEmployeeTimes'],
 				returnAll: [false],
 			},
 		},
@@ -9405,7 +9559,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team4'],
+				operation: ['listEmployeeTimes'],
 			},
 		},
 	},
@@ -9418,7 +9572,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team4'],
+				operation: ['listEmployeeTimes'],
 			},
 		},
 	},
@@ -9432,7 +9586,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team4'],
+				operation: ['listEmployeeTimes'],
 				returnAll: [false],
 			},
 		},
@@ -9446,7 +9600,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team5'],
+				operation: ['pause'],
 			},
 		},
 	},
@@ -9459,7 +9613,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team5'],
+				operation: ['pause'],
 			},
 		},
 		options: [
@@ -9486,7 +9640,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team6'],
+				operation: ['unpause'],
 			},
 		},
 	},
@@ -9499,7 +9653,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team6'],
+				operation: ['unpause'],
 			},
 		},
 		options: [
@@ -9518,15 +9672,15 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		],
 	},
 	{
-		displayName: 'Employeeid',
-		name: 'employeeId',
+		displayName: 'Timeid',
+		name: 'timeId',
 		type: 'string',
 		default: '',
 		required: true,
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team7'],
+				operation: ['updateEmployeeTime'],
 			},
 		},
 	},
@@ -9539,7 +9693,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team7'],
+				operation: ['updateEmployeeTime'],
 			},
 		},
 	},
@@ -9552,89 +9706,9 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['employeeTimeTracking'],
-				operation: ['team7'],
+				operation: ['updateEmployeeTime'],
 			},
 		},
-	},
-	{
-		displayName: 'Employeeid',
-		name: 'employeeId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['employeeTimeTracking'],
-				operation: ['team8'],
-			},
-		},
-	},
-	{
-		displayName: 'Additional Fields',
-		name: 'additionalFields',
-		type: 'collection',
-		placeholder: 'Add Field',
-		default: {},
-		displayOptions: {
-			show: {
-				resource: ['employeeTimeTracking'],
-				operation: ['team8'],
-			},
-		},
-		options: [
-				{
-					displayName: 'Latitude',
-					name: 'latitude',
-					type: 'number',
-					default: 0
-				},
-				{
-					displayName: 'Longitude',
-					name: 'longitude',
-					type: 'number',
-					default: 0
-				}
-		],
-	},
-	{
-		displayName: 'Employeeid',
-		name: 'employeeId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['employeeTimeTracking'],
-				operation: ['team9'],
-			},
-		},
-	},
-	{
-		displayName: 'Additional Fields',
-		name: 'additionalFields',
-		type: 'collection',
-		placeholder: 'Add Field',
-		default: {},
-		displayOptions: {
-			show: {
-				resource: ['employeeTimeTracking'],
-				operation: ['team9'],
-			},
-		},
-		options: [
-				{
-					displayName: 'Latitude',
-					name: 'latitude',
-					type: 'number',
-					default: 0
-				},
-				{
-					displayName: 'Longitude',
-					name: 'longitude',
-					type: 'number',
-					default: 0
-				}
-		],
 	},
 	{
 		displayName: 'Operation',
@@ -10648,86 +10722,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Expenses Account',
-				value: 'expensesAccount',
-				action: 'Expenses Account',
+				name: 'Create Expenses Account',
+				value: 'createExpensesAccount',
+				action: 'Create Expenses Account',
 			},
 			{
-				name: 'Expenses Account',
-				value: 'expensesAccount2',
-				action: 'Expenses Account',
+				name: 'Delete Expenses Account',
+				value: 'deleteExpensesAccount',
+				action: 'Delete Expenses Account',
 			},
 			{
-				name: 'Expenses Account',
-				value: 'expensesAccount3',
-				action: 'Expenses Account',
+				name: 'Get Expenses Account',
+				value: 'getExpensesAccount',
+				action: 'Get Expenses Account',
 			},
 			{
-				name: 'Expenses Account',
-				value: 'expensesAccount4',
-				action: 'Expenses Account',
+				name: 'List Expenses Accounts',
+				value: 'listExpensesAccounts',
+				action: 'List Expenses Accounts',
 			},
 			{
-				name: 'Expenses Account',
-				value: 'expensesAccount5',
-				action: 'Expenses Account',
+				name: 'Update Expenses Account',
+				value: 'updateExpensesAccount',
+				action: 'Update Expenses Account',
 			},
 		],
-		default: 'expensesAccount',
-	},
-	{
-		displayName: 'Expensesaccountid',
-		name: 'expensesAccountId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['expenseAccount'],
-				operation: ['expensesAccount'],
-			},
-		},
-	},
-	{
-		displayName: 'Expensesaccountid',
-		name: 'expensesAccountId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['expenseAccount'],
-				operation: ['expensesAccount2'],
-			},
-		},
-	},
-	{
-		displayName: 'Return All',
-		name: 'returnAll',
-		type: 'boolean',
-		default: false,
-		description: 'Whether to return all results or only up to a given limit',
-		displayOptions: {
-			show: {
-				resource: ['expenseAccount'],
-				operation: ['expensesAccount3'],
-			},
-		},
-	},
-	{
-		displayName: 'Limit',
-		name: 'limit',
-		type: 'number',
-		typeOptions: { minValue: 1 },
-		default: 50,
-		description: 'Max number of results to return',
-		displayOptions: {
-			show: {
-				resource: ['expenseAccount'],
-				operation: ['expensesAccount3'],
-				returnAll: [false],
-			},
-		},
+		default: 'createExpensesAccount',
 	},
 	{
 		displayName: 'Name',
@@ -10738,7 +10758,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['expenseAccount'],
-				operation: ['expensesAccount4'],
+				operation: ['createExpensesAccount'],
 			},
 		},
 	},
@@ -10751,7 +10771,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['expenseAccount'],
-				operation: ['expensesAccount4'],
+				operation: ['createExpensesAccount'],
 			},
 		},
 	},
@@ -10764,7 +10784,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['expenseAccount'],
-				operation: ['expensesAccount4'],
+				operation: ['createExpensesAccount'],
 			},
 		},
 		options: [
@@ -10785,7 +10805,61 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['expenseAccount'],
-				operation: ['expensesAccount5'],
+				operation: ['deleteExpensesAccount'],
+			},
+		},
+	},
+	{
+		displayName: 'Expensesaccountid',
+		name: 'expensesAccountId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['expenseAccount'],
+				operation: ['getExpensesAccount'],
+			},
+		},
+	},
+	{
+		displayName: 'Return All',
+		name: 'returnAll',
+		type: 'boolean',
+		default: false,
+		description: 'Whether to return all results or only up to a given limit',
+		displayOptions: {
+			show: {
+				resource: ['expenseAccount'],
+				operation: ['listExpensesAccounts'],
+			},
+		},
+	},
+	{
+		displayName: 'Limit',
+		name: 'limit',
+		type: 'number',
+		typeOptions: { minValue: 1 },
+		default: 50,
+		description: 'Max number of results to return',
+		displayOptions: {
+			show: {
+				resource: ['expenseAccount'],
+				operation: ['listExpensesAccounts'],
+				returnAll: [false],
+			},
+		},
+	},
+	{
+		displayName: 'Expensesaccountid',
+		name: 'expensesAccountId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['expenseAccount'],
+				operation: ['updateExpensesAccount'],
 			},
 		},
 	},
@@ -10798,7 +10872,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['expenseAccount'],
-				operation: ['expensesAccount5'],
+				operation: ['updateExpensesAccount'],
 			},
 		},
 		options: [
@@ -10828,86 +10902,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Crm',
-				value: 'crm',
-				action: 'Crm',
+				name: 'Create Funnel',
+				value: 'create',
+				action: 'Create Funnel',
 			},
 			{
-				name: 'Crm',
-				value: 'crm2',
-				action: 'Crm',
+				name: 'Get Funnel',
+				value: 'get',
+				action: 'Get Funnel',
 			},
 			{
-				name: 'Crm',
-				value: 'crm3',
-				action: 'Crm',
+				name: 'List Funnels',
+				value: 'getAll',
+				action: 'List Funnels',
 			},
 			{
-				name: 'Crm',
-				value: 'crm4',
-				action: 'Crm',
+				name: 'Update Funnel',
+				value: 'update',
+				action: 'Update Funnel',
 			},
 			{
-				name: 'Crm',
-				value: 'crm5',
-				action: 'Crm',
+				name: 'Delete Funnel',
+				value: 'delete',
+				action: 'Delete Funnel',
 			},
 		],
-		default: 'crm',
-	},
-	{
-		displayName: 'Funnelid',
-		name: 'funnelId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['funnel'],
-				operation: ['crm'],
-			},
-		},
-	},
-	{
-		displayName: 'Funnelid',
-		name: 'funnelId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['funnel'],
-				operation: ['crm2'],
-			},
-		},
-	},
-	{
-		displayName: 'Return All',
-		name: 'returnAll',
-		type: 'boolean',
-		default: false,
-		description: 'Whether to return all results or only up to a given limit',
-		displayOptions: {
-			show: {
-				resource: ['funnel'],
-				operation: ['crm3'],
-			},
-		},
-	},
-	{
-		displayName: 'Limit',
-		name: 'limit',
-		type: 'number',
-		typeOptions: { minValue: 1 },
-		default: 50,
-		description: 'Max number of results to return',
-		displayOptions: {
-			show: {
-				resource: ['funnel'],
-				operation: ['crm3'],
-				returnAll: [false],
-			},
-		},
+		default: 'create',
 	},
 	{
 		displayName: 'Name',
@@ -10918,7 +10938,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['funnel'],
-				operation: ['crm4'],
+				operation: ['create'],
 			},
 		},
 	},
@@ -10931,7 +10951,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['funnel'],
-				operation: ['crm4'],
+				operation: ['create'],
 			},
 		},
 		options: [
@@ -10953,7 +10973,48 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['funnel'],
-				operation: ['crm5'],
+				operation: ['get'],
+			},
+		},
+	},
+	{
+		displayName: 'Return All',
+		name: 'returnAll',
+		type: 'boolean',
+		default: false,
+		description: 'Whether to return all results or only up to a given limit',
+		displayOptions: {
+			show: {
+				resource: ['funnel'],
+				operation: ['getAll'],
+			},
+		},
+	},
+	{
+		displayName: 'Limit',
+		name: 'limit',
+		type: 'number',
+		typeOptions: { minValue: 1 },
+		default: 50,
+		description: 'Max number of results to return',
+		displayOptions: {
+			show: {
+				resource: ['funnel'],
+				operation: ['getAll'],
+				returnAll: [false],
+			},
+		},
+	},
+	{
+		displayName: 'Funnelid',
+		name: 'funnelId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['funnel'],
+				operation: ['update'],
 			},
 		},
 	},
@@ -10966,7 +11027,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['funnel'],
-				operation: ['crm5'],
+				operation: ['update'],
 			},
 		},
 		options: [
@@ -10984,6 +11045,19 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					description: 'Send as JSON.'
 				}
 		],
+	},
+	{
+		displayName: 'Funnelid',
+		name: 'funnelId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['funnel'],
+				operation: ['delete'],
+			},
+		},
 	},
 	{
 		displayName: 'Operation',
@@ -12268,24 +12342,24 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Numbering Series',
+				name: 'Create Numbering Series',
 				value: 'create',
-				action: 'Numbering Series',
+				action: 'Create Numbering Series',
 			},
 			{
-				name: 'Numbering Series',
+				name: 'List Numbering Series',
+				value: 'getAll',
+				action: 'List Numbering Series',
+			},
+			{
+				name: 'Update Numbering Series',
 				value: 'update',
-				action: 'Numbering Series',
+				action: 'Update Numbering Series',
 			},
 			{
-				name: 'Numbering Series',
+				name: 'Delete Numbering Series',
 				value: 'delete',
-				action: 'Numbering Series',
-			},
-			{
-				name: 'Numbering Series',
-				value: 'listarSeriesDeNumeracionPorTipoDeDocumento',
-				action: 'Numbering Series',
+				action: 'Delete Numbering Series',
 			},
 		],
 		default: 'create',
@@ -12371,6 +12445,19 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['numberingSeries'],
+				operation: ['getAll'],
+			},
+		},
+	},
+	{
+		displayName: 'Type',
+		name: 'type',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['numberingSeries'],
 				operation: ['update'],
 			},
 		},
@@ -12474,19 +12561,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: 'Type',
-		name: 'type',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['numberingSeries'],
-				operation: ['listarSeriesDeNumeracionPorTipoDeDocumento'],
-			},
-		},
-	},
-	{
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
@@ -12498,265 +12572,67 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Crm',
-				value: 'crm',
-				action: 'Crm',
+				name: 'Create Lead',
+				value: 'createLead',
+				action: 'Create Lead',
 			},
 			{
-				name: 'Crm',
-				value: 'crm10',
-				action: 'Crm',
+				name: 'Create Lead Note',
+				value: 'createLeadNote',
+				action: 'Create Lead Note',
 			},
 			{
-				name: 'Crm',
-				value: 'crm11',
-				action: 'Crm',
+				name: 'Create Lead Task',
+				value: 'createLeadTask',
+				action: 'Create Lead Task',
 			},
 			{
-				name: 'Crm',
-				value: 'crm12',
-				action: 'Crm',
+				name: 'Delete Lead',
+				value: 'deleteLead',
+				action: 'Delete Lead',
 			},
 			{
-				name: 'Crm',
-				value: 'crm2',
-				action: 'Crm',
+				name: 'Delete Lead Task',
+				value: 'deleteLeadTask',
+				action: 'Delete Lead Task',
 			},
 			{
-				name: 'Crm',
-				value: 'crm3',
-				action: 'Crm',
+				name: 'Get Lead',
+				value: 'getLead',
+				action: 'Get Lead',
 			},
 			{
-				name: 'Crm',
-				value: 'crm4',
-				action: 'Crm',
+				name: 'List Leads',
+				value: 'listLeads',
+				action: 'List Leads',
 			},
 			{
-				name: 'Crm',
-				value: 'crm5',
-				action: 'Crm',
+				name: 'Update Lead',
+				value: 'updateLead',
+				action: 'Update Lead',
 			},
 			{
-				name: 'Crm',
-				value: 'crm6',
-				action: 'Crm',
+				name: 'Update Lead Dates',
+				value: 'updateLeadDates',
+				action: 'Update Lead Dates',
 			},
 			{
-				name: 'Crm',
-				value: 'crm7',
-				action: 'Crm',
+				name: 'Update Lead Note',
+				value: 'updateLeadNote',
+				action: 'Update Lead Note',
 			},
 			{
-				name: 'Crm',
-				value: 'crm8',
-				action: 'Crm',
+				name: 'Update Lead Stage',
+				value: 'updateLeadStage',
+				action: 'Update Lead Stage',
 			},
 			{
-				name: 'Crm',
-				value: 'crm9',
-				action: 'Crm',
+				name: 'Update Lead Task',
+				value: 'updateLeadTask',
+				action: 'Update Lead Task',
 			},
 		],
-		default: 'crm',
-	},
-	{
-		displayName: 'Leadid',
-		name: 'leadId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm'],
-			},
-		},
-	},
-	{
-		displayName: 'Leadid',
-		name: 'leadId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm10'],
-			},
-		},
-	},
-	{
-		displayName: 'Note Id',
-		name: 'noteId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm10'],
-			},
-		},
-	},
-	{
-		displayName: 'Additional Fields',
-		name: 'additionalFields',
-		type: 'collection',
-		placeholder: 'Add Field',
-		default: {},
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm10'],
-			},
-		},
-		options: [
-				{
-					displayName: 'Title',
-					name: 'title',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				}
-		],
-	},
-	{
-		displayName: 'Leadid',
-		name: 'leadId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm11'],
-			},
-		},
-	},
-	{
-		displayName: 'Stage Id',
-		name: 'stageId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm11'],
-			},
-		},
-	},
-	{
-		displayName: 'Leadid',
-		name: 'leadId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm12'],
-			},
-		},
-	},
-	{
-		displayName: 'Task Id',
-		name: 'taskId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm12'],
-			},
-		},
-	},
-	{
-		displayName: 'Name',
-		name: 'name',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm12'],
-			},
-		},
-	},
-	{
-		displayName: 'Leadid',
-		name: 'leadId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm2'],
-			},
-		},
-	},
-	{
-		displayName: 'Task Id',
-		name: 'taskId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm2'],
-			},
-		},
-	},
-	{
-		displayName: 'Leadid',
-		name: 'leadId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm3'],
-			},
-		},
-	},
-	{
-		displayName: 'Return All',
-		name: 'returnAll',
-		type: 'boolean',
-		default: false,
-		description: 'Whether to return all results or only up to a given limit',
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm4'],
-			},
-		},
-	},
-	{
-		displayName: 'Limit',
-		name: 'limit',
-		type: 'number',
-		typeOptions: { minValue: 1 },
-		default: 50,
-		description: 'Max number of results to return',
-		displayOptions: {
-			show: {
-				resource: ['opportunity'],
-				operation: ['crm4'],
-				returnAll: [false],
-			},
-		},
+		default: 'createLead',
 	},
 	{
 		displayName: 'Funnel Id',
@@ -12767,7 +12643,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm5'],
+				operation: ['createLead'],
 			},
 		},
 	},
@@ -12780,7 +12656,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm5'],
+				operation: ['createLead'],
 			},
 		},
 	},
@@ -12793,7 +12669,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm5'],
+				operation: ['createLead'],
 			},
 		},
 	},
@@ -12806,7 +12682,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm5'],
+				operation: ['createLead'],
 			},
 		},
 		options: [
@@ -12852,7 +12728,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm6'],
+				operation: ['createLeadNote'],
 			},
 		},
 	},
@@ -12865,7 +12741,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm6'],
+				operation: ['createLeadNote'],
 			},
 		},
 	},
@@ -12878,7 +12754,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm6'],
+				operation: ['createLeadNote'],
 			},
 		},
 		options: [
@@ -12899,7 +12775,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm7'],
+				operation: ['createLeadTask'],
 			},
 		},
 	},
@@ -12912,7 +12788,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm7'],
+				operation: ['createLeadTask'],
 			},
 		},
 	},
@@ -12925,7 +12801,87 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm8'],
+				operation: ['deleteLead'],
+			},
+		},
+	},
+	{
+		displayName: 'Leadid',
+		name: 'leadId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['deleteLeadTask'],
+			},
+		},
+	},
+	{
+		displayName: 'Task Id',
+		name: 'taskId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['deleteLeadTask'],
+			},
+		},
+	},
+	{
+		displayName: 'Leadid',
+		name: 'leadId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['getLead'],
+			},
+		},
+	},
+	{
+		displayName: 'Return All',
+		name: 'returnAll',
+		type: 'boolean',
+		default: false,
+		description: 'Whether to return all results or only up to a given limit',
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['listLeads'],
+			},
+		},
+	},
+	{
+		displayName: 'Limit',
+		name: 'limit',
+		type: 'number',
+		typeOptions: { minValue: 1 },
+		default: 50,
+		description: 'Max number of results to return',
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['listLeads'],
+				returnAll: [false],
+			},
+		},
+	},
+	{
+		displayName: 'Leadid',
+		name: 'leadId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['updateLead'],
 			},
 		},
 	},
@@ -12938,7 +12894,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm8'],
+				operation: ['updateLead'],
 			},
 		},
 		options: [
@@ -13002,7 +12958,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm9'],
+				operation: ['updateLeadDates'],
 			},
 		},
 	},
@@ -13015,7 +12971,125 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['opportunity'],
-				operation: ['crm9'],
+				operation: ['updateLeadDates'],
+			},
+		},
+	},
+	{
+		displayName: 'Leadid',
+		name: 'leadId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['updateLeadNote'],
+			},
+		},
+	},
+	{
+		displayName: 'Note Id',
+		name: 'noteId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['updateLeadNote'],
+			},
+		},
+	},
+	{
+		displayName: 'Additional Fields',
+		name: 'additionalFields',
+		type: 'collection',
+		placeholder: 'Add Field',
+		default: {},
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['updateLeadNote'],
+			},
+		},
+		options: [
+				{
+					displayName: 'Title',
+					name: 'title',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Description',
+					name: 'description',
+					type: 'string',
+					default: ''
+				}
+		],
+	},
+	{
+		displayName: 'Leadid',
+		name: 'leadId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['updateLeadStage'],
+			},
+		},
+	},
+	{
+		displayName: 'Stage Id',
+		name: 'stageId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['updateLeadStage'],
+			},
+		},
+	},
+	{
+		displayName: 'Leadid',
+		name: 'leadId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['updateLeadTask'],
+			},
+		},
+	},
+	{
+		displayName: 'Task Id',
+		name: 'taskId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['updateLeadTask'],
+			},
+		},
+	},
+	{
+		displayName: 'Name',
+		name: 'name',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['opportunity'],
+				operation: ['updateLeadTask'],
 			},
 		},
 	},
@@ -13492,119 +13566,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Salary Record',
-				value: 'salaryRecord',
-				action: 'Salary Record',
+				name: 'Create Salary Record',
+				value: 'createSalaryRecord',
+				action: 'Create Salary Record',
 			},
 			{
-				name: 'Salary Record',
-				value: 'salaryRecord2',
-				action: 'Salary Record',
+				name: 'Delete Salary Record',
+				value: 'deleteSalaryRecord',
+				action: 'Delete Salary Record',
 			},
 			{
-				name: 'Salary Record',
-				value: 'salaryRecord3',
-				action: 'Salary Record',
+				name: 'Get Salary Record',
+				value: 'getSalaryRecord',
+				action: 'Get Salary Record',
 			},
 			{
-				name: 'Salary Record',
-				value: 'salaryRecord4',
-				action: 'Salary Record',
+				name: 'List Salary Records',
+				value: 'listSalaryRecords',
+				action: 'List Salary Records',
 			},
 			{
-				name: 'Salary Record',
-				value: 'salaryRecord5',
-				action: 'Salary Record',
+				name: 'Update Salary Record',
+				value: 'updateSalaryRecord',
+				action: 'Update Salary Record',
 			},
 		],
-		default: 'salaryRecord',
-	},
-	{
-		displayName: 'Salaryrecordid',
-		name: 'salaryRecordId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['payrollRecord'],
-				operation: ['salaryRecord'],
-			},
-		},
-	},
-	{
-		displayName: 'Salaryrecordid',
-		name: 'salaryRecordId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['payrollRecord'],
-				operation: ['salaryRecord2'],
-			},
-		},
-	},
-	{
-		displayName: 'Filters',
-		name: 'filters',
-		type: 'collection',
-		placeholder: 'Add Field',
-		default: {},
-		displayOptions: {
-			show: {
-				resource: ['payrollRecord'],
-				operation: ['salaryRecord3'],
-			},
-		},
-		options: [
-				{
-					displayName: 'Employee Id',
-					name: 'employeeId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Start Date',
-					name: 'startDate',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'End Date',
-					name: 'endDate',
-					type: 'string',
-					default: ''
-				}
-		],
-	},
-	{
-		displayName: 'Return All',
-		name: 'returnAll',
-		type: 'boolean',
-		default: false,
-		description: 'Whether to return all results or only up to a given limit',
-		displayOptions: {
-			show: {
-				resource: ['payrollRecord'],
-				operation: ['salaryRecord3'],
-			},
-		},
-	},
-	{
-		displayName: 'Limit',
-		name: 'limit',
-		type: 'number',
-		typeOptions: { minValue: 1 },
-		default: 50,
-		description: 'Max number of results to return',
-		displayOptions: {
-			show: {
-				resource: ['payrollRecord'],
-				operation: ['salaryRecord3'],
-				returnAll: [false],
-			},
-		},
+		default: 'createSalaryRecord',
 	},
 	{
 		displayName: 'Employee Id',
@@ -13615,7 +13602,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['payrollRecord'],
-				operation: ['salaryRecord4'],
+				operation: ['createSalaryRecord'],
 			},
 		},
 	},
@@ -13628,7 +13615,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['payrollRecord'],
-				operation: ['salaryRecord4'],
+				operation: ['createSalaryRecord'],
 			},
 		},
 	},
@@ -13641,7 +13628,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['payrollRecord'],
-				operation: ['salaryRecord4'],
+				operation: ['createSalaryRecord'],
 			},
 		},
 	},
@@ -13654,7 +13641,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['payrollRecord'],
-				operation: ['salaryRecord4'],
+				operation: ['createSalaryRecord'],
 			},
 		},
 	},
@@ -13667,7 +13654,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['payrollRecord'],
-				operation: ['salaryRecord4'],
+				operation: ['createSalaryRecord'],
 			},
 		},
 		options: [
@@ -13702,7 +13689,94 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['payrollRecord'],
-				operation: ['salaryRecord5'],
+				operation: ['deleteSalaryRecord'],
+			},
+		},
+	},
+	{
+		displayName: 'Salaryrecordid',
+		name: 'salaryRecordId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['payrollRecord'],
+				operation: ['getSalaryRecord'],
+			},
+		},
+	},
+	{
+		displayName: 'Filters',
+		name: 'filters',
+		type: 'collection',
+		placeholder: 'Add Field',
+		default: {},
+		displayOptions: {
+			show: {
+				resource: ['payrollRecord'],
+				operation: ['listSalaryRecords'],
+			},
+		},
+		options: [
+				{
+					displayName: 'Employee Id',
+					name: 'employeeId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Start Date',
+					name: 'startDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'End Date',
+					name: 'endDate',
+					type: 'string',
+					default: ''
+				}
+		],
+	},
+	{
+		displayName: 'Return All',
+		name: 'returnAll',
+		type: 'boolean',
+		default: false,
+		description: 'Whether to return all results or only up to a given limit',
+		displayOptions: {
+			show: {
+				resource: ['payrollRecord'],
+				operation: ['listSalaryRecords'],
+			},
+		},
+	},
+	{
+		displayName: 'Limit',
+		name: 'limit',
+		type: 'number',
+		typeOptions: { minValue: 1 },
+		default: 50,
+		description: 'Max number of results to return',
+		displayOptions: {
+			show: {
+				resource: ['payrollRecord'],
+				operation: ['listSalaryRecords'],
+				returnAll: [false],
+			},
+		},
+	},
+	{
+		displayName: 'Salaryrecordid',
+		name: 'salaryRecordId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['payrollRecord'],
+				operation: ['updateSalaryRecord'],
 			},
 		},
 	},
@@ -13715,7 +13789,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['payrollRecord'],
-				operation: ['salaryRecord5'],
+				operation: ['updateSalaryRecord'],
 			},
 		},
 		options: [
@@ -13777,32 +13851,66 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Pricelist',
-				value: 'pricelist',
-				action: 'Pricelist',
+				name: 'Create Pricelist',
+				value: 'createPricelist',
+				action: 'Create Pricelist',
 			},
 			{
-				name: 'Pricelist',
-				value: 'pricelist2',
-				action: 'Pricelist',
+				name: 'Delete Pricelist',
+				value: 'deletePricelist',
+				action: 'Delete Pricelist',
 			},
 			{
-				name: 'Pricelist',
-				value: 'pricelist3',
-				action: 'Pricelist',
+				name: 'Get Pricelist',
+				value: 'getPricelist',
+				action: 'Get Pricelist',
 			},
 			{
-				name: 'Pricelist',
-				value: 'pricelist4',
-				action: 'Pricelist',
+				name: 'List Pricelists',
+				value: 'listPricelists',
+				action: 'List Pricelists',
 			},
 			{
-				name: 'Pricelist',
-				value: 'pricelist5',
-				action: 'Pricelist',
+				name: 'Update Pricelist',
+				value: 'updatePricelist',
+				action: 'Update Pricelist',
 			},
 		],
-		default: 'pricelist',
+		default: 'createPricelist',
+	},
+	{
+		displayName: 'Name',
+		name: 'name',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['priceList'],
+				operation: ['createPricelist'],
+			},
+		},
+	},
+	{
+		displayName: 'Additional Fields',
+		name: 'additionalFields',
+		type: 'collection',
+		placeholder: 'Add Field',
+		default: {},
+		displayOptions: {
+			show: {
+				resource: ['priceList'],
+				operation: ['createPricelist'],
+			},
+		},
+		options: [
+				{
+					displayName: 'Description',
+					name: 'description',
+					type: 'string',
+					default: ''
+				}
+		],
 	},
 	{
 		displayName: 'Pricelistid',
@@ -13813,7 +13921,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['priceList'],
-				operation: ['pricelist'],
+				operation: ['deletePricelist'],
 			},
 		},
 	},
@@ -13826,7 +13934,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['priceList'],
-				operation: ['pricelist2'],
+				operation: ['getPricelist'],
 			},
 		},
 	},
@@ -13839,7 +13947,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['priceList'],
-				operation: ['pricelist3'],
+				operation: ['listPricelists'],
 			},
 		},
 	},
@@ -13853,7 +13961,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['priceList'],
-				operation: ['pricelist3'],
+				operation: ['listPricelists'],
 				returnAll: [false],
 			},
 		},
@@ -13867,7 +13975,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['priceList'],
-				operation: ['pricelist4'],
+				operation: ['updatePricelist'],
 			},
 		},
 	},
@@ -13880,7 +13988,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['priceList'],
-				operation: ['pricelist4'],
+				operation: ['updatePricelist'],
 			},
 		},
 		options: [
@@ -13890,40 +13998,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					type: 'string',
 					default: ''
 				},
-				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				}
-		],
-	},
-	{
-		displayName: 'Name',
-		name: 'name',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['priceList'],
-				operation: ['pricelist5'],
-			},
-		},
-	},
-	{
-		displayName: 'Additional Fields',
-		name: 'additionalFields',
-		type: 'collection',
-		placeholder: 'Add Field',
-		default: {},
-		displayOptions: {
-			show: {
-				resource: ['priceList'],
-				operation: ['pricelist5'],
-			},
-		},
-		options: [
 				{
 					displayName: 'Description',
 					name: 'description',
@@ -15628,34 +15702,34 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Projects',
+				name: 'Create Project',
 				value: 'create',
-				action: 'Projects',
+				action: 'Create Project',
 			},
 			{
-				name: 'Projects',
+				name: 'Get Project',
 				value: 'get',
-				action: 'Projects',
+				action: 'Get Project',
 			},
 			{
-				name: 'Projects',
+				name: 'List Projects',
 				value: 'getAll',
-				action: 'Projects',
+				action: 'List Projects',
 			},
 			{
-				name: 'Projects',
+				name: 'Update Project',
 				value: 'update',
-				action: 'Projects',
+				action: 'Update Project',
 			},
 			{
-				name: 'Projects',
+				name: 'Delete Project',
 				value: 'delete',
-				action: 'Projects',
+				action: 'Delete Project',
 			},
 			{
-				name: 'Projects',
-				value: 'get2',
-				action: 'Projects',
+				name: 'Get Project Summary',
+				value: 'getProjectSummary',
+				action: 'Get Project Summary',
 			},
 		],
 		default: 'create',
@@ -15880,7 +15954,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['project'],
-				operation: ['get2'],
+				operation: ['getProjectSummary'],
 			},
 		},
 	},
@@ -15893,7 +15967,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['project'],
-				operation: ['get2'],
+				operation: ['getProjectSummary'],
 			},
 		},
 	},
@@ -15907,7 +15981,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['project'],
-				operation: ['get2'],
+				operation: ['getProjectSummary'],
 				returnAll: [false],
 			},
 		},
@@ -15924,37 +15998,37 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Projects',
-				value: 'projects',
-				action: 'Projects',
+				name: 'Create Project Time',
+				value: 'createProjectTime',
+				action: 'Create Project Time',
 			},
 			{
-				name: 'Projects',
-				value: 'projects2',
-				action: 'Projects',
+				name: 'Delete Project Time',
+				value: 'deleteProjectTime',
+				action: 'Delete Project Time',
 			},
 			{
-				name: 'Projects',
-				value: 'projects3',
-				action: 'Projects',
+				name: 'Get Project Time',
+				value: 'getProjectTime',
+				action: 'Get Project Time',
 			},
 			{
-				name: 'Projects',
-				value: 'projects4',
-				action: 'Projects',
+				name: 'List All Project Times',
+				value: 'listAllProjectTimes',
+				action: 'List All Project Times',
 			},
 			{
-				name: 'Projects',
-				value: 'projects5',
-				action: 'Projects',
+				name: 'List Project Times',
+				value: 'listProjectTimes',
+				action: 'List Project Times',
 			},
 			{
-				name: 'Projects',
-				value: 'projects6',
-				action: 'Projects',
+				name: 'Update Project Time',
+				value: 'updateProjectTime',
+				action: 'Update Project Time',
 			},
 		],
-		default: 'projects',
+		default: 'createProjectTime',
 	},
 	{
 		displayName: 'Projectid',
@@ -15965,128 +16039,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['projectTimeTracking'],
-				operation: ['projects'],
-			},
-		},
-	},
-	{
-		displayName: 'Timeid',
-		name: 'timeId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['projectTimeTracking'],
-				operation: ['projects'],
-			},
-		},
-	},
-	{
-		displayName: 'Projectid',
-		name: 'projectId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['projectTimeTracking'],
-				operation: ['projects2'],
-			},
-		},
-	},
-	{
-		displayName: 'Timeid',
-		name: 'timeId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['projectTimeTracking'],
-				operation: ['projects2'],
-			},
-		},
-	},
-	{
-		displayName: 'Return All',
-		name: 'returnAll',
-		type: 'boolean',
-		default: false,
-		description: 'Whether to return all results or only up to a given limit',
-		displayOptions: {
-			show: {
-				resource: ['projectTimeTracking'],
-				operation: ['projects3'],
-			},
-		},
-	},
-	{
-		displayName: 'Limit',
-		name: 'limit',
-		type: 'number',
-		typeOptions: { minValue: 1 },
-		default: 50,
-		description: 'Max number of results to return',
-		displayOptions: {
-			show: {
-				resource: ['projectTimeTracking'],
-				operation: ['projects3'],
-				returnAll: [false],
-			},
-		},
-	},
-	{
-		displayName: 'Projectid',
-		name: 'projectId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['projectTimeTracking'],
-				operation: ['projects4'],
-			},
-		},
-	},
-	{
-		displayName: 'Return All',
-		name: 'returnAll',
-		type: 'boolean',
-		default: false,
-		description: 'Whether to return all results or only up to a given limit',
-		displayOptions: {
-			show: {
-				resource: ['projectTimeTracking'],
-				operation: ['projects4'],
-			},
-		},
-	},
-	{
-		displayName: 'Limit',
-		name: 'limit',
-		type: 'number',
-		typeOptions: { minValue: 1 },
-		default: 50,
-		description: 'Max number of results to return',
-		displayOptions: {
-			show: {
-				resource: ['projectTimeTracking'],
-				operation: ['projects4'],
-				returnAll: [false],
-			},
-		},
-	},
-	{
-		displayName: 'Projectid',
-		name: 'projectId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['projectTimeTracking'],
-				operation: ['projects5'],
+				operation: ['createProjectTime'],
 			},
 		},
 	},
@@ -16099,7 +16052,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['projectTimeTracking'],
-				operation: ['projects5'],
+				operation: ['createProjectTime'],
 			},
 		},
 	},
@@ -16112,7 +16065,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['projectTimeTracking'],
-				operation: ['projects5'],
+				operation: ['createProjectTime'],
 			},
 		},
 	},
@@ -16125,7 +16078,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['projectTimeTracking'],
-				operation: ['projects5'],
+				operation: ['createProjectTime'],
 			},
 		},
 		options: [
@@ -16170,7 +16123,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['projectTimeTracking'],
-				operation: ['projects6'],
+				operation: ['deleteProjectTime'],
 			},
 		},
 	},
@@ -16183,7 +16136,128 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['projectTimeTracking'],
-				operation: ['projects6'],
+				operation: ['deleteProjectTime'],
+			},
+		},
+	},
+	{
+		displayName: 'Projectid',
+		name: 'projectId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['projectTimeTracking'],
+				operation: ['getProjectTime'],
+			},
+		},
+	},
+	{
+		displayName: 'Timeid',
+		name: 'timeId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['projectTimeTracking'],
+				operation: ['getProjectTime'],
+			},
+		},
+	},
+	{
+		displayName: 'Return All',
+		name: 'returnAll',
+		type: 'boolean',
+		default: false,
+		description: 'Whether to return all results or only up to a given limit',
+		displayOptions: {
+			show: {
+				resource: ['projectTimeTracking'],
+				operation: ['listAllProjectTimes'],
+			},
+		},
+	},
+	{
+		displayName: 'Limit',
+		name: 'limit',
+		type: 'number',
+		typeOptions: { minValue: 1 },
+		default: 50,
+		description: 'Max number of results to return',
+		displayOptions: {
+			show: {
+				resource: ['projectTimeTracking'],
+				operation: ['listAllProjectTimes'],
+				returnAll: [false],
+			},
+		},
+	},
+	{
+		displayName: 'Projectid',
+		name: 'projectId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['projectTimeTracking'],
+				operation: ['listProjectTimes'],
+			},
+		},
+	},
+	{
+		displayName: 'Return All',
+		name: 'returnAll',
+		type: 'boolean',
+		default: false,
+		description: 'Whether to return all results or only up to a given limit',
+		displayOptions: {
+			show: {
+				resource: ['projectTimeTracking'],
+				operation: ['listProjectTimes'],
+			},
+		},
+	},
+	{
+		displayName: 'Limit',
+		name: 'limit',
+		type: 'number',
+		typeOptions: { minValue: 1 },
+		default: 50,
+		description: 'Max number of results to return',
+		displayOptions: {
+			show: {
+				resource: ['projectTimeTracking'],
+				operation: ['listProjectTimes'],
+				returnAll: [false],
+			},
+		},
+	},
+	{
+		displayName: 'Projectid',
+		name: 'projectId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['projectTimeTracking'],
+				operation: ['updateProjectTime'],
+			},
+		},
+	},
+	{
+		displayName: 'Timeid',
+		name: 'timeId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['projectTimeTracking'],
+				operation: ['updateProjectTime'],
 			},
 		},
 	},
@@ -16196,7 +16270,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['projectTimeTracking'],
-				operation: ['projects6'],
+				operation: ['updateProjectTime'],
 			},
 		},
 		options: [
@@ -18603,29 +18677,29 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Sales Channel',
+				name: 'Create Sales Channel',
 				value: 'create',
-				action: 'Sales Channel',
+				action: 'Create Sales Channel',
 			},
 			{
-				name: 'Sales Channel',
+				name: 'Get Sales Channel',
 				value: 'get',
-				action: 'Sales Channel',
+				action: 'Get Sales Channel',
 			},
 			{
-				name: 'Sales Channel',
+				name: 'List Sales Channels',
 				value: 'getAll',
-				action: 'Sales Channel',
+				action: 'List Sales Channels',
 			},
 			{
-				name: 'Sales Channel',
+				name: 'Update Sales Channel',
 				value: 'update',
-				action: 'Sales Channel',
+				action: 'Update Sales Channel',
 			},
 			{
-				name: 'Sales Channel',
+				name: 'Delete Sales Channel',
 				value: 'delete',
-				action: 'Sales Channel',
+				action: 'Delete Sales Channel',
 			},
 		],
 		default: 'create',
@@ -21313,86 +21387,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Projects',
-				value: 'projects',
-				action: 'Projects',
+				name: 'Create Task',
+				value: 'create',
+				action: 'Create Task',
 			},
 			{
-				name: 'Projects',
-				value: 'projects2',
-				action: 'Projects',
+				name: 'Get Task',
+				value: 'get',
+				action: 'Get Task',
 			},
 			{
-				name: 'Projects',
-				value: 'projects3',
-				action: 'Projects',
+				name: 'List Tasks',
+				value: 'getAll',
+				action: 'List Tasks',
 			},
 			{
-				name: 'Projects',
-				value: 'projects4',
-				action: 'Projects',
+				name: 'Update Task',
+				value: 'update',
+				action: 'Update Task',
 			},
 			{
-				name: 'Projects',
-				value: 'projects5',
-				action: 'Projects',
+				name: 'Delete Task',
+				value: 'delete',
+				action: 'Delete Task',
 			},
 		],
-		default: 'projects',
-	},
-	{
-		displayName: 'Taskid',
-		name: 'taskId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['task'],
-				operation: ['projects'],
-			},
-		},
-	},
-	{
-		displayName: 'Taskid',
-		name: 'taskId',
-		type: 'string',
-		default: '',
-		required: true,
-		displayOptions: {
-			show: {
-				resource: ['task'],
-				operation: ['projects2'],
-			},
-		},
-	},
-	{
-		displayName: 'Return All',
-		name: 'returnAll',
-		type: 'boolean',
-		default: false,
-		description: 'Whether to return all results or only up to a given limit',
-		displayOptions: {
-			show: {
-				resource: ['task'],
-				operation: ['projects3'],
-			},
-		},
-	},
-	{
-		displayName: 'Limit',
-		name: 'limit',
-		type: 'number',
-		typeOptions: { minValue: 1 },
-		default: 50,
-		description: 'Max number of results to return',
-		displayOptions: {
-			show: {
-				resource: ['task'],
-				operation: ['projects3'],
-				returnAll: [false],
-			},
-		},
+		default: 'create',
 	},
 	{
 		displayName: 'Project Id',
@@ -21403,7 +21423,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['task'],
-				operation: ['projects4'],
+				operation: ['create'],
 			},
 		},
 	},
@@ -21416,7 +21436,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['task'],
-				operation: ['projects4'],
+				operation: ['create'],
 			},
 		},
 	},
@@ -21429,7 +21449,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['task'],
-				operation: ['projects4'],
+				operation: ['create'],
 			},
 		},
 		options: [
@@ -21475,7 +21495,48 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['task'],
-				operation: ['projects5'],
+				operation: ['get'],
+			},
+		},
+	},
+	{
+		displayName: 'Return All',
+		name: 'returnAll',
+		type: 'boolean',
+		default: false,
+		description: 'Whether to return all results or only up to a given limit',
+		displayOptions: {
+			show: {
+				resource: ['task'],
+				operation: ['getAll'],
+			},
+		},
+	},
+	{
+		displayName: 'Limit',
+		name: 'limit',
+		type: 'number',
+		typeOptions: { minValue: 1 },
+		default: 50,
+		description: 'Max number of results to return',
+		displayOptions: {
+			show: {
+				resource: ['task'],
+				operation: ['getAll'],
+				returnAll: [false],
+			},
+		},
+	},
+	{
+		displayName: 'Taskid',
+		name: 'taskId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['task'],
+				operation: ['update'],
 			},
 		},
 	},
@@ -21488,7 +21549,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		displayOptions: {
 			show: {
 				resource: ['task'],
-				operation: ['projects5'],
+				operation: ['update'],
 			},
 		},
 		options: [
@@ -21538,6 +21599,19 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		],
 	},
 	{
+		displayName: 'Taskid',
+		name: 'taskId',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['task'],
+				operation: ['delete'],
+			},
+		},
+	},
+	{
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
@@ -21552,6 +21626,11 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				name: 'List Taxes',
 				value: 'getAll',
 				action: 'List Taxes',
+			},
+			{
+				name: 'Get Keys By Country',
+				value: 'getKeysByCountry',
+				action: 'Get Keys By Country',
 			},
 		],
 		default: 'getAll',
@@ -21581,6 +21660,70 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				resource: ['tax'],
 				operation: ['getAll'],
 				returnAll: [false],
+			},
+		},
+	},
+	{
+		displayName: 'Filters',
+		name: 'filters',
+		type: 'collection',
+		placeholder: 'Add Field',
+		default: {},
+		displayOptions: {
+			show: {
+				resource: ['tax'],
+				operation: ['getKeysByCountry'],
+			},
+		},
+		options: [
+				{
+					displayName: 'Country',
+					name: 'country',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Section',
+					name: 'section',
+					type: 'string',
+					default: ''
+				}
+		],
+	},
+	{
+		displayName: 'Operation',
+		name: 'operation',
+		type: 'options',
+		noDataExpression: true,
+		displayOptions: {
+			show: {
+				resource: ['usage'],
+			},
+		},
+		options: [
+			{
+				name: 'Get Usage',
+				value: 'get',
+				action: 'Get Usage',
+			},
+			{
+				name: 'Get Usage By Type',
+				value: 'getUsageByType',
+				action: 'Get Usage By Type',
+			},
+		],
+		default: 'get',
+	},
+	{
+		displayName: 'Type',
+		name: 'type',
+		type: 'string',
+		default: '',
+		required: true,
+		displayOptions: {
+			show: {
+				resource: ['usage'],
+				operation: ['getUsageByType'],
 			},
 		},
 	},

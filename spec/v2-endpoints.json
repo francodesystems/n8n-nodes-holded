@@ -5899,6 +5899,59 @@
         "isWebhook": false,
         "eventName": null,
         "_slug": "/es/desarrolladores/referencia-api/impuestos/listado-de-impuestos"
+      },
+      {
+        "method": "get",
+        "path": "/api/v2/taxes/keys-by-country",
+        "operationId": "get_holded_tax_ui_adapter_http_api_accounting_tax_getkeysbycountryapi__invoke",
+        "slug": "obtener-claves-de-impuesto-por-pais",
+        "summary": "Claves de impuesto por país",
+        "description": "Devuelve la lista ordenada de claves de impuesto aplicables para un país y sección de ecommerce.",
+        "permission": "accounting:taxes.read",
+        "tags": [
+          "Impuestos"
+        ],
+        "parameters": [
+          {
+            "name": "country",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Código de país ISO 3166-1 alpha-2 (p. ej. ES, FR, DE). OBLIGATORIO.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "section",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "description": "Sección de ecommerce: all, shopify, prestashop, woocommerce, amazon, wix, stripe. Por defecto all.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": null,
+        "responses": [
+          {
+            "statusCode": "200",
+            "description": "OK",
+            "contentType": "application/json",
+            "schema": {}
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "deprecated": false,
+        "isWebhook": false,
+        "eventName": null,
+        "x_collection": false,
+        "_slug": "obtener-claves-de-impuesto-por-pais"
       }
     ],
     "bandeja-de-entrada": [
@@ -66370,6 +66423,48 @@
         "isWebhook": false,
         "eventName": null,
         "_slug": "/es/desarrolladores/referencia-api/empleados/actualizar-un-empleado"
+      },
+      {
+        "method": "get",
+        "path": "/api/v2/employees/{employeeId}/contract",
+        "operationId": "get_holded_api_ui_adapter_http_api_team_employee_getcontractapi__invoke",
+        "slug": "obtener-contrato-de-empleado",
+        "summary": "Obtener contrato del empleado",
+        "description": "Devuelve todos los campos del contrato activo del empleado.",
+        "permission": "team:employees.read",
+        "tags": [
+          "Empleados"
+        ],
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "path",
+            "required": true,
+            "description": "ID del empleado (ObjectId hexadecimal de 24 caracteres)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": null,
+        "responses": [
+          {
+            "statusCode": "200",
+            "description": "OK",
+            "contentType": "application/json",
+            "schema": {}
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "deprecated": false,
+        "isWebhook": false,
+        "eventName": null,
+        "x_collection": false,
+        "_slug": "obtener-contrato-de-empleado"
       }
     ],
     "control-horario-de-empleados": [
@@ -72426,6 +72521,88 @@
         "isWebhook": false,
         "eventName": null,
         "_slug": "/es/desarrolladores/referencia-api/reservas/actualizar-una-reserva"
+      }
+    ],
+    "uso": [
+      {
+        "method": "get",
+        "path": "/api/v2/usage",
+        "operationId": "get_holded_developer_ui_adapter_http_api_developer_usage_getusageapi__invoke",
+        "slug": "obtener-uso",
+        "summary": "Obtener uso de la API",
+        "description": "Devuelve el uso de la API del mes en curso para toda la cuenta.",
+        "permission": "developers:usage.read",
+        "tags": [
+          "Uso"
+        ],
+        "parameters": [],
+        "requestBody": null,
+        "responses": [
+          {
+            "statusCode": "200",
+            "description": "OK",
+            "contentType": "application/json",
+            "schema": {}
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "deprecated": false,
+        "isWebhook": false,
+        "eventName": null,
+        "x_collection": false,
+        "_slug": "obtener-uso"
+      },
+      {
+        "method": "get",
+        "path": "/api/v2/usage/{type}",
+        "operationId": "get_holded_developer_ui_adapter_http_api_developer_usage_getusagebytypeapi__invoke",
+        "slug": "obtener-uso-por-tipo",
+        "summary": "Obtener uso por tipo",
+        "description": "Devuelve el uso de la API del mes en curso para un tipo concreto.",
+        "permission": "developers:usage.read",
+        "tags": [
+          "Uso"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "description": "Tipo de uso: automation_token, digital_signature, ai_banking_rule_suggestion, llm_tokens",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "automation_token",
+                "digital_signature",
+                "ai_banking_rule_suggestion",
+                "llm_tokens"
+              ]
+            }
+          }
+        ],
+        "requestBody": null,
+        "responses": [
+          {
+            "statusCode": "200",
+            "description": "OK",
+            "contentType": "application/json",
+            "schema": {}
+          }
+        ],
+        "security": [
+          {
+            "apiKey": []
+          }
+        ],
+        "deprecated": false,
+        "isWebhook": false,
+        "eventName": null,
+        "x_collection": false,
+        "_slug": "obtener-uso-por-tipo"
       }
     ]
   },

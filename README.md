@@ -11,7 +11,7 @@ This is an [n8n](https://n8n.io) community node that lets you use **Holded** in 
 
 > **Disclaimer**: This is an unofficial community integration. "Holded" and the Holded logo are trademarks of Holded Technologies S.L. and are used here under nominative fair use to identify the third-party service this node integrates with. This package is not affiliated with, endorsed by, or sponsored by Holded.
 
-[Installation](#installation) · [Operations](#operations) · [Credentials](#credentials) · [Compatibility](#compatibility) · [Usage](#usage) · [Resources](#resources)
+[Installation](#installation) · [Operations](#operations) · [Trigger](#trigger) · [Credentials](#credentials) · [Compatibility](#compatibility) · [Usage](#usage) · [Resources](#resources)
 
 ## Installation
 
@@ -25,7 +25,7 @@ In your n8n instance: **Settings → Community Nodes → Install**, and enter:
 
 ## Operations
 
-Targets the **Holded API v2** (current). Every v2 endpoint is exposed: **42 resources, 323 operations**. The Contact resource is hand-tuned for a polished UX (nested address, defaults collection, custom fields as JSON, multipart attachment upload/download); the rest are driven by the catalog scraped from the official Holded developers portal — each operation exposes its path parameters, query filters and request body fields as native n8n inputs.
+Targets the **Holded API v2** (current). Every v2 endpoint is exposed: **43 resources, 327 operations**. The Contact resource is hand-tuned for a polished UX (nested address, defaults collection, custom fields as JSON, multipart attachment upload/download); the rest are driven by the catalog scraped from the official Holded developers portal — each operation exposes its path parameters, query filters and request body fields as native n8n inputs.
 
 | Area | Resources |
 |---|---|
@@ -35,11 +35,28 @@ Targets the **Holded API v2** (current). Every v2 endpoint is exposed: **42 reso
 | **CRM** | Contact, Contact Group, Opportunity, Funnel, Tag, Event, Booking |
 | **Accounting** | Accounting, Payment, Payment Method, Bank Account, Expense Account, Tax, Remittance |
 | **Projects & Team** | Project, Project Time Tracking, Task, Employee, Employee Time Tracking, Payroll Record |
-| **Other** | Sales Channel, Inbox, Document |
+| **Other** | Sales Channel, Inbox, Document, Usage |
 
 For complex bodies (invoice lines, custom field arrays, etc.) the corresponding field expects JSON; the dispatcher parses it before sending. Pagination on collection GETs uses Holded's cursor (`limit` + `has_more`) and the node automatically loops when **Return All** is enabled.
 
 > **Looking for v1?** Up to v0.3.x this package shipped both v1 and v2 side by side. Starting from v0.4.0 the focus is v2 only (Holded recommends v2 for all new integrations). If you need v1 endpoints, pin `0.3.8` or open an [issue](https://github.com/francodesystems/n8n-nodes-holded/issues).
+
+## Trigger
+
+The **Holded Trigger** node starts a workflow when Holded sends a webhook — covering all **18 objects / 58 events** (`invoice.create`, `contact.update`, `stock.update`, `purchase.approve`, …).
+
+Holded webhooks are configured **manually** in the Holded dashboard (there is no API to register them), so setup is two steps:
+
+1. Add a **Holded Trigger** node and copy its **Production URL**.
+2. In Holded → **Settings → Webhooks**, paste the URL and subscribe to the events you want.
+
+Options:
+
+- **Events** — optionally restrict which events start the workflow (leave empty for all).
+- **Signature verification** — attach a **Holded Webhook** credential with the signing secret shown in Holded. When set, the node verifies the `x-holded-webhook-signature` (HMAC-SHA256) header and rejects tampered or unsigned requests with `401`.
+- **Payload Only** — output just the raw event object, or (default) wrap it with `event`, `eventId`, `accountId`, `date` and `version` metadata.
+
+`.approve` events exist only for Invoice, Credit Note, Sales Receipt, Purchase, Purchase Refund and Receipt Note; Stock only emits `stock.update`.
 
 ## Credentials
 
@@ -48,6 +65,7 @@ You need a Holded API key. Generate one in Holded → **Settings → API → Gen
 | Credential | Auth scheme | Notes |
 |---|---|---|
 | **Holded V2 API** | `Authorization: Bearer <api_key>` | Tested against `GET /api/v2/contacts?limit=1` |
+| **Holded Webhook** | Signing secret (HMAC-SHA256) | Optional. Only used by the Holded Trigger to verify webhook signatures |
 
 **v2 keys have per-scope permissions** (e.g. `contacts:contacts.read`, `contacts:contacts.write`). If a key is missing the scope a given endpoint needs, you get a `403 Forbidden`. Pick the minimum set of scopes when generating the key.
 

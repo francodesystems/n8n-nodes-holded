@@ -120,6 +120,7 @@ RESOURCE_MAP: dict[str, tuple[str, str]] = {
     "tareas": ("task", "Task"),
     "tarifas": ("priceList", "Price List"),
     "tickets-de-venta": ("salesReceipt", "Sales Receipt"),
+    "uso": ("usage", "Usage"),
 }
 
 # Atomic English verbs/adjectives that prefix operations. The walker peels them
@@ -172,6 +173,7 @@ ENGLISH_NOUNS = sorted(
         # Misc nouns
         "payment", "pdf", "pipeline", "note", "info", "type", "link", "portal",
         "items", "item", "thumbnail", "main",
+        "usage", "contract", "country", "keys",
     ],
     key=len,
     reverse=True,
@@ -254,7 +256,11 @@ def english_words_from_operationid(operation_id: str) -> list[str]:
         if len(parts) >= 2 and parts[0] == parts[1]:
             raw = parts[0]
         else:
-            raw = parts[0]  # fall back to first segment
+            # Holded operationIds are `<category>_<subresource>_<verbnoun>`,
+            # e.g. `team_employee_getemployee`. The meaningful op is the LAST
+            # segment; taking parts[0] mislabels every such op after the
+            # category ("Team", "Crm", "Projects"…).
+            raw = parts[-1]
     raw = raw.lower()
 
     vocabulary = sorted(set(ENGLISH_VERBS) | set(ENGLISH_NOUNS), key=len, reverse=True)
@@ -603,7 +609,13 @@ def emit_resource(
     for op, ep, method in [(d["op"], d["ep"], d["method"]) for d in ops_emitted]:
         show = {"resource": [resource_value], "operation": [op]}
         path = ep.get("path") or ""
-        coll_get = is_collection_get(ep)
+        # A GET whose path has no `{id}` is treated as a cursor-paginated
+        # collection. Some object-returning GETs (e.g. /usage, /taxes/
+        # keys-by-country, /employees/{id}/contract) are NOT paginated lists,
+        # so allow the spec to override via `x_collection: false`.
+        coll_get = ep.get("x_collection")
+        if coll_get is None:
+            coll_get = is_collection_get(ep)
 
         cat: dict[str, Any] = {
             "method": method,
