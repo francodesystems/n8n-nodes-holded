@@ -7,7 +7,6 @@ import type {
 	IWebhookResponseData,
 } from 'n8n-workflow';
 import { createHmac, timingSafeEqual } from 'crypto';
-import { Buffer } from 'buffer';
 
 import { HOLDED_WEBHOOK_EVENT_OPTIONS } from './v2/WebhookEvents';
 
