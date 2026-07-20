@@ -8,7 +8,6 @@ import type {
 	JsonObject,
 } from 'n8n-workflow';
 import { NodeApiError } from 'n8n-workflow';
-import { Buffer } from 'buffer';
 
 const HOLDED_V2_BASE_URL = 'https://api.holded.com/api/v2';
 

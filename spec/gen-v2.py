@@ -225,10 +225,22 @@ def to_camel(s: str) -> str:
     return parts[0].lower() + "".join(p[:1].upper() + p[1:].lower() for p in parts[1:])
 
 
+UPPER_ACRONYMS = {"pdf": "PDF", "id": "ID", "url": "URL", "vat": "VAT"}
+
+
 def to_title(s: str) -> str:
-    """kebab/snake → Title Case (display)."""
-    parts = re.split(r"[-_\s]+", s)
-    return " ".join(p[:1].upper() + p[1:].lower() for p in parts if p)
+    """kebab/snake/camelCase → Title Case (display), with acronym fixups.
+
+    Splits on separators AND camelCase boundaries so an already-camelCase
+    api key like `employeeId` becomes "Employee ID" rather than "Employeeid".
+    """
+    parts = re.split(r"[-_\s]+|(?<=[a-z0-9])(?=[A-Z])", s)
+    out: list[str] = []
+    for p in parts:
+        if not p:
+            continue
+        out.append(UPPER_ACRONYMS.get(p.lower(), p[:1].upper() + p[1:].lower()))
+    return " ".join(out)
 
 
 OPERATIONID_RE = re.compile(r"http_api_(.*?)__invoke")
@@ -295,7 +307,9 @@ def english_words_from_operationid(operation_id: str) -> list[str]:
     return fixed
 
 
-UPPER_ACRONYMS = {"pdf": "PDF", "id": "ID", "url": "URL", "vat": "VAT"}
+# Single-token verbs the walker emits glued together but which read better as
+# two words in display/action labels. The op VALUE keeps the glued camelCase.
+WORD_DISPLAY = {"clockin": "Clock In", "clockout": "Clock Out", "checkin": "Check In"}
 
 
 def english_display_from_endpoint(ep: dict) -> str:
@@ -309,7 +323,9 @@ def english_display_from_endpoint(ep: dict) -> str:
     words = english_words_from_operationid(ep.get("operationId") or "")
     if not words:
         return ep.get("slug") or ""
-    return " ".join(UPPER_ACRONYMS.get(w.lower(), w) for w in words)
+    return " ".join(
+        WORD_DISPLAY.get(w.lower(), UPPER_ACRONYMS.get(w.lower(), w)) for w in words
+    )
 
 
 def english_op_value_from_endpoint(ep: dict, resource_value: str) -> str:

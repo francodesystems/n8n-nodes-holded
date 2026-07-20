@@ -6,6 +6,7 @@ import type {
 	IWebhookFunctions,
 	IWebhookResponseData,
 } from 'n8n-workflow';
+import { NodeConnectionTypes } from 'n8n-workflow';
 import { createHmac, timingSafeEqual } from 'crypto';
 
 import { HOLDED_WEBHOOK_EVENT_OPTIONS } from './v2/WebhookEvents';
@@ -26,13 +27,19 @@ export class HoldedTrigger implements INodeType {
 		icon: 'file:holded.svg',
 		group: ['trigger'],
 		version: 1,
+		// A trigger is never usable as an AI tool. n8n's type only permits `true`
+		// (undefined already means "not a tool"), so we cast to declare it explicitly.
+		usableAsTool: false as unknown as undefined,
 		subtitle: '={{($parameter["events"] || []).length ? ($parameter["events"] || []).join(", ") : "All events"}}',
 		description: 'Starts the workflow when Holded sends a webhook',
 		defaults: {
 			name: 'Holded Trigger',
 		},
 		inputs: [],
-		outputs: ['main'],
+		// eslint-plugin-n8n-nodes-base@1.16.6 predates NodeConnectionTypes and only
+		// recognizes the 'main' string literal; the enum is the current n8n standard.
+		// eslint-disable-next-line n8n-nodes-base/node-class-description-outputs-wrong
+		outputs: [NodeConnectionTypes.Main],
 		credentials: [
 			{
 				name: 'holdedWebhookApi',

@@ -4,9 +4,9 @@ import type {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
+	JsonObject,
 } from 'n8n-workflow';
-import { NodeOperationError } from 'n8n-workflow';
-import { Buffer } from 'buffer';
+import { NodeApiError, NodeOperationError } from 'n8n-workflow';
 
 import { contactV2Fields, contactV2Operations } from './descriptions/ContactV2Description';
 import {
@@ -346,7 +346,7 @@ export class Holded implements INodeType {
 					returnData.push(...executionData);
 					continue;
 				}
-				throw error;
+				throw new NodeApiError(this.getNode(), error as JsonObject);
 			}
 		}
 
