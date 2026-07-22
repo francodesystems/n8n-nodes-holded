@@ -1,6 +1,6 @@
 {
   "name": "@francodesystems-npm/n8n-nodes-holded",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "n8n community node for Holded — the Spanish ERP / accounting platform. Full coverage of the Holded API v2 (43 resources, 327 operations) plus a webhook trigger.",
   "keywords": [
     "n8n-community-node-package",

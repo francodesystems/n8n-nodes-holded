@@ -225,7 +225,7 @@ def to_camel(s: str) -> str:
     return parts[0].lower() + "".join(p[:1].upper() + p[1:].lower() for p in parts[1:])
 
 
-UPPER_ACRONYMS = {"pdf": "PDF", "id": "ID", "url": "URL", "vat": "VAT"}
+UPPER_ACRONYMS = {"pdf": "PDF", "id": "ID", "ids": "IDs", "url": "URL", "vat": "VAT"}
 
 
 def to_title(s: str) -> str:
@@ -240,6 +240,26 @@ def to_title(s: str) -> str:
         if not p:
             continue
         out.append(UPPER_ACRONYMS.get(p.lower(), p[:1].upper() + p[1:].lower()))
+    return " ".join(out)
+
+
+def to_action(name: str) -> str:
+    """Title Case display name → sentence-cased `action` label.
+
+    n8n's `node-param-operation-option-action-miscased` rule requires actions to
+    pass its `isSentenceCase` check: capitalize only the first word, lowercase the
+    rest — but all-uppercase acronyms (PDF, ID, URL, VAT) are stripped before the
+    check, so we keep them uppercase for readability (e.g. "Get invoice PDF").
+    """
+    words = name.split()
+    out: list[str] = []
+    for w in words:
+        if w.isupper() and len(w) > 1:  # acronym like PDF / ID / IDs stays as-is
+            out.append(w)
+        else:
+            out.append(w.lower())
+    if out:
+        out[0] = out[0][:1].upper() + out[0][1:]
     return " ".join(out)
 
 
@@ -435,7 +455,11 @@ def map_body_prop_type(prop: dict) -> tuple[str, dict]:
     enum = prop.get("enum")
     extra: dict[str, Any] = {}
     if enum and t == "string":
-        extra["options"] = [{"name": to_title(str(v)), "value": str(v)} for v in enum]
+        # n8n lint (node-param-options-type-unsorted-items) requires option
+        # lists to be alphabetized by name.
+        opts = [{"name": to_title(str(v)), "value": str(v)} for v in enum]
+        opts.sort(key=lambda o: o["name"].lower())
+        extra["options"] = opts
         return "options", extra
     if fmt == "date" or fmt == "date-time":
         return "dateTime", extra
@@ -457,6 +481,22 @@ def map_body_prop_type(prop: dict) -> tuple[str, dict]:
     return "string", extra
 
 
+def refine_field_type(n8n_name: str, field_type: str) -> tuple[str, str | None]:
+    """Post-process a string field into a more specific n8n type/placeholder.
+
+    - a field literally named `color` → `color` type (colour picker); n8n lint:
+      node-param-color-type-unused.
+    - a field literally named `email` → gets an email placeholder; n8n lint:
+      node-param-placeholder-missing-email.
+    Returns (field_type, placeholder).
+    """
+    if field_type == "string" and n8n_name.lower() == "color":
+        return "color", None
+    if field_type == "string" and n8n_name == "email":
+        return field_type, "name@email.com"
+    return field_type, None
+
+
 def emit_field(
     *,
     api_key: str,
@@ -467,6 +507,7 @@ def emit_field(
     extra: dict,
     required: bool,
     show_filters: dict[str, list[str]],
+    placeholder: str | None = None,
 ) -> str:
     """Emit one INodeProperties entry as TS source."""
     parts: list[str] = []
@@ -488,17 +529,20 @@ def emit_field(
         parts.append("\t\tdefault: false,")
     elif field_type == "number":
         parts.append("\t\tdefault: 0,")
-    else:  # string, dateTime
+    else:  # string, dateTime, color
         parts.append("\t\tdefault: '',")
+    if placeholder:
+        parts.append(f"\t\tplaceholder: {js_string(placeholder)},")
     if required:
         parts.append("\t\trequired: true,")
     # Skip Spanish description from the upstream API docs; emit only the
     # JSON/CSV hint when applicable so the input format is unambiguous.
+    # (No trailing period — n8n lint: node-param-description-excess-final-period.)
     hint = extra.get("_jsonHint")
     if hint == "json":
-        parts.append(f"\t\tdescription: {js_string('Send as JSON.')},")
+        parts.append(f"\t\tdescription: {js_string('Send as JSON')},")
     elif hint == "csv":
-        parts.append(f"\t\tdescription: {js_string('Comma-separated.')},")
+        parts.append(f"\t\tdescription: {js_string('Comma-separated')},")
     show_lines = ["\t\tdisplayOptions: {", "\t\t\tshow: {"]
     for k, v in show_filters.items():
         show_lines.append(f"\t\t\t\t{k}: [{', '.join(js_string(x) for x in v)}],")
@@ -587,10 +631,24 @@ def emit_resource(
     ordered.sort(key=sort_key)
 
     # 1. Operations selector — names in English derived from operationId.
-    op_options_src = []
+    # Option display order must be alphabetical by name (n8n lint:
+    # node-param-options-type-unsorted-items), so we collect (name, block) and
+    # sort before emitting. Field emission (below) keeps CRUD order, which is
+    # irrelevant since each field is gated by its own displayOptions.
+    op_option_entries: list[tuple[str, str]] = []
     for op, ep in ordered:
-        name = english_display_from_endpoint(ep) or to_title(op)
-        action_label = name
+        display = english_display_from_endpoint(ep) or to_title(op)
+        if op == "getAll":
+            # n8n convention: the list-all operation name is exactly "Get Many"
+            # (rule node-param-option-name-wrong-for-get-many); the resource
+            # name lives in the sentence-cased action label instead.
+            tail = re.sub(r"^(List|Get All|Get)\s+", "", display).strip()
+            name = "Get Many"
+            action_src = (f"Get Many {tail}").strip()
+        else:
+            name = display
+            action_src = display
+        action_label = to_action(action_src)
         method = (ep.get("method") or "GET").upper()
         block = (
             "\t\t\t{\n"
@@ -599,8 +657,11 @@ def emit_resource(
             f"\t\t\t\taction: {js_string(action_label)},\n"
             "\t\t\t},"
         )
-        op_options_src.append(block)
+        op_option_entries.append((name, block))
         ops_emitted.append({"op": op, "ep": ep, "method": method})
+
+    op_option_entries.sort(key=lambda t: t[0].lower())
+    op_options_src = [b for _, b in op_option_entries]
 
     operations_block = (
         "\t{\n"
@@ -671,11 +732,14 @@ def emit_resource(
         required_keys = set(schema.get("required") or [])
 
         required_fields_src: list[str] = []
-        optional_fields_src: list[str] = []
+        # (display, chunk) pairs so the collection can be alphabetized by name
+        # (n8n lint: node-param-collection-type-unsorted-items).
+        optional_fields: list[tuple[str, str]] = []
         for api_key, sub in props.items():
             sub = sub or {}
             field_type, extra = map_body_prop_type(sub)
             n8n_name = to_camel(api_key) or api_key
+            field_type, placeholder = refine_field_type(n8n_name, field_type)
             display = to_title(api_key)
             desc = short(sub.get("description") or "", 220)
             example = sub.get("example")
@@ -690,6 +754,7 @@ def emit_resource(
                 extra=extra,
                 required=api_key in required_keys,
                 show_filters=show,
+                placeholder=placeholder,
             )
             if api_key in required_keys:
                 required_fields_src.append(chunk)
@@ -700,7 +765,7 @@ def emit_resource(
                     "",
                     chunk,
                 )
-                optional_fields_src.append(chunk_inner)
+                optional_fields.append((display, chunk_inner))
             cat["bodyMap"][n8n_name] = api_key
             hint = extra.get("_jsonHint")
             if hint == "json":
@@ -709,12 +774,13 @@ def emit_resource(
                 cat["bodyCsvKeys"].append(n8n_name)
 
         field_chunks.extend(required_fields_src)
-        if optional_fields_src:
+        if optional_fields:
+            optional_fields.sort(key=lambda t: t[0].lower())
             field_chunks.append(
                 emit_collection(
                     name="additionalFields",
                     display="Additional Fields",
-                    children_src=optional_fields_src,
+                    children_src=[c for _, c in optional_fields],
                     show_filters=show,
                 )
             )
@@ -722,7 +788,8 @@ def emit_resource(
         # 2c. Query params
         qparams = kept_query_params(ep)
         if qparams:
-            q_inner: list[str] = []
+            # (display, chunk) pairs — alphabetized before emission.
+            q_items: list[tuple[str, str]] = []
             for p in qparams:
                 api_key = p.get("name") or ""
                 n8n_name = to_camel(api_key) or api_key
@@ -732,29 +799,33 @@ def emit_resource(
                     "enum": p.get("enum"),
                 }
                 field_type, extra = map_body_prop_type(sub_schema)
+                field_type, placeholder = refine_field_type(n8n_name, field_type)
+                display = to_title(api_key)
                 desc = short(p.get("description") or "", 220)
                 chunk = emit_field(
                     api_key=api_key,
                     n8n_name=n8n_name,
-                    display=to_title(api_key),
+                    display=display,
                     desc=desc,
                     field_type=field_type,
                     extra=extra,
                     required=False,
                     show_filters=show,
+                    placeholder=placeholder,
                 )
                 chunk_inner = re.sub(
                     r",\n\t\tdisplayOptions: \{[\s\S]*?\n\t\t\},",
                     "",
                     chunk,
                 )
-                q_inner.append(chunk_inner)
+                q_items.append((display, chunk_inner))
                 cat["queryMap"][n8n_name] = api_key
+            q_items.sort(key=lambda t: t[0].lower())
             field_chunks.append(
                 emit_collection(
                     name="filters",
                     display="Filters",
-                    children_src=q_inner,
+                    children_src=[c for _, c in q_items],
                     show_filters=show,
                 )
             )

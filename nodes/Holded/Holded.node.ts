@@ -6,7 +6,7 @@ import type {
 	INodeTypeDescription,
 	JsonObject,
 } from 'n8n-workflow';
-import { NodeApiError, NodeOperationError } from 'n8n-workflow';
+import { NodeApiError, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
 
 import { contactV2Fields, contactV2Operations } from './descriptions/ContactV2Description';
 import {
@@ -102,14 +102,19 @@ export class Holded implements INodeType {
 		icon: 'file:holded.svg',
 		group: ['transform'],
 		version: 1,
+		usableAsTool: true,
 		subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
 		description:
 			'Interact with the Holded ERP API v2 (contacts, invoices, sales orders, products and more)',
 		defaults: {
 			name: 'Holded',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		// eslint-plugin-n8n-nodes-base@1.16.6 predates NodeConnectionTypes and only
+		// recognizes the 'main' string literal; the enum is the current n8n standard.
+		// eslint-disable-next-line n8n-nodes-base/node-class-description-inputs-wrong-regular-node
+		inputs: [NodeConnectionTypes.Main],
+		// eslint-disable-next-line n8n-nodes-base/node-class-description-outputs-wrong
+		outputs: [NodeConnectionTypes.Main],
 		credentials: [
 			{
 				name: 'holdedV2Api',
@@ -346,7 +351,7 @@ export class Holded implements INodeType {
 					returnData.push(...executionData);
 					continue;
 				}
-				throw new NodeApiError(this.getNode(), error as JsonObject);
+				throw new NodeApiError(this.getNode(), error as JsonObject, { itemIndex: i });
 			}
 		}
 

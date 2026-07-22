@@ -5796,22 +5796,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Accounting Account',
 				value: 'createAccountingAccount',
-				action: 'Create Accounting Account',
+				action: 'Create accounting account',
 			},
 			{
 				name: 'Create Ledger Entry',
 				value: 'createLedgerEntry',
-				action: 'Create Ledger Entry',
+				action: 'Create ledger entry',
 			},
 			{
 				name: 'List Accounting Accounts',
 				value: 'listAccountingAccounts',
-				action: 'List Accounting Accounts',
+				action: 'List accounting accounts',
 			},
 			{
 				name: 'List Ledger Entries',
 				value: 'listLedgerEntries',
-				action: 'List Ledger Entries',
+				action: 'List ledger entries',
 			},
 		],
 		default: 'createAccountingAccount',
@@ -5856,10 +5856,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Number',
-					name: 'number',
-					type: 'number',
-					default: 0
+					displayName: 'Color',
+					name: 'color',
+					type: 'color',
+					default: ''
 				},
 				{
 					displayName: 'Description',
@@ -5868,10 +5868,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Color',
-					name: 'color',
-					type: 'string',
-					default: ''
+					displayName: 'Number',
+					name: 'number',
+					type: 'number',
+					default: 0
 				}
 		],
 	},
@@ -5894,7 +5894,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['accounting'],
@@ -5916,14 +5916,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Notes',
-					name: 'notes',
+					displayName: 'Contact ID',
+					name: 'contactId',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Contact ID',
-					name: 'contactId',
+					displayName: 'Notes',
+					name: 'notes',
 					type: 'string',
 					default: ''
 				}
@@ -5949,12 +5949,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Start Date',
-					name: 'startDate',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'End Date',
 					name: 'endDate',
 					type: 'string',
@@ -5963,6 +5957,12 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				{
 					displayName: 'Include Empty',
 					name: 'includeEmpty',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Start Date',
+					name: 'startDate',
 					type: 'string',
 					default: ''
 				}
@@ -6010,14 +6010,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Start Date',
-					name: 'startDate',
+					displayName: 'End Date',
+					name: 'endDate',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'End Date',
-					name: 'endDate',
+					displayName: 'Start Date',
+					name: 'startDate',
 					type: 'string',
 					default: ''
 				}
@@ -6065,52 +6065,52 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Archive Banking Account',
 				value: 'archiveBankingAccount',
-				action: 'Archive Banking Account',
+				action: 'Archive banking account',
 			},
 			{
 				name: 'Create Bank Movement',
 				value: 'createBankMovement',
-				action: 'Create Bank Movement',
+				action: 'Create bank movement',
 			},
 			{
 				name: 'Create Banking Account',
 				value: 'createBankingAccount',
-				action: 'Create Banking Account',
+				action: 'Create banking account',
 			},
 			{
 				name: 'Delete Banking Account',
 				value: 'deleteBankingAccount',
-				action: 'Delete Banking Account',
+				action: 'Delete banking account',
 			},
 			{
 				name: 'Get Banking Account',
 				value: 'getBankingAccount',
-				action: 'Get Banking Account',
+				action: 'Get banking account',
 			},
 			{
 				name: 'List Banking Account Bank Movements',
 				value: 'listBankingAccountBankMovements',
-				action: 'List Banking Account Bank Movements',
+				action: 'List banking account bank movements',
 			},
 			{
 				name: 'List Banking Account Cash Movements',
 				value: 'listBankingAccountCashMovements',
-				action: 'List Banking Account Cash Movements',
+				action: 'List banking account cash movements',
 			},
 			{
 				name: 'List Banking Accounts',
 				value: 'listBankingAccounts',
-				action: 'List Banking Accounts',
+				action: 'List banking accounts',
 			},
 			{
 				name: 'Reconcile Transactionwith Document',
 				value: 'reconcileTransactionwithDocument',
-				action: 'Reconcile Transactionwith Document',
+				action: 'Reconcile transactionwith document',
 			},
 			{
 				name: 'Update Banking Account',
 				value: 'updateBankingAccount',
-				action: 'Update Banking Account',
+				action: 'Update banking account',
 			},
 		],
 		default: 'archiveBankingAccount',
@@ -6161,8 +6161,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		options: [
 			{ name: 'Bank', value: 'bank' },
 			{ name: 'Card', value: 'card' },
-			{ name: 'Gateway', value: 'gateway' },
 			{ name: 'Cash', value: 'cash' },
+			{ name: 'Gateway', value: 'gateway' },
 		],
 		default: 'bank',
 		required: true,
@@ -6187,14 +6187,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Currency',
-					name: 'currency',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Iban',
-					name: 'iban',
+					displayName: 'Account Number',
+					name: 'accountNumber',
 					type: 'string',
 					default: ''
 				},
@@ -6205,14 +6199,20 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Account Number',
-					name: 'accountNumber',
+					displayName: 'Creditor ID',
+					name: 'creditorId',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Creditor ID',
-					name: 'creditorId',
+					displayName: 'Currency',
+					name: 'currency',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Iban',
+					name: 'iban',
 					type: 'string',
 					default: ''
 				},
@@ -6277,14 +6277,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Start Date',
-					name: 'startDate',
+					displayName: 'End Date',
+					name: 'endDate',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'End Date',
-					name: 'endDate',
+					displayName: 'Start Date',
+					name: 'startDate',
 					type: 'string',
 					default: ''
 				},
@@ -6351,14 +6351,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Start Date',
-					name: 'startDate',
+					displayName: 'End Date',
+					name: 'endDate',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'End Date',
-					name: 'endDate',
+					displayName: 'Start Date',
+					name: 'startDate',
 					type: 'string',
 					default: ''
 				}
@@ -6406,14 +6406,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Type',
-					name: 'type',
+					displayName: 'Archived',
+					name: 'archived',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Archived',
-					name: 'archived',
+					displayName: 'Type',
+					name: 'type',
 					type: 'string',
 					default: ''
 				}
@@ -6491,7 +6491,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'documents',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				}
 		],
 	},
@@ -6574,12 +6574,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Iban',
-					name: 'iban',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Bic',
 					name: 'bic',
 					type: 'string',
@@ -6592,16 +6586,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Issuer ID',
-					name: 'issuerId',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Default Account',
 					name: 'defaultAccount',
 					type: 'boolean',
 					default: false
+				},
+				{
+					displayName: 'Iban',
+					name: 'iban',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Issuer ID',
+					name: 'issuerId',
+					type: 'string',
+					default: ''
 				}
 		],
 	},
@@ -6619,27 +6619,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Invoicing Forecast',
 				value: 'createInvoicingForecast',
-				action: 'Create Invoicing Forecast',
+				action: 'Create invoicing forecast',
 			},
 			{
 				name: 'Delete Invoicing Forecast',
 				value: 'deleteInvoicingForecast',
-				action: 'Delete Invoicing Forecast',
+				action: 'Delete invoicing forecast',
 			},
 			{
 				name: 'Editinvoicing Forecast',
 				value: 'editinvoicingForecast',
-				action: 'Editinvoicing Forecast',
+				action: 'Editinvoicing forecast',
 			},
 			{
 				name: 'Get Invoicing Forecast',
 				value: 'getInvoicingForecast',
-				action: 'Get Invoicing Forecast',
+				action: 'Get invoicing forecast',
 			},
 			{
 				name: 'List Invoicing Forecasts',
 				value: 'listInvoicingForecasts',
-				action: 'List Invoicing Forecasts',
+				action: 'List invoicing forecasts',
 			},
 		],
 		default: 'createInvoicingForecast',
@@ -6928,37 +6928,37 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Booking',
 				value: 'create',
-				action: 'Create Booking',
-			},
-			{
-				name: 'Get Booking',
-				value: 'get',
-				action: 'Get Booking',
-			},
-			{
-				name: 'List Bookings',
-				value: 'getAll',
-				action: 'List Bookings',
-			},
-			{
-				name: 'Update Booking',
-				value: 'update',
-				action: 'Update Booking',
+				action: 'Create booking',
 			},
 			{
 				name: 'Delete Booking',
 				value: 'delete',
-				action: 'Delete Booking',
+				action: 'Delete booking',
+			},
+			{
+				name: 'Get Booking',
+				value: 'get',
+				action: 'Get booking',
 			},
 			{
 				name: 'Get Booking Location Slots',
 				value: 'getBookingLocationSlots',
-				action: 'Get Booking Location Slots',
+				action: 'Get booking location slots',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many bookings',
 			},
 			{
 				name: 'List Booking Locations',
 				value: 'listBookingLocations',
-				action: 'List Booking Locations',
+				action: 'List booking locations',
+			},
+			{
+				name: 'Update Booking',
+				value: 'update',
+				action: 'Update booking',
 			},
 		],
 		default: 'create',
@@ -7046,7 +7046,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				}
 		],
 	},
@@ -7077,12 +7077,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Start Date',
-					name: 'startDate',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'End Date',
 					name: 'endDate',
 					type: 'string',
@@ -7103,6 +7097,12 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				{
 					displayName: 'Sort Order',
 					name: 'sortOrder',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Start Date',
+					name: 'startDate',
 					type: 'string',
 					default: ''
 				}
@@ -7163,17 +7163,17 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Date Time',
-					name: 'dateTime',
-					type: 'dateTime',
-					default: ''
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Date Time',
+					name: 'dateTime',
+					type: 'dateTime',
+					default: ''
 				}
 		],
 	},
@@ -7217,14 +7217,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Service ID',
-					name: 'serviceId',
+					displayName: 'Day',
+					name: 'day',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Day',
-					name: 'day',
+					displayName: 'Service ID',
+					name: 'serviceId',
 					type: 'string',
 					default: ''
 				}
@@ -7300,27 +7300,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Contact Group',
 				value: 'create',
-				action: 'Create Contact Group',
-			},
-			{
-				name: 'Get Contact Group',
-				value: 'get',
-				action: 'Get Contact Group',
-			},
-			{
-				name: 'List Contact Groups',
-				value: 'getAll',
-				action: 'List Contact Groups',
-			},
-			{
-				name: 'Update Contact Group',
-				value: 'update',
-				action: 'Update Contact Group',
+				action: 'Create contact group',
 			},
 			{
 				name: 'Delete Contact Group',
 				value: 'delete',
-				action: 'Delete Contact Group',
+				action: 'Delete contact group',
+			},
+			{
+				name: 'Get Contact Group',
+				value: 'get',
+				action: 'Get contact group',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many contact groups',
+			},
+			{
+				name: 'Update Contact Group',
+				value: 'update',
+				action: 'Update contact group',
 			},
 		],
 		default: 'create',
@@ -7352,14 +7352,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
+					displayName: 'Color',
+					name: 'color',
+					type: 'color',
 					default: ''
 				},
 				{
-					displayName: 'Color',
-					name: 'color',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				}
@@ -7433,9 +7433,9 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
-					type: 'string',
+					displayName: 'Color',
+					name: 'color',
+					type: 'color',
 					default: ''
 				},
 				{
@@ -7445,8 +7445,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Color',
-					name: 'color',
+					displayName: 'Name',
+					name: 'name',
 					type: 'string',
 					default: ''
 				}
@@ -7479,67 +7479,67 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Approve Creditnote',
 				value: 'approveCreditnote',
-				action: 'Approve Creditnote',
+				action: 'Approve creditnote',
 			},
 			{
 				name: 'Attach Creditnote File',
 				value: 'attachCreditnoteFile',
-				action: 'Attach Creditnote File',
+				action: 'Attach creditnote file',
 			},
 			{
 				name: 'Create Creditnote',
 				value: 'createCreditnote',
-				action: 'Create Creditnote',
+				action: 'Create creditnote',
 			},
 			{
 				name: 'Create Creditnote Payment',
 				value: 'createCreditnotePayment',
-				action: 'Create Creditnote Payment',
+				action: 'Create creditnote payment',
 			},
 			{
 				name: 'Delete Creditnote',
 				value: 'deleteCreditnote',
-				action: 'Delete Creditnote',
+				action: 'Delete creditnote',
 			},
 			{
 				name: 'Get Creditnote',
 				value: 'getCreditnote',
-				action: 'Get Creditnote',
+				action: 'Get creditnote',
 			},
 			{
 				name: 'Get Creditnote Attachment',
 				value: 'getCreditnoteAttachment',
-				action: 'Get Creditnote Attachment',
+				action: 'Get creditnote attachment',
 			},
 			{
 				name: 'Get Creditnote PDF',
 				value: 'getCreditnotePdf',
-				action: 'Get Creditnote PDF',
+				action: 'Get creditnote PDF',
 			},
 			{
 				name: 'List Creditnote Attachments',
 				value: 'listCreditnoteAttachments',
-				action: 'List Creditnote Attachments',
+				action: 'List creditnote attachments',
 			},
 			{
 				name: 'List Creditnotes',
 				value: 'listCreditnotes',
-				action: 'List Creditnotes',
+				action: 'List creditnotes',
 			},
 			{
 				name: 'Send Creditnote',
 				value: 'sendCreditnote',
-				action: 'Send Creditnote',
+				action: 'Send creditnote',
 			},
 			{
 				name: 'Set Creditnote Pipeline',
 				value: 'setCreditnotePipeline',
-				action: 'Set Creditnote Pipeline',
+				action: 'Set creditnote pipeline',
 			},
 			{
 				name: 'Update Creditnote',
 				value: 'updateCreditnote',
-				action: 'Update Creditnote',
+				action: 'Update creditnote',
 			},
 		],
 		default: 'approveCreditnote',
@@ -7610,7 +7610,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['creditNote'],
@@ -7632,44 +7632,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Contact Name',
-					name: 'contactName',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Body',
 					name: 'body',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Language',
-					name: 'language',
+					displayName: 'Contact Name',
+					name: 'contactName',
 					type: 'string',
 					default: ''
 				},
@@ -7686,34 +7656,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sales Channel ID',
-					name: 'salesChannelId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -7724,14 +7681,57 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
-					displayName: 'Project ID',
-					name: 'projectId',
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
 					type: 'string',
 					default: ''
 				},
 				{
 					displayName: 'Payment Method ID',
 					name: 'paymentMethodId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Project ID',
+					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sales Channel ID',
+					name: 'salesChannelId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -7776,14 +7776,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Treasury ID',
-					name: 'treasuryId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
+					displayName: 'Treasury ID',
+					name: 'treasuryId',
 					type: 'string',
 					default: ''
 				}
@@ -7937,20 +7937,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Approval Status',
+					name: 'approvalStatus',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Contact ID',
 					name: 'contactId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Status',
-					name: 'status',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Start Date',
-					name: 'startDate',
 					type: 'string',
 					default: ''
 				},
@@ -7967,8 +7961,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Approval Status',
-					name: 'approvalStatus',
+					displayName: 'Start Date',
+					name: 'startDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				}
@@ -8021,7 +8021,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Comma-separated.',
+		description: 'Comma-separated',
 		displayOptions: {
 			show: {
 				resource: ['creditNote'],
@@ -8043,8 +8043,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Subject',
-					name: 'subject',
+					displayName: 'Bcc',
+					name: 'bcc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Cc',
+					name: 'cc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Mail Template ID',
+					name: 'mailTemplateId',
 					type: 'string',
 					default: ''
 				},
@@ -8055,24 +8069,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Mail Template ID',
-					name: 'mailTemplateId',
+					displayName: 'Subject',
+					name: 'subject',
 					type: 'string',
 					default: ''
-				},
-				{
-					displayName: 'Cc',
-					name: 'cc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Bcc',
-					name: 'bcc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
 				}
 		],
 	},
@@ -8162,67 +8162,67 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Approve Waybill',
 				value: 'approveWaybill',
-				action: 'Approve Waybill',
+				action: 'Approve waybill',
 			},
 			{
 				name: 'Attach Waybill File',
 				value: 'attachWaybillFile',
-				action: 'Attach Waybill File',
+				action: 'Attach waybill file',
 			},
 			{
 				name: 'Create Waybill',
 				value: 'createWaybill',
-				action: 'Create Waybill',
+				action: 'Create waybill',
 			},
 			{
 				name: 'Delete Waybill',
 				value: 'deleteWaybill',
-				action: 'Delete Waybill',
+				action: 'Delete waybill',
 			},
 			{
 				name: 'Get Waybill',
 				value: 'getWaybill',
-				action: 'Get Waybill',
+				action: 'Get waybill',
 			},
 			{
 				name: 'Get Waybill Attachment',
 				value: 'getWaybillAttachment',
-				action: 'Get Waybill Attachment',
+				action: 'Get waybill attachment',
 			},
 			{
 				name: 'Get Waybill PDF',
 				value: 'getWaybillPdf',
-				action: 'Get Waybill PDF',
+				action: 'Get waybill PDF',
 			},
 			{
 				name: 'List Waybill Attachments',
 				value: 'listWaybillAttachments',
-				action: 'List Waybill Attachments',
+				action: 'List waybill attachments',
 			},
 			{
 				name: 'List Waybills',
 				value: 'listWaybills',
-				action: 'List Waybills',
+				action: 'List waybills',
 			},
 			{
 				name: 'Send Waybill',
 				value: 'sendWaybill',
-				action: 'Send Waybill',
+				action: 'Send waybill',
 			},
 			{
 				name: 'Set Waybill Pipeline',
 				value: 'setWaybillPipeline',
-				action: 'Set Waybill Pipeline',
+				action: 'Set waybill pipeline',
 			},
 			{
 				name: 'Update Waybill',
 				value: 'updateWaybill',
-				action: 'Update Waybill',
+				action: 'Update waybill',
 			},
 			{
 				name: 'Update Waybill Tracking',
 				value: 'updateWaybillTracking',
-				action: 'Update Waybill Tracking',
+				action: 'Update waybill tracking',
 			},
 		],
 		default: 'approveWaybill',
@@ -8293,7 +8293,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['deliveryNote'],
@@ -8321,36 +8321,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Currency',
 					name: 'currency',
 					type: 'string',
@@ -8363,34 +8333,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sales Channel ID',
-					name: 'salesChannelId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -8401,8 +8358,51 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Project ID',
 					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sales Channel ID',
+					name: 'salesChannelId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -8562,8 +8562,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Status',
-					name: 'status',
+					displayName: 'End Date',
+					name: 'endDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sort',
+					name: 'sort',
 					type: 'string',
 					default: ''
 				},
@@ -8574,14 +8580,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'End Date',
-					name: 'endDate',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sort',
-					name: 'sort',
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				}
@@ -8634,7 +8634,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Comma-separated.',
+		description: 'Comma-separated',
 		displayOptions: {
 			show: {
 				resource: ['deliveryNote'],
@@ -8656,8 +8656,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Subject',
-					name: 'subject',
+					displayName: 'Bcc',
+					name: 'bcc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Cc',
+					name: 'cc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Mail Template ID',
+					name: 'mailTemplateId',
 					type: 'string',
 					default: ''
 				},
@@ -8668,24 +8682,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Mail Template ID',
-					name: 'mailTemplateId',
+					displayName: 'Subject',
+					name: 'subject',
 					type: 'string',
 					default: ''
-				},
-				{
-					displayName: 'Cc',
-					name: 'cc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Bcc',
-					name: 'bcc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
 				}
 		],
 	},
@@ -8788,6 +8788,24 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Delivery Date',
+					name: 'deliveryDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Internal Notes',
+					name: 'internalNotes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Pickup Date',
+					name: 'pickupDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
 					displayName: 'Tracking Key',
 					name: 'trackingKey',
 					type: 'string',
@@ -8802,24 +8820,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				{
 					displayName: 'Tracking Number',
 					name: 'trackingNumber',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Pickup Date',
-					name: 'pickupDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Delivery Date',
-					name: 'deliveryDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Internal Notes',
-					name: 'internalNotes',
 					type: 'string',
 					default: ''
 				}
@@ -8839,7 +8839,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Convert Document',
 				value: 'convert',
-				action: 'Convert Document',
+				action: 'Convert document',
 			},
 		],
 		default: 'convert',
@@ -8849,17 +8849,17 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		name: 'sourceType',
 		type: 'options',
 		options: [
-			{ name: 'Invoice', value: 'invoice' },
 			{ name: 'Creditnote', value: 'creditnote' },
 			{ name: 'Estimate', value: 'estimate' },
-			{ name: 'Salesorder', value: 'salesorder' },
-			{ name: 'Salesreceipt', value: 'salesreceipt' },
-			{ name: 'Purchase', value: 'purchase' },
+			{ name: 'Invoice', value: 'invoice' },
 			{ name: 'Order', value: 'order' },
 			{ name: 'Proform', value: 'proform' },
+			{ name: 'Purchase', value: 'purchase' },
+			{ name: 'Salesorder', value: 'salesorder' },
+			{ name: 'Salesreceipt', value: 'salesreceipt' },
 			{ name: 'Waybill', value: 'waybill' },
 		],
-		default: 'invoice',
+		default: 'creditnote',
 		required: true,
 		displayOptions: {
 			show: {
@@ -8886,17 +8886,17 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		name: 'targetType',
 		type: 'options',
 		options: [
-			{ name: 'Invoice', value: 'invoice' },
 			{ name: 'Creditnote', value: 'creditnote' },
 			{ name: 'Estimate', value: 'estimate' },
-			{ name: 'Salesorder', value: 'salesorder' },
-			{ name: 'Salesreceipt', value: 'salesreceipt' },
-			{ name: 'Purchase', value: 'purchase' },
+			{ name: 'Invoice', value: 'invoice' },
 			{ name: 'Order', value: 'order' },
 			{ name: 'Proform', value: 'proform' },
+			{ name: 'Purchase', value: 'purchase' },
+			{ name: 'Salesorder', value: 'salesorder' },
+			{ name: 'Salesreceipt', value: 'salesreceipt' },
 			{ name: 'Waybill', value: 'waybill' },
 		],
-		default: 'invoice',
+		default: 'creditnote',
 		required: true,
 		displayOptions: {
 			show: {
@@ -8925,21 +8925,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Description',
 					name: 'description',
 					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Draft',
+					name: 'draft',
+					type: 'boolean',
+					default: false
+				},
+				{
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
 					default: ''
 				},
 				{
@@ -8949,10 +8949,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Draft',
-					name: 'draft',
-					type: 'boolean',
-					default: false
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
+					type: 'string',
+					default: ''
 				}
 		],
 	},
@@ -8970,32 +8970,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Employee',
 				value: 'create',
-				action: 'Create Employee',
-			},
-			{
-				name: 'Get Employee',
-				value: 'get',
-				action: 'Get Employee',
-			},
-			{
-				name: 'List Employees',
-				value: 'getAll',
-				action: 'List Employees',
-			},
-			{
-				name: 'Update Employee',
-				value: 'update',
-				action: 'Update Employee',
+				action: 'Create employee',
 			},
 			{
 				name: 'Delete Employee',
 				value: 'delete',
-				action: 'Delete Employee',
+				action: 'Delete employee',
 			},
 			{
 				name: 'Get Contract',
 				value: 'getContract',
-				action: 'Get Contract',
+				action: 'Get contract',
+			},
+			{
+				name: 'Get Employee',
+				value: 'get',
+				action: 'Get employee',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many employees',
+			},
+			{
+				name: 'Update Employee',
+				value: 'update',
+				action: 'Update employee',
 			},
 		],
 		default: 'create',
@@ -9031,6 +9031,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		name: 'email',
 		type: 'string',
 		default: '',
+		placeholder: 'name@email.com',
 		required: true,
 		displayOptions: {
 			show: {
@@ -9053,20 +9054,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Workplace ID',
-					name: 'workplaceId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Phone',
-					name: 'phone',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Mobile',
-					name: 'mobile',
+					displayName: 'Code',
+					name: 'code',
 					type: 'string',
 					default: ''
 				},
@@ -9083,8 +9072,20 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
+					displayName: 'Iban',
+					name: 'iban',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Main Language',
 					name: 'mainLanguage',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Mobile',
+					name: 'mobile',
 					type: 'string',
 					default: ''
 				},
@@ -9095,20 +9096,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Code',
-					name: 'code',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Social Security Number',
-					name: 'socialSecurityNumber',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Iban',
-					name: 'iban',
+					displayName: 'Phone',
+					name: 'phone',
 					type: 'string',
 					default: ''
 				},
@@ -9119,11 +9108,23 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Team Ids',
+					displayName: 'Social Security Number',
+					name: 'socialSecurityNumber',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Team IDs',
 					name: 'teamIds',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Workplace ID',
+					name: 'workplaceId',
+					type: 'string',
+					default: ''
 				}
 		],
 	},
@@ -9195,38 +9196,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Last Name',
-					name: 'lastName',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Email',
-					name: 'email',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Workplace ID',
-					name: 'workplaceId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Phone',
-					name: 'phone',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Mobile',
-					name: 'mobile',
+					displayName: 'Code',
+					name: 'code',
 					type: 'string',
 					default: ''
 				},
@@ -9237,32 +9208,15 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
+					displayName: 'Email',
+					name: 'email',
+					type: 'string',
+					default: '',
+					placeholder: 'name@email.com'
+				},
+				{
 					displayName: 'Gender',
 					name: 'gender',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Main Language',
-					name: 'mainLanguage',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Nationality',
-					name: 'nationality',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Code',
-					name: 'code',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Social Security Number',
-					name: 'socialSecurityNumber',
 					type: 'string',
 					default: ''
 				},
@@ -9273,17 +9227,65 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
+					displayName: 'Last Name',
+					name: 'lastName',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Main Language',
+					name: 'mainLanguage',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Mobile',
+					name: 'mobile',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Name',
+					name: 'name',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Nationality',
+					name: 'nationality',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Phone',
+					name: 'phone',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Reporting To',
 					name: 'reportingTo',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Team Ids',
+					displayName: 'Social Security Number',
+					name: 'socialSecurityNumber',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Team IDs',
 					name: 'teamIds',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Workplace ID',
+					name: 'workplaceId',
+					type: 'string',
+					default: ''
 				}
 		],
 	},
@@ -9327,37 +9329,37 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Clock In',
 				value: 'clockin',
-				action: 'Clock In',
+				action: 'Clock in',
 			},
 			{
 				name: 'Clock Out',
 				value: 'clockout',
-				action: 'Clock Out',
+				action: 'Clock out',
 			},
 			{
 				name: 'Create Employee Time',
 				value: 'createEmployeeTime',
-				action: 'Create Employee Time',
+				action: 'Create employee time',
 			},
 			{
 				name: 'Delete Employee Time',
 				value: 'deleteEmployeeTime',
-				action: 'Delete Employee Time',
+				action: 'Delete employee time',
 			},
 			{
 				name: 'Get Employee Time',
 				value: 'getEmployeeTime',
-				action: 'Get Employee Time',
+				action: 'Get employee time',
 			},
 			{
 				name: 'List All Employee Times',
 				value: 'listAllEmployeeTimes',
-				action: 'List All Employee Times',
+				action: 'List all employee times',
 			},
 			{
 				name: 'List Employee Times',
 				value: 'listEmployeeTimes',
-				action: 'List Employee Times',
+				action: 'List employee times',
 			},
 			{
 				name: 'Pause',
@@ -9372,7 +9374,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Update Employee Time',
 				value: 'updateEmployeeTime',
-				action: 'Update Employee Time',
+				action: 'Update employee time',
 			},
 		],
 		default: 'clockin',
@@ -9722,69 +9724,69 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Create Estimate',
-				value: 'create',
-				action: 'Create Estimate',
-			},
-			{
-				name: 'Get Estimate',
-				value: 'get',
-				action: 'Get Estimate',
-			},
-			{
-				name: 'List Estimates',
-				value: 'getAll',
-				action: 'List Estimates',
-			},
-			{
-				name: 'Update Estimate',
-				value: 'update',
-				action: 'Update Estimate',
-			},
-			{
-				name: 'Delete Estimate',
-				value: 'delete',
-				action: 'Delete Estimate',
-			},
-			{
 				name: 'Accept Estimate',
 				value: 'accept',
-				action: 'Accept Estimate',
+				action: 'Accept estimate',
 			},
 			{
 				name: 'Attach Estimate File',
 				value: 'attachEstimateFile',
-				action: 'Attach Estimate File',
+				action: 'Attach estimate file',
+			},
+			{
+				name: 'Create Estimate',
+				value: 'create',
+				action: 'Create estimate',
+			},
+			{
+				name: 'Delete Estimate',
+				value: 'delete',
+				action: 'Delete estimate',
+			},
+			{
+				name: 'Get Estimate',
+				value: 'get',
+				action: 'Get estimate',
 			},
 			{
 				name: 'Get Estimate Attachment',
 				value: 'getEstimateAttachment',
-				action: 'Get Estimate Attachment',
+				action: 'Get estimate attachment',
 			},
 			{
 				name: 'Get Estimate PDF',
 				value: 'getEstimatePdf',
-				action: 'Get Estimate PDF',
+				action: 'Get estimate PDF',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many estimates',
 			},
 			{
 				name: 'List Estimate Attachments',
 				value: 'listEstimateAttachments',
-				action: 'List Estimate Attachments',
+				action: 'List estimate attachments',
 			},
 			{
 				name: 'Reject Estimate',
 				value: 'reject',
-				action: 'Reject Estimate',
+				action: 'Reject estimate',
 			},
 			{
 				name: 'Send Estimate',
 				value: 'send',
-				action: 'Send Estimate',
+				action: 'Send estimate',
 			},
 			{
 				name: 'Set Estimate Pipeline',
 				value: 'setEstimatePipeline',
-				action: 'Set Estimate Pipeline',
+				action: 'Set estimate pipeline',
+			},
+			{
+				name: 'Update Estimate',
+				value: 'update',
+				action: 'Update estimate',
 			},
 		],
 		default: 'create',
@@ -9808,7 +9810,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['estimate'],
@@ -9836,36 +9838,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Currency',
 					name: 'currency',
 					type: 'string',
@@ -9878,34 +9850,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sales Channel ID',
-					name: 'salesChannelId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -9916,14 +9875,57 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
-					displayName: 'Project ID',
-					name: 'projectId',
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
 					type: 'string',
 					default: ''
 				},
 				{
 					displayName: 'Payment Method ID',
 					name: 'paymentMethodId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Project ID',
+					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sales Channel ID',
+					name: 'salesChannelId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -9956,20 +9958,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Approval Status',
+					name: 'approvalStatus',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Contact ID',
 					name: 'contactId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Status',
-					name: 'status',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Start Date',
-					name: 'startDate',
 					type: 'string',
 					default: ''
 				},
@@ -9986,8 +9982,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Approval Status',
-					name: 'approvalStatus',
+					displayName: 'Start Date',
+					name: 'startDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				}
@@ -10107,14 +10109,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
+					displayName: 'Comment',
+					name: 'comment',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Comment',
-					name: 'comment',
+					displayName: 'Name',
+					name: 'name',
 					type: 'string',
 					default: ''
 				}
@@ -10289,14 +10291,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
+					displayName: 'Comment',
+					name: 'comment',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Comment',
-					name: 'comment',
+					displayName: 'Name',
+					name: 'name',
 					type: 'string',
 					default: ''
 				}
@@ -10321,7 +10323,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Comma-separated.',
+		description: 'Comma-separated',
 		displayOptions: {
 			show: {
 				resource: ['estimate'],
@@ -10343,8 +10345,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Subject',
-					name: 'subject',
+					displayName: 'Bcc',
+					name: 'bcc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Cc',
+					name: 'cc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Mail Template ID',
+					name: 'mailTemplateId',
 					type: 'string',
 					default: ''
 				},
@@ -10355,24 +10371,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Mail Template ID',
-					name: 'mailTemplateId',
+					displayName: 'Subject',
+					name: 'subject',
 					type: 'string',
 					default: ''
-				},
-				{
-					displayName: 'Cc',
-					name: 'cc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Bcc',
-					name: 'bcc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
 				}
 		],
 	},
@@ -10416,27 +10418,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Event',
 				value: 'create',
-				action: 'Create Event',
-			},
-			{
-				name: 'Get Event',
-				value: 'get',
-				action: 'Get Event',
-			},
-			{
-				name: 'List Events',
-				value: 'getAll',
-				action: 'List Events',
-			},
-			{
-				name: 'Update Event',
-				value: 'update',
-				action: 'Update Event',
+				action: 'Create event',
 			},
 			{
 				name: 'Delete Event',
 				value: 'delete',
-				action: 'Delete Event',
+				action: 'Delete event',
+			},
+			{
+				name: 'Get Event',
+				value: 'get',
+				action: 'Get event',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many events',
+			},
+			{
+				name: 'Update Event',
+				value: 'update',
+				action: 'Update event',
 			},
 		],
 		default: 'create',
@@ -10481,12 +10483,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'User ID',
-					name: 'userId',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Contact ID',
 					name: 'contactId',
 					type: 'string',
@@ -10499,16 +10495,16 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Kind',
-					name: 'kind',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Description',
 					name: 'description',
 					type: 'string',
 					default: ''
+				},
+				{
+					displayName: 'Duration',
+					name: 'duration',
+					type: 'number',
+					default: 0
 				},
 				{
 					displayName: 'End Date',
@@ -10517,10 +10513,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Duration',
-					name: 'duration',
-					type: 'number',
-					default: 0
+					displayName: 'Kind',
+					name: 'kind',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Lead ID',
+					name: 'leadId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Location',
+					name: 'location',
+					type: 'string',
+					default: ''
 				},
 				{
 					displayName: 'Status',
@@ -10533,17 +10541,11 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'tags',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
+					description: 'Comma-separated'
 				},
 				{
-					displayName: 'Lead ID',
-					name: 'leadId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Location',
-					name: 'location',
+					displayName: 'User ID',
+					name: 'userId',
 					type: 'string',
 					default: ''
 				}
@@ -10617,18 +10619,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'User ID',
-					name: 'userId',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Contact ID',
 					name: 'contactId',
 					type: 'string',
@@ -10641,22 +10631,16 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Kind',
-					name: 'kind',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Description',
 					name: 'description',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Start Date',
-					name: 'startDate',
-					type: 'dateTime',
-					default: ''
+					displayName: 'Duration',
+					name: 'duration',
+					type: 'number',
+					default: 0
 				},
 				{
 					displayName: 'End Date',
@@ -10665,10 +10649,34 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Duration',
-					name: 'duration',
-					type: 'number',
-					default: 0
+					displayName: 'Kind',
+					name: 'kind',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Lead ID',
+					name: 'leadId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Location',
+					name: 'location',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Name',
+					name: 'name',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Start Date',
+					name: 'startDate',
+					type: 'dateTime',
+					default: ''
 				},
 				{
 					displayName: 'Status',
@@ -10681,17 +10689,11 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'tags',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
+					description: 'Comma-separated'
 				},
 				{
-					displayName: 'Lead ID',
-					name: 'leadId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Location',
-					name: 'location',
+					displayName: 'User ID',
+					name: 'userId',
 					type: 'string',
 					default: ''
 				}
@@ -10724,27 +10726,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Expenses Account',
 				value: 'createExpensesAccount',
-				action: 'Create Expenses Account',
+				action: 'Create expenses account',
 			},
 			{
 				name: 'Delete Expenses Account',
 				value: 'deleteExpensesAccount',
-				action: 'Delete Expenses Account',
+				action: 'Delete expenses account',
 			},
 			{
 				name: 'Get Expenses Account',
 				value: 'getExpensesAccount',
-				action: 'Get Expenses Account',
+				action: 'Get expenses account',
 			},
 			{
 				name: 'List Expenses Accounts',
 				value: 'listExpensesAccounts',
-				action: 'List Expenses Accounts',
+				action: 'List expenses accounts',
 			},
 			{
 				name: 'Update Expenses Account',
 				value: 'updateExpensesAccount',
-				action: 'Update Expenses Account',
+				action: 'Update expenses account',
 			},
 		],
 		default: 'createExpensesAccount',
@@ -10791,7 +10793,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				{
 					displayName: 'Color',
 					name: 'color',
-					type: 'string',
+					type: 'color',
 					default: ''
 				}
 		],
@@ -10877,14 +10879,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
-					type: 'string',
+					displayName: 'Color',
+					name: 'color',
+					type: 'color',
 					default: ''
 				},
 				{
-					displayName: 'Color',
-					name: 'color',
+					displayName: 'Name',
+					name: 'name',
 					type: 'string',
 					default: ''
 				}
@@ -10904,27 +10906,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Funnel',
 				value: 'create',
-				action: 'Create Funnel',
-			},
-			{
-				name: 'Get Funnel',
-				value: 'get',
-				action: 'Get Funnel',
-			},
-			{
-				name: 'List Funnels',
-				value: 'getAll',
-				action: 'List Funnels',
-			},
-			{
-				name: 'Update Funnel',
-				value: 'update',
-				action: 'Update Funnel',
+				action: 'Create funnel',
 			},
 			{
 				name: 'Delete Funnel',
 				value: 'delete',
-				action: 'Delete Funnel',
+				action: 'Delete funnel',
+			},
+			{
+				name: 'Get Funnel',
+				value: 'get',
+				action: 'Get funnel',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many funnels',
+			},
+			{
+				name: 'Update Funnel',
+				value: 'update',
+				action: 'Update funnel',
 			},
 		],
 		default: 'create',
@@ -10960,7 +10962,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'stages',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				}
 		],
 	},
@@ -11042,7 +11044,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'stages',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				}
 		],
 	},
@@ -11071,44 +11073,44 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Get Inbox',
-				value: 'get',
-				action: 'Get Inbox',
-			},
-			{
-				name: 'List Inbox',
-				value: 'getAll',
-				action: 'List Inbox',
-			},
-			{
-				name: 'Update Inbox',
-				value: 'update',
-				action: 'Update Inbox',
+				name: 'Attach Inbox',
+				value: 'attach',
+				action: 'Attach inbox',
 			},
 			{
 				name: 'Delete Inbox',
 				value: 'delete',
-				action: 'Delete Inbox',
-			},
-			{
-				name: 'Attach Inbox',
-				value: 'attach',
-				action: 'Attach Inbox',
+				action: 'Delete inbox',
 			},
 			{
 				name: 'Download Inbox File',
 				value: 'downloadInboxFile',
-				action: 'Download Inbox File',
+				action: 'Download inbox file',
+			},
+			{
+				name: 'Get Inbox',
+				value: 'get',
+				action: 'Get inbox',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many inbox',
 			},
 			{
 				name: 'Preview Inbox File',
 				value: 'previewInboxFile',
-				action: 'Preview Inbox File',
+				action: 'Preview inbox file',
+			},
+			{
+				name: 'Update Inbox',
+				value: 'update',
+				action: 'Update inbox',
 			},
 			{
 				name: 'Upload Inbox',
 				value: 'upload',
-				action: 'Upload Inbox',
+				action: 'Upload inbox',
 			},
 		],
 		default: 'get',
@@ -11140,8 +11142,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Status',
-					name: 'status',
+					displayName: 'End Date',
+					name: 'endDate',
 					type: 'string',
 					default: ''
 				},
@@ -11152,8 +11154,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'End Date',
-					name: 'endDate',
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				},
@@ -11250,12 +11252,12 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		name: 'documentType',
 		type: 'options',
 		options: [
-			{ name: 'Purchase', value: 'purchase' },
 			{ name: 'Order', value: 'order' },
+			{ name: 'Purchase', value: 'purchase' },
 			{ name: 'Purchaserefund', value: 'purchaserefund' },
 			{ name: 'Receipt', value: 'receipt' },
 		],
-		default: 'purchase',
+		default: 'order',
 		required: true,
 		displayOptions: {
 			show: {
@@ -11379,14 +11381,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Width',
-					name: 'width',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Height',
-					name: 'height',
+					displayName: 'Blur',
+					name: 'blur',
 					type: 'string',
 					default: ''
 				},
@@ -11397,20 +11393,26 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Blur',
-					name: 'blur',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Grayscale',
 					name: 'grayscale',
 					type: 'string',
 					default: ''
 				},
 				{
+					displayName: 'Height',
+					name: 'height',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Quality',
 					name: 'quality',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Width',
+					name: 'width',
 					type: 'string',
 					default: ''
 				}
@@ -11469,89 +11471,89 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Create Invoice',
-				value: 'create',
-				action: 'Create Invoice',
-			},
-			{
-				name: 'Get Invoice',
-				value: 'get',
-				action: 'Get Invoice',
-			},
-			{
-				name: 'List Invoices',
-				value: 'getAll',
-				action: 'List Invoices',
-			},
-			{
-				name: 'Update Invoice',
-				value: 'update',
-				action: 'Update Invoice',
-			},
-			{
-				name: 'Delete Invoice',
-				value: 'delete',
-				action: 'Delete Invoice',
-			},
-			{
 				name: 'Approve Invoice',
 				value: 'approve',
-				action: 'Approve Invoice',
+				action: 'Approve invoice',
 			},
 			{
 				name: 'Attach Invoice File',
 				value: 'attachInvoiceFile',
-				action: 'Attach Invoice File',
+				action: 'Attach invoice file',
 			},
 			{
 				name: 'Bulk Approve Invoices',
 				value: 'bulkApprove',
-				action: 'Bulk Approve Invoices',
+				action: 'Bulk approve invoices',
 			},
 			{
 				name: 'Bulk Cancel Invoices',
 				value: 'bulkCancel',
-				action: 'Bulk Cancel Invoices',
+				action: 'Bulk cancel invoices',
 			},
 			{
 				name: 'Bulk Delete Invoices',
 				value: 'bulkDelete',
-				action: 'Bulk Delete Invoices',
+				action: 'Bulk delete invoices',
 			},
 			{
 				name: 'Cancel Invoice',
 				value: 'cancel',
-				action: 'Cancel Invoice',
+				action: 'Cancel invoice',
+			},
+			{
+				name: 'Create Invoice',
+				value: 'create',
+				action: 'Create invoice',
 			},
 			{
 				name: 'Create Invoice Payment',
 				value: 'createInvoicePayment',
-				action: 'Create Invoice Payment',
+				action: 'Create invoice payment',
+			},
+			{
+				name: 'Delete Invoice',
+				value: 'delete',
+				action: 'Delete invoice',
+			},
+			{
+				name: 'Get Invoice',
+				value: 'get',
+				action: 'Get invoice',
 			},
 			{
 				name: 'Get Invoice Attachment',
 				value: 'getInvoiceAttachment',
-				action: 'Get Invoice Attachment',
+				action: 'Get invoice attachment',
 			},
 			{
 				name: 'Get Invoice PDF',
 				value: 'getInvoicePdf',
-				action: 'Get Invoice PDF',
+				action: 'Get invoice PDF',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many invoices',
 			},
 			{
 				name: 'List Invoice Attachments',
 				value: 'listInvoiceAttachments',
-				action: 'List Invoice Attachments',
+				action: 'List invoice attachments',
 			},
 			{
 				name: 'Send Invoice',
 				value: 'send',
-				action: 'Send Invoice',
+				action: 'Send invoice',
 			},
 			{
 				name: 'Set Invoice Pipeline',
 				value: 'setInvoicePipeline',
-				action: 'Set Invoice Pipeline',
+				action: 'Set invoice pipeline',
+			},
+			{
+				name: 'Update Invoice',
+				value: 'update',
+				action: 'Update invoice',
 			},
 		],
 		default: 'create',
@@ -11575,7 +11577,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['invoice'],
@@ -11597,44 +11599,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Contact Name',
-					name: 'contactName',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Body',
 					name: 'body',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Language',
-					name: 'language',
+					displayName: 'Contact Name',
+					name: 'contactName',
 					type: 'string',
 					default: ''
 				},
@@ -11651,34 +11623,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sales Channel ID',
-					name: 'salesChannelId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -11689,14 +11648,57 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
-					displayName: 'Project ID',
-					name: 'projectId',
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
 					type: 'string',
 					default: ''
 				},
 				{
 					displayName: 'Payment Method ID',
 					name: 'paymentMethodId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Project ID',
+					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sales Channel ID',
+					name: 'salesChannelId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -11729,20 +11731,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Approval Status',
+					name: 'approvalStatus',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Contact ID',
 					name: 'contactId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Status',
-					name: 'status',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Start Date',
-					name: 'startDate',
 					type: 'string',
 					default: ''
 				},
@@ -11759,8 +11755,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Approval Status',
-					name: 'approvalStatus',
+					displayName: 'Start Date',
+					name: 'startDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				}
@@ -11821,6 +11823,12 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Body',
+					name: 'body',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Contact ID',
 					name: 'contactId',
 					type: 'string',
@@ -11829,42 +11837,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				{
 					displayName: 'Contact Name',
 					name: 'contactName',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Body',
-					name: 'body',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
 					type: 'string',
 					default: ''
 				},
@@ -11881,41 +11853,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Items',
-					name: 'items',
-					type: 'string',
-					default: '',
-					description: 'Send as JSON.'
-				},
-				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sales Channel ID',
-					name: 'salesChannelId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -11926,14 +11878,64 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
-					displayName: 'Project ID',
-					name: 'projectId',
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Items',
+					name: 'items',
+					type: 'string',
+					default: '',
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
 					type: 'string',
 					default: ''
 				},
 				{
 					displayName: 'Payment Method ID',
 					name: 'paymentMethodId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Project ID',
+					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sales Channel ID',
+					name: 'salesChannelId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -12013,21 +12015,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Ids',
+					displayName: 'IDs',
 					name: 'ids',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
+					description: 'Comma-separated'
 				}
 		],
 	},
 	{
-		displayName: 'Ids',
+		displayName: 'IDs',
 		name: 'ids',
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Comma-separated.',
+		description: 'Comma-separated',
 		displayOptions: {
 			show: {
 				resource: ['invoice'],
@@ -12049,11 +12051,11 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Ids',
+					displayName: 'IDs',
 					name: 'ids',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
+					description: 'Comma-separated'
 				}
 		],
 	},
@@ -12103,12 +12105,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Treasury ID',
-					name: 'treasuryId',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Date',
 					name: 'date',
 					type: 'dateTime',
@@ -12117,6 +12113,12 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				{
 					displayName: 'Description',
 					name: 'description',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Treasury ID',
+					name: 'treasuryId',
 					type: 'string',
 					default: ''
 				}
@@ -12249,7 +12251,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Comma-separated.',
+		description: 'Comma-separated',
 		displayOptions: {
 			show: {
 				resource: ['invoice'],
@@ -12271,8 +12273,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Subject',
-					name: 'subject',
+					displayName: 'Bcc',
+					name: 'bcc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Cc',
+					name: 'cc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Mail Template ID',
+					name: 'mailTemplateId',
 					type: 'string',
 					default: ''
 				},
@@ -12283,24 +12299,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Mail Template ID',
-					name: 'mailTemplateId',
+					displayName: 'Subject',
+					name: 'subject',
 					type: 'string',
 					default: ''
-				},
-				{
-					displayName: 'Cc',
-					name: 'cc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Bcc',
-					name: 'bcc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
 				}
 		],
 	},
@@ -12344,22 +12346,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Numbering Series',
 				value: 'create',
-				action: 'Create Numbering Series',
-			},
-			{
-				name: 'List Numbering Series',
-				value: 'getAll',
-				action: 'List Numbering Series',
-			},
-			{
-				name: 'Update Numbering Series',
-				value: 'update',
-				action: 'Update Numbering Series',
+				action: 'Create numbering series',
 			},
 			{
 				name: 'Delete Numbering Series',
 				value: 'delete',
-				action: 'Delete Numbering Series',
+				action: 'Delete numbering series',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many numbering series',
+			},
+			{
+				name: 'Update Numbering Series',
+				value: 'update',
+				action: 'Update numbering series',
 			},
 		],
 		default: 'create',
@@ -12574,62 +12576,62 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Lead',
 				value: 'createLead',
-				action: 'Create Lead',
+				action: 'Create lead',
 			},
 			{
 				name: 'Create Lead Note',
 				value: 'createLeadNote',
-				action: 'Create Lead Note',
+				action: 'Create lead note',
 			},
 			{
 				name: 'Create Lead Task',
 				value: 'createLeadTask',
-				action: 'Create Lead Task',
+				action: 'Create lead task',
 			},
 			{
 				name: 'Delete Lead',
 				value: 'deleteLead',
-				action: 'Delete Lead',
+				action: 'Delete lead',
 			},
 			{
 				name: 'Delete Lead Task',
 				value: 'deleteLeadTask',
-				action: 'Delete Lead Task',
+				action: 'Delete lead task',
 			},
 			{
 				name: 'Get Lead',
 				value: 'getLead',
-				action: 'Get Lead',
+				action: 'Get lead',
 			},
 			{
 				name: 'List Leads',
 				value: 'listLeads',
-				action: 'List Leads',
+				action: 'List leads',
 			},
 			{
 				name: 'Update Lead',
 				value: 'updateLead',
-				action: 'Update Lead',
+				action: 'Update lead',
 			},
 			{
 				name: 'Update Lead Dates',
 				value: 'updateLeadDates',
-				action: 'Update Lead Dates',
+				action: 'Update lead dates',
 			},
 			{
 				name: 'Update Lead Note',
 				value: 'updateLeadNote',
-				action: 'Update Lead Note',
+				action: 'Update lead note',
 			},
 			{
 				name: 'Update Lead Stage',
 				value: 'updateLeadStage',
-				action: 'Update Lead Stage',
+				action: 'Update lead stage',
 			},
 			{
 				name: 'Update Lead Task',
 				value: 'updateLeadTask',
-				action: 'Update Lead Task',
+				action: 'Update lead task',
 			},
 		],
 		default: 'createLead',
@@ -12687,6 +12689,25 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Custom Fields',
+					name: 'customFields',
+					type: 'string',
+					default: '',
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Potential',
+					name: 'potential',
+					type: 'number',
+					default: 0
+				},
+				{
 					displayName: 'Stage ID',
 					name: 'stageId',
 					type: 'string',
@@ -12697,25 +12718,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'value',
 					type: 'number',
 					default: 0
-				},
-				{
-					displayName: 'Potential',
-					name: 'potential',
-					type: 'number',
-					default: 0
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Custom Fields',
-					name: 'customFields',
-					type: 'string',
-					default: '',
-					description: 'Send as JSON.'
 				}
 		],
 	},
@@ -12899,14 +12901,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Funnel ID',
-					name: 'funnelId',
+					displayName: 'Contact ID',
+					name: 'contactId',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Contact ID',
-					name: 'contactId',
+					displayName: 'Custom Fields',
+					name: 'customFields',
+					type: 'string',
+					default: '',
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Funnel ID',
+					name: 'funnelId',
 					type: 'string',
 					default: ''
 				},
@@ -12915,6 +12930,12 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'name',
 					type: 'string',
 					default: ''
+				},
+				{
+					displayName: 'Potential',
+					name: 'potential',
+					type: 'number',
+					default: 0
 				},
 				{
 					displayName: 'Stage ID',
@@ -12927,25 +12948,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'value',
 					type: 'number',
 					default: 0
-				},
-				{
-					displayName: 'Potential',
-					name: 'potential',
-					type: 'number',
-					default: 0
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Custom Fields',
-					name: 'customFields',
-					type: 'string',
-					default: '',
-					description: 'Send as JSON.'
 				}
 		],
 	},
@@ -13015,14 +13017,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Title',
-					name: 'title',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
+					displayName: 'Title',
+					name: 'title',
 					type: 'string',
 					default: ''
 				}
@@ -13107,27 +13109,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Payment',
 				value: 'create',
-				action: 'Create Payment',
-			},
-			{
-				name: 'Get Payment',
-				value: 'get',
-				action: 'Get Payment',
-			},
-			{
-				name: 'List Payments',
-				value: 'getAll',
-				action: 'List Payments',
-			},
-			{
-				name: 'Update Payment',
-				value: 'update',
-				action: 'Update Payment',
+				action: 'Create payment',
 			},
 			{
 				name: 'Delete Payment',
 				value: 'delete',
-				action: 'Delete Payment',
+				action: 'Delete payment',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many payments',
+			},
+			{
+				name: 'Get Payment',
+				value: 'get',
+				action: 'Get payment',
+			},
+			{
+				name: 'Update Payment',
+				value: 'update',
+				action: 'Update payment',
 			},
 		],
 		default: 'create',
@@ -13137,10 +13139,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		name: 'type',
 		type: 'options',
 		options: [
-			{ name: 'Payment', value: 'payment' },
 			{ name: 'Collection', value: 'collection' },
+			{ name: 'Payment', value: 'payment' },
 		],
-		default: 'payment',
+		default: 'collection',
 		required: true,
 		displayOptions: {
 			show: {
@@ -13235,14 +13237,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Start Date',
-					name: 'startDate',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'End Date',
-					name: 'endDate',
+					displayName: 'Banking Account ID',
+					name: 'bankingAccountId',
 					type: 'string',
 					default: ''
 				},
@@ -13259,8 +13255,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Banking Account ID',
-					name: 'bankingAccountId',
+					displayName: 'End Date',
+					name: 'endDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Start Date',
+					name: 'startDate',
 					type: 'string',
 					default: ''
 				}
@@ -13321,25 +13323,9 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Type',
-					name: 'type',
-					type: 'options',
-					options: [
-						{ name: 'Payment', value: 'payment' },
-						{ name: 'Collection', value: 'collection' },
-					],
-					default: 'payment'
-				},
-				{
 					displayName: 'Amount',
 					name: 'amount',
 					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
 					default: ''
 				},
 				{
@@ -13355,10 +13341,26 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
+					default: ''
+				},
+				{
 					displayName: 'Description',
 					name: 'description',
 					type: 'string',
 					default: ''
+				},
+				{
+					displayName: 'Type',
+					name: 'type',
+					type: 'options',
+					options: [
+						{ name: 'Collection', value: 'collection' },
+						{ name: 'Payment', value: 'payment' },
+					],
+					default: 'collection'
 				}
 		],
 	},
@@ -13389,27 +13391,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Payment Method',
 				value: 'create',
-				action: 'Create Payment Method',
-			},
-			{
-				name: 'Get Payment Method',
-				value: 'get',
-				action: 'Get Payment Method',
-			},
-			{
-				name: 'List Payment Methods',
-				value: 'getAll',
-				action: 'List Payment Methods',
-			},
-			{
-				name: 'Update Payment Method',
-				value: 'update',
-				action: 'Update Payment Method',
+				action: 'Create payment method',
 			},
 			{
 				name: 'Delete Payment Method',
 				value: 'delete',
-				action: 'Delete Payment Method',
+				action: 'Delete payment method',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many payment methods',
+			},
+			{
+				name: 'Get Payment Method',
+				value: 'get',
+				action: 'Get payment method',
+			},
+			{
+				name: 'Update Payment Method',
+				value: 'update',
+				action: 'Update payment method',
 			},
 		],
 		default: 'create',
@@ -13441,16 +13443,16 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Due Days',
-					name: 'dueDays',
-					type: 'number',
-					default: 0
-				},
-				{
 					displayName: 'Banking Account ID',
 					name: 'bankingAccountId',
 					type: 'string',
 					default: ''
+				},
+				{
+					displayName: 'Due Days',
+					name: 'dueDays',
+					type: 'number',
+					default: 0
 				}
 		],
 	},
@@ -13522,8 +13524,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
+					displayName: 'Banking Account ID',
+					name: 'bankingAccountId',
 					type: 'string',
 					default: ''
 				},
@@ -13534,8 +13536,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
-					displayName: 'Banking Account ID',
-					name: 'bankingAccountId',
+					displayName: 'Name',
+					name: 'name',
 					type: 'string',
 					default: ''
 				}
@@ -13568,27 +13570,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Salary Record',
 				value: 'createSalaryRecord',
-				action: 'Create Salary Record',
+				action: 'Create salary record',
 			},
 			{
 				name: 'Delete Salary Record',
 				value: 'deleteSalaryRecord',
-				action: 'Delete Salary Record',
+				action: 'Delete salary record',
 			},
 			{
 				name: 'Get Salary Record',
 				value: 'getSalaryRecord',
-				action: 'Get Salary Record',
+				action: 'Get salary record',
 			},
 			{
 				name: 'List Salary Records',
 				value: 'listSalaryRecords',
-				action: 'List Salary Records',
+				action: 'List salary records',
 			},
 			{
 				name: 'Update Salary Record',
 				value: 'updateSalaryRecord',
-				action: 'Update Salary Record',
+				action: 'Update salary record',
 			},
 		],
 		default: 'createSalaryRecord',
@@ -13665,18 +13667,18 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Lines',
 					name: 'lines',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
 				}
 		],
 	},
@@ -13726,14 +13728,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Start Date',
-					name: 'startDate',
+					displayName: 'End Date',
+					name: 'endDate',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'End Date',
-					name: 'endDate',
+					displayName: 'Start Date',
+					name: 'startDate',
 					type: 'string',
 					default: ''
 				}
@@ -13794,8 +13796,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Employee ID',
-					name: 'employeeId',
+					displayName: 'Accounting Account ID',
+					name: 'accountingAccountId',
 					type: 'string',
 					default: ''
 				},
@@ -13806,8 +13808,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Accounting Account ID',
-					name: 'accountingAccountId',
+					displayName: 'Description',
+					name: 'description',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Employee ID',
+					name: 'employeeId',
 					type: 'string',
 					default: ''
 				},
@@ -13818,24 +13826,18 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: false
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
+					displayName: 'Lines',
+					name: 'lines',
 					type: 'string',
-					default: ''
+					default: '',
+					description: 'Send as JSON'
 				},
 				{
 					displayName: 'Tags',
 					name: 'tags',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Lines',
-					name: 'lines',
-					type: 'string',
-					default: '',
-					description: 'Send as JSON.'
+					description: 'Comma-separated'
 				}
 		],
 	},
@@ -13853,27 +13855,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Pricelist',
 				value: 'createPricelist',
-				action: 'Create Pricelist',
+				action: 'Create pricelist',
 			},
 			{
 				name: 'Delete Pricelist',
 				value: 'deletePricelist',
-				action: 'Delete Pricelist',
+				action: 'Delete pricelist',
 			},
 			{
 				name: 'Get Pricelist',
 				value: 'getPricelist',
-				action: 'Get Pricelist',
+				action: 'Get pricelist',
 			},
 			{
 				name: 'List Pricelists',
 				value: 'listPricelists',
-				action: 'List Pricelists',
+				action: 'List pricelists',
 			},
 			{
 				name: 'Update Pricelist',
 				value: 'updatePricelist',
-				action: 'Update Pricelist',
+				action: 'Update pricelist',
 			},
 		],
 		default: 'createPricelist',
@@ -13993,14 +13995,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
+					displayName: 'Name',
+					name: 'name',
 					type: 'string',
 					default: ''
 				}
@@ -14020,62 +14022,62 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Product',
 				value: 'create',
-				action: 'Create Product',
-			},
-			{
-				name: 'Get Product',
-				value: 'get',
-				action: 'Get Product',
-			},
-			{
-				name: 'List Products',
-				value: 'getAll',
-				action: 'List Products',
-			},
-			{
-				name: 'Update Product',
-				value: 'update',
-				action: 'Update Product',
+				action: 'Create product',
 			},
 			{
 				name: 'Delete Product',
 				value: 'delete',
-				action: 'Delete Product',
+				action: 'Delete product',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many products',
+			},
+			{
+				name: 'Get Product',
+				value: 'get',
+				action: 'Get product',
 			},
 			{
 				name: 'Get Product Image',
 				value: 'getProductImage',
-				action: 'Get Product Image',
+				action: 'Get product image',
 			},
 			{
 				name: 'Get Product Main Image',
 				value: 'getProductMainImage',
-				action: 'Get Product Main Image',
+				action: 'Get product main image',
 			},
 			{
 				name: 'Get Product Stock',
 				value: 'getProductStock',
-				action: 'Get Product Stock',
+				action: 'Get product stock',
 			},
 			{
 				name: 'Get Product Stock Transit',
 				value: 'getProductStockTransit',
-				action: 'Get Product Stock Transit',
+				action: 'Get product stock transit',
 			},
 			{
 				name: 'List Product Images',
 				value: 'listProductImages',
-				action: 'List Product Images',
+				action: 'List product images',
+			},
+			{
+				name: 'Update Product',
+				value: 'update',
+				action: 'Update product',
 			},
 			{
 				name: 'Update Product Stock',
 				value: 'updateProductStock',
-				action: 'Update Product Stock',
+				action: 'Update product stock',
 			},
 			{
 				name: 'Upload Product Image',
 				value: 'uploadProductImage',
-				action: 'Upload Product Image',
+				action: 'Upload product image',
 			},
 		],
 		default: 'create',
@@ -14098,13 +14100,13 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		name: 'kind',
 		type: 'options',
 		options: [
-			{ name: 'Simple', value: 'simple' },
 			{ name: 'Lots', value: 'lots' },
 			{ name: 'Pack', value: 'pack' },
-			{ name: 'Variants', value: 'variants' },
 			{ name: 'Serialnumbers', value: 'serialnumbers' },
+			{ name: 'Simple', value: 'simple' },
+			{ name: 'Variants', value: 'variants' },
 		],
-		default: 'simple',
+		default: 'lots',
 		required: true,
 		displayOptions: {
 			show: {
@@ -14166,26 +14168,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sku',
-					name: 'sku',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Barcode',
 					name: 'barcode',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Price',
-					name: 'price',
 					type: 'string',
 					default: ''
 				},
@@ -14196,38 +14180,29 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Taxes',
-					name: 'taxes',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Stock',
-					name: 'stock',
-					type: 'number',
-					default: 0
-				},
-				{
-					displayName: 'Variants',
-					name: 'variants',
-					type: 'string',
-					default: '',
-					description: 'Send as JSON.'
+					default: ''
 				},
 				{
 					displayName: 'Pack Items',
 					name: 'packItems',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Price',
+					name: 'price',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Show End Date',
+					name: 'showEndDate',
+					type: 'boolean',
+					default: false
 				},
 				{
 					displayName: 'Show Start Date',
@@ -14236,10 +14211,37 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: false
 				},
 				{
-					displayName: 'Show End Date',
-					name: 'showEndDate',
-					type: 'boolean',
-					default: false
+					displayName: 'Sku',
+					name: 'sku',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Stock',
+					name: 'stock',
+					type: 'number',
+					default: 0
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Taxes',
+					name: 'taxes',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Variants',
+					name: 'variants',
+					type: 'string',
+					default: '',
+					description: 'Send as JSON'
 				}
 		],
 	},
@@ -14363,26 +14365,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sku',
-					name: 'sku',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Barcode',
 					name: 'barcode',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Price',
-					name: 'price',
 					type: 'string',
 					default: ''
 				},
@@ -14393,32 +14377,29 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Taxes',
-					name: 'taxes',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Variants',
-					name: 'variants',
-					type: 'string',
-					default: '',
-					description: 'Send as JSON.'
+					default: ''
 				},
 				{
 					displayName: 'Pack Items',
 					name: 'packItems',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Price',
+					name: 'price',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Show End Date',
+					name: 'showEndDate',
+					type: 'boolean',
+					default: false
 				},
 				{
 					displayName: 'Show Start Date',
@@ -14427,10 +14408,31 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: false
 				},
 				{
-					displayName: 'Show End Date',
-					name: 'showEndDate',
-					type: 'boolean',
-					default: false
+					displayName: 'Sku',
+					name: 'sku',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Taxes',
+					name: 'taxes',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Variants',
+					name: 'variants',
+					type: 'string',
+					default: '',
+					description: 'Send as JSON'
 				}
 		],
 	},
@@ -14690,14 +14692,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Variant ID',
-					name: 'variantId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
+					displayName: 'Variant ID',
+					name: 'variantId',
 					type: 'string',
 					default: ''
 				}
@@ -14743,27 +14745,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Production Order',
 				value: 'create',
-				action: 'Create Production Order',
-			},
-			{
-				name: 'Get Production Order',
-				value: 'get',
-				action: 'Get Production Order',
-			},
-			{
-				name: 'List Production Orders',
-				value: 'getAll',
-				action: 'List Production Orders',
-			},
-			{
-				name: 'Update Production Order',
-				value: 'update',
-				action: 'Update Production Order',
+				action: 'Create production order',
 			},
 			{
 				name: 'Delete Production Order',
 				value: 'delete',
-				action: 'Delete Production Order',
+				action: 'Delete production order',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many production orders',
+			},
+			{
+				name: 'Get Production Order',
+				value: 'get',
+				action: 'Get production order',
+			},
+			{
+				name: 'Update Production Order',
+				value: 'update',
+				action: 'Update production order',
 			},
 		],
 		default: 'create',
@@ -14774,7 +14776,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['productionOrder'],
@@ -14796,8 +14798,20 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Description',
-					name: 'description',
+					displayName: 'Contact ID',
+					name: 'contactId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Contact Name',
+					name: 'contactName',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Currency',
+					name: 'currency',
 					type: 'string',
 					default: ''
 				},
@@ -14808,20 +14822,57 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
+					displayName: 'Description',
+					name: 'description',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Destination Warehouse ID',
+					name: 'destinationWarehouseId',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Due Date',
 					name: 'dueDate',
 					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Contact ID',
-					name: 'contactId',
+					displayName: 'Is Valued',
+					name: 'isValued',
+					type: 'boolean',
+					default: false
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Contact Name',
-					name: 'contactName',
+					displayName: 'Manufacturing Pipeline ID',
+					name: 'manufacturingPipelineId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Materials',
+					name: 'materials',
+					type: 'string',
+					default: '',
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Source Warehouse ID',
+					name: 'sourceWarehouseId',
 					type: 'string',
 					default: ''
 				},
@@ -14838,60 +14889,11 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Currency',
-					name: 'currency',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Tags',
 					name: 'tags',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Source Warehouse ID',
-					name: 'sourceWarehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Destination Warehouse ID',
-					name: 'destinationWarehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Manufacturing Pipeline ID',
-					name: 'manufacturingPipelineId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Materials',
-					name: 'materials',
-					type: 'string',
-					default: '',
-					description: 'Send as JSON.'
-				},
-				{
-					displayName: 'Is Valued',
-					name: 'isValued',
-					type: 'boolean',
-					default: false
+					description: 'Comma-separated'
 				}
 		],
 	},
@@ -14963,8 +14965,20 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Description',
-					name: 'description',
+					displayName: 'Contact ID',
+					name: 'contactId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Contact Name',
+					name: 'contactName',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Currency',
+					name: 'currency',
 					type: 'string',
 					default: ''
 				},
@@ -14975,20 +14989,64 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
+					displayName: 'Description',
+					name: 'description',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Destination Warehouse ID',
+					name: 'destinationWarehouseId',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Due Date',
 					name: 'dueDate',
 					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Contact ID',
-					name: 'contactId',
+					displayName: 'Is Valued',
+					name: 'isValued',
+					type: 'boolean',
+					default: false
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Contact Name',
-					name: 'contactName',
+					displayName: 'Manufactured Product',
+					name: 'manufacturedProduct',
+					type: 'string',
+					default: '',
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Manufacturing Pipeline ID',
+					name: 'manufacturingPipelineId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Materials',
+					name: 'materials',
+					type: 'string',
+					default: '',
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Source Warehouse ID',
+					name: 'sourceWarehouseId',
 					type: 'string',
 					default: ''
 				},
@@ -15005,67 +15063,11 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Currency',
-					name: 'currency',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Tags',
 					name: 'tags',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Source Warehouse ID',
-					name: 'sourceWarehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Destination Warehouse ID',
-					name: 'destinationWarehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Manufacturing Pipeline ID',
-					name: 'manufacturingPipelineId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Manufactured Product',
-					name: 'manufacturedProduct',
-					type: 'string',
-					default: '',
-					description: 'Send as JSON.'
-				},
-				{
-					displayName: 'Materials',
-					name: 'materials',
-					type: 'string',
-					default: '',
-					description: 'Send as JSON.'
-				},
-				{
-					displayName: 'Is Valued',
-					name: 'isValued',
-					type: 'boolean',
-					default: false
+					description: 'Comma-separated'
 				}
 		],
 	},
@@ -15094,64 +15096,64 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Create Proforma',
-				value: 'create',
-				action: 'Create Proforma',
-			},
-			{
-				name: 'Get Proforma',
-				value: 'get',
-				action: 'Get Proforma',
-			},
-			{
-				name: 'List Proformas',
-				value: 'getAll',
-				action: 'List Proformas',
-			},
-			{
-				name: 'Update Proforma',
-				value: 'update',
-				action: 'Update Proforma',
-			},
-			{
-				name: 'Delete Proforma',
-				value: 'delete',
-				action: 'Delete Proforma',
-			},
-			{
 				name: 'Approve Proforma',
 				value: 'approve',
-				action: 'Approve Proforma',
+				action: 'Approve proforma',
 			},
 			{
 				name: 'Attach Proforma File',
 				value: 'attachProformaFile',
-				action: 'Attach Proforma File',
+				action: 'Attach proforma file',
+			},
+			{
+				name: 'Create Proforma',
+				value: 'create',
+				action: 'Create proforma',
+			},
+			{
+				name: 'Delete Proforma',
+				value: 'delete',
+				action: 'Delete proforma',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many proformas',
+			},
+			{
+				name: 'Get Proforma',
+				value: 'get',
+				action: 'Get proforma',
 			},
 			{
 				name: 'Get Proforma Attachment',
 				value: 'getProformaAttachment',
-				action: 'Get Proforma Attachment',
+				action: 'Get proforma attachment',
 			},
 			{
 				name: 'Get Proforma PDF',
 				value: 'getProformaPdf',
-				action: 'Get Proforma PDF',
+				action: 'Get proforma PDF',
 			},
 			{
 				name: 'List Proforma Attachments',
 				value: 'listProformaAttachments',
-				action: 'List Proforma Attachments',
+				action: 'List proforma attachments',
 			},
 			{
 				name: 'Send Proforma',
 				value: 'send',
-				action: 'Send Proforma',
+				action: 'Send proforma',
 			},
 			{
 				name: 'Set Proforma Pipeline',
 				value: 'setProformaPipeline',
-				action: 'Set Proforma Pipeline',
+				action: 'Set proforma pipeline',
+			},
+			{
+				name: 'Update Proforma',
+				value: 'update',
+				action: 'Update proforma',
 			},
 		],
 		default: 'create',
@@ -15175,7 +15177,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['proforma'],
@@ -15203,36 +15205,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Currency',
 					name: 'currency',
 					type: 'string',
@@ -15245,34 +15217,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sales Channel ID',
-					name: 'salesChannelId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -15283,8 +15242,51 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Project ID',
 					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sales Channel ID',
+					name: 'salesChannelId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -15323,8 +15325,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Status',
-					name: 'status',
+					displayName: 'End Date',
+					name: 'endDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sort',
+					name: 'sort',
 					type: 'string',
 					default: ''
 				},
@@ -15335,14 +15343,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'End Date',
-					name: 'endDate',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sort',
-					name: 'sort',
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				}
@@ -15609,7 +15611,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Comma-separated.',
+		description: 'Comma-separated',
 		displayOptions: {
 			show: {
 				resource: ['proforma'],
@@ -15631,8 +15633,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Subject',
-					name: 'subject',
+					displayName: 'Bcc',
+					name: 'bcc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Cc',
+					name: 'cc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Mail Template ID',
+					name: 'mailTemplateId',
 					type: 'string',
 					default: ''
 				},
@@ -15643,24 +15659,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Mail Template ID',
-					name: 'mailTemplateId',
+					displayName: 'Subject',
+					name: 'subject',
 					type: 'string',
 					default: ''
-				},
-				{
-					displayName: 'Cc',
-					name: 'cc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Bcc',
-					name: 'bcc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
 				}
 		],
 	},
@@ -15704,32 +15706,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Project',
 				value: 'create',
-				action: 'Create Project',
-			},
-			{
-				name: 'Get Project',
-				value: 'get',
-				action: 'Get Project',
-			},
-			{
-				name: 'List Projects',
-				value: 'getAll',
-				action: 'List Projects',
-			},
-			{
-				name: 'Update Project',
-				value: 'update',
-				action: 'Update Project',
+				action: 'Create project',
 			},
 			{
 				name: 'Delete Project',
 				value: 'delete',
-				action: 'Delete Project',
+				action: 'Delete project',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many projects',
+			},
+			{
+				name: 'Get Project',
+				value: 'get',
+				action: 'Get project',
 			},
 			{
 				name: 'Get Project Summary',
 				value: 'getProjectSummary',
-				action: 'Get Project Summary',
+				action: 'Get project summary',
+			},
+			{
+				name: 'Update Project',
+				value: 'update',
+				action: 'Update project',
 			},
 		],
 		default: 'create',
@@ -15761,6 +15763,12 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Contact ID',
+					name: 'contactId',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Description',
 					name: 'description',
 					type: 'string',
@@ -15770,12 +15778,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					displayName: 'Due Date',
 					name: 'dueDate',
 					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Contact ID',
-					name: 'contactId',
-					type: 'string',
 					default: ''
 				}
 		],
@@ -15869,8 +15871,20 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
+					displayName: 'Allow Notifications',
+					name: 'allowNotifications',
+					type: 'boolean',
+					default: false
+				},
+				{
+					displayName: 'Billable',
+					name: 'billable',
+					type: 'boolean',
+					default: false
+				},
+				{
+					displayName: 'Contact ID',
+					name: 'contactId',
 					type: 'string',
 					default: ''
 				},
@@ -15887,9 +15901,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Contact ID',
-					name: 'contactId',
+					displayName: 'Lists',
+					name: 'lists',
 					type: 'string',
+					default: '',
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Name',
+					name: 'name',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Start Date',
+					name: 'startDate',
+					type: 'dateTime',
 					default: ''
 				},
 				{
@@ -15899,36 +15926,11 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
-					displayName: 'Start Date',
-					name: 'startDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Billable',
-					name: 'billable',
-					type: 'boolean',
-					default: false
-				},
-				{
 					displayName: 'Tags',
 					name: 'tags',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Allow Notifications',
-					name: 'allowNotifications',
-					type: 'boolean',
-					default: false
-				},
-				{
-					displayName: 'Lists',
-					name: 'lists',
-					type: 'string',
-					default: '',
-					description: 'Send as JSON.'
+					description: 'Comma-separated'
 				}
 		],
 	},
@@ -16000,32 +16002,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Project Time',
 				value: 'createProjectTime',
-				action: 'Create Project Time',
+				action: 'Create project time',
 			},
 			{
 				name: 'Delete Project Time',
 				value: 'deleteProjectTime',
-				action: 'Delete Project Time',
+				action: 'Delete project time',
 			},
 			{
 				name: 'Get Project Time',
 				value: 'getProjectTime',
-				action: 'Get Project Time',
+				action: 'Get project time',
 			},
 			{
 				name: 'List All Project Times',
 				value: 'listAllProjectTimes',
-				action: 'List All Project Times',
+				action: 'List all project times',
 			},
 			{
 				name: 'List Project Times',
 				value: 'listProjectTimes',
-				action: 'List Project Times',
+				action: 'List project times',
 			},
 			{
 				name: 'Update Project Time',
 				value: 'updateProjectTime',
-				action: 'Update Project Time',
+				action: 'Update project time',
 			},
 		],
 		default: 'createProjectTime',
@@ -16083,20 +16085,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Task ID',
-					name: 'taskId',
+					displayName: 'Category',
+					name: 'category',
 					type: 'string',
 					default: ''
 				},
@@ -16107,8 +16097,20 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Category',
-					name: 'category',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Description',
+					name: 'description',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Task ID',
+					name: 'taskId',
 					type: 'string',
 					default: ''
 				}
@@ -16275,32 +16277,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Duration',
-					name: 'duration',
-					type: 'number',
-					default: 0
-				},
-				{
-					displayName: 'User ID',
-					name: 'userId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Task ID',
-					name: 'taskId',
+					displayName: 'Category',
+					name: 'category',
 					type: 'string',
 					default: ''
 				},
@@ -16311,8 +16289,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Category',
-					name: 'category',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Description',
+					name: 'description',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Duration',
+					name: 'duration',
+					type: 'number',
+					default: 0
+				},
+				{
+					displayName: 'Task ID',
+					name: 'taskId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'User ID',
+					name: 'userId',
 					type: 'string',
 					default: ''
 				}
@@ -16330,64 +16332,64 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Create Purchase',
-				value: 'create',
-				action: 'Create Purchase',
-			},
-			{
-				name: 'Get Purchase',
-				value: 'get',
-				action: 'Get Purchase',
-			},
-			{
-				name: 'List Purchases',
-				value: 'getAll',
-				action: 'List Purchases',
-			},
-			{
-				name: 'Update Purchase',
-				value: 'update',
-				action: 'Update Purchase',
-			},
-			{
-				name: 'Delete Purchase',
-				value: 'delete',
-				action: 'Delete Purchase',
-			},
-			{
 				name: 'Approve Purchase',
 				value: 'approve',
-				action: 'Approve Purchase',
+				action: 'Approve purchase',
 			},
 			{
 				name: 'Attach Purchase File',
 				value: 'attachPurchaseFile',
-				action: 'Attach Purchase File',
+				action: 'Attach purchase file',
+			},
+			{
+				name: 'Create Purchase',
+				value: 'create',
+				action: 'Create purchase',
 			},
 			{
 				name: 'Create Purchase Payment',
 				value: 'createPurchasePayment',
-				action: 'Create Purchase Payment',
+				action: 'Create purchase payment',
 			},
 			{
 				name: 'Create Purchase Refund',
 				value: 'createPurchaseRefund',
-				action: 'Create Purchase Refund',
+				action: 'Create purchase refund',
+			},
+			{
+				name: 'Delete Purchase',
+				value: 'delete',
+				action: 'Delete purchase',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many purchases',
+			},
+			{
+				name: 'Get Purchase',
+				value: 'get',
+				action: 'Get purchase',
 			},
 			{
 				name: 'Get Purchase Attachment',
 				value: 'getPurchaseAttachment',
-				action: 'Get Purchase Attachment',
+				action: 'Get purchase attachment',
 			},
 			{
 				name: 'List Purchase Attachments',
 				value: 'listPurchaseAttachments',
-				action: 'List Purchase Attachments',
+				action: 'List purchase attachments',
 			},
 			{
 				name: 'Set Purchase Pipeline',
 				value: 'setPurchasePipeline',
-				action: 'Set Purchase Pipeline',
+				action: 'Set purchase pipeline',
+			},
+			{
+				name: 'Update Purchase',
+				value: 'update',
+				action: 'Update purchase',
 			},
 		],
 		default: 'create',
@@ -16411,7 +16413,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['purchase'],
@@ -16439,36 +16441,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Currency',
 					name: 'currency',
 					type: 'string',
@@ -16481,34 +16453,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Payment Method ID',
-					name: 'paymentMethodId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -16519,8 +16478,51 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Payment Method ID',
+					name: 'paymentMethodId',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Project ID',
 					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -16553,20 +16555,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Approval Status',
+					name: 'approvalStatus',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Contact ID',
 					name: 'contactId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Status',
-					name: 'status',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Start Date',
-					name: 'startDate',
 					type: 'string',
 					default: ''
 				},
@@ -16583,8 +16579,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Approval Status',
-					name: 'approvalStatus',
+					displayName: 'Start Date',
+					name: 'startDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				}
@@ -16764,12 +16766,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Treasury ID',
-					name: 'treasuryId',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Date',
 					name: 'date',
 					type: 'dateTime',
@@ -16778,6 +16774,12 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				{
 					displayName: 'Description',
 					name: 'description',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Treasury ID',
+					name: 'treasuryId',
 					type: 'string',
 					default: ''
 				}
@@ -16802,7 +16804,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['purchase'],
@@ -16830,36 +16832,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Currency',
 					name: 'currency',
 					type: 'string',
@@ -16872,18 +16844,47 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Description',
+					name: 'description',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Discount',
+					name: 'discount',
+					type: 'number',
+					default: 0
+				},
+				{
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
 				},
 				{
 					displayName: 'Number Line ID',
@@ -16898,16 +16899,17 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Discount',
-					name: 'discount',
-					type: 'number',
-					default: 0
-				},
-				{
 					displayName: 'Project ID',
 					name: 'projectId',
 					type: 'string',
 					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
 				}
 		],
 	},
@@ -17018,32 +17020,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Approve Purchase Shipment',
 				value: 'approvePurchaseShipment',
-				action: 'Approve Purchase Shipment',
+				action: 'Approve purchase shipment',
 			},
 			{
 				name: 'Create Purchase Shipment',
 				value: 'createPurchaseShipment',
-				action: 'Create Purchase Shipment',
+				action: 'Create purchase shipment',
 			},
 			{
 				name: 'Delete Purchase Shipment',
 				value: 'deletePurchaseShipment',
-				action: 'Delete Purchase Shipment',
+				action: 'Delete purchase shipment',
 			},
 			{
 				name: 'Get Purchase Shipment',
 				value: 'getPurchaseShipment',
-				action: 'Get Purchase Shipment',
+				action: 'Get purchase shipment',
 			},
 			{
 				name: 'List Purchase Shipments',
 				value: 'listPurchaseShipments',
-				action: 'List Purchase Shipments',
+				action: 'List purchase shipments',
 			},
 			{
 				name: 'Update Purchase Shipment',
 				value: 'updatePurchaseShipment',
-				action: 'Update Purchase Shipment',
+				action: 'Update purchase shipment',
 			},
 		],
 		default: 'approvePurchaseShipment',
@@ -17080,7 +17082,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['purchaseDeliveryNote'],
@@ -17108,42 +17110,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Deduction Date',
-					name: 'deductionDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Currency',
 					name: 'currency',
 					type: 'string',
@@ -17156,28 +17122,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
+					displayName: 'Deduction Date',
+					name: 'deductionDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -17188,8 +17153,45 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Project ID',
 					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -17241,8 +17243,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Status',
-					name: 'status',
+					displayName: 'End Date',
+					name: 'endDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sort',
+					name: 'sort',
 					type: 'string',
 					default: ''
 				},
@@ -17253,14 +17261,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'End Date',
-					name: 'endDate',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sort',
-					name: 'sort',
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				}
@@ -17327,14 +17329,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Due Date',
-					name: 'dueDate',
+					displayName: 'Deduction Date',
+					name: 'deductionDate',
 					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Deduction Date',
-					name: 'deductionDate',
+					displayName: 'Due Date',
+					name: 'dueDate',
 					type: 'dateTime',
 					default: ''
 				},
@@ -17358,74 +17360,74 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Create Purchase Order',
-				value: 'create',
-				action: 'Create Purchase Order',
-			},
-			{
-				name: 'Get Purchase Order',
-				value: 'get',
-				action: 'Get Purchase Order',
-			},
-			{
-				name: 'List Purchase Orders',
-				value: 'getAll',
-				action: 'List Purchase Orders',
-			},
-			{
-				name: 'Update Purchase Order',
-				value: 'update',
-				action: 'Update Purchase Order',
-			},
-			{
-				name: 'Delete Purchase Order',
-				value: 'delete',
-				action: 'Delete Purchase Order',
-			},
-			{
 				name: 'Approve Purchase Order',
 				value: 'approve',
-				action: 'Approve Purchase Order',
+				action: 'Approve purchase order',
 			},
 			{
 				name: 'Attach Purchase Order File',
 				value: 'attachPurchaseOrderFile',
-				action: 'Attach Purchase Order File',
+				action: 'Attach purchase order file',
+			},
+			{
+				name: 'Create Purchase Order',
+				value: 'create',
+				action: 'Create purchase order',
+			},
+			{
+				name: 'Delete Purchase Order',
+				value: 'delete',
+				action: 'Delete purchase order',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many purchase orders',
+			},
+			{
+				name: 'Get Purchase Order',
+				value: 'get',
+				action: 'Get purchase order',
 			},
 			{
 				name: 'Get Purchase Order Attachment',
 				value: 'getPurchaseOrderAttachment',
-				action: 'Get Purchase Order Attachment',
+				action: 'Get purchase order attachment',
 			},
 			{
 				name: 'Get Purchase Order PDF',
 				value: 'getPurchaseOrderPdf',
-				action: 'Get Purchase Order PDF',
+				action: 'Get purchase order PDF',
 			},
 			{
 				name: 'Get Purchase Order Received Items',
 				value: 'getPurchaseOrderReceivedItems',
-				action: 'Get Purchase Order Received Items',
+				action: 'Get purchase order received items',
 			},
 			{
 				name: 'List Purchase Order Attachments',
 				value: 'listPurchaseOrderAttachments',
-				action: 'List Purchase Order Attachments',
+				action: 'List purchase order attachments',
 			},
 			{
 				name: 'Receive Purchase Order',
 				value: 'receive',
-				action: 'Receive Purchase Order',
+				action: 'Receive purchase order',
 			},
 			{
 				name: 'Send Purchase Order',
 				value: 'send',
-				action: 'Send Purchase Order',
+				action: 'Send purchase order',
 			},
 			{
 				name: 'Set Purchase Order Pipeline',
 				value: 'setPurchaseOrderPipeline',
-				action: 'Set Purchase Order Pipeline',
+				action: 'Set purchase order pipeline',
+			},
+			{
+				name: 'Update Purchase Order',
+				value: 'update',
+				action: 'Update purchase order',
 			},
 		],
 		default: 'create',
@@ -17449,7 +17451,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['purchaseOrder'],
@@ -17477,36 +17479,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Currency',
 					name: 'currency',
 					type: 'string',
@@ -17519,28 +17491,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -17551,8 +17516,45 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Project ID',
 					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -17591,8 +17593,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Status',
-					name: 'status',
+					displayName: 'End Date',
+					name: 'endDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sort',
+					name: 'sort',
 					type: 'string',
 					default: ''
 				},
@@ -17603,14 +17611,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'End Date',
-					name: 'endDate',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sort',
-					name: 'sort',
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				}
@@ -17918,7 +17920,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['purchaseOrder'],
@@ -17972,7 +17974,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Comma-separated.',
+		description: 'Comma-separated',
 		displayOptions: {
 			show: {
 				resource: ['purchaseOrder'],
@@ -17994,8 +17996,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Subject',
-					name: 'subject',
+					displayName: 'Bcc',
+					name: 'bcc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Cc',
+					name: 'cc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Mail Template ID',
+					name: 'mailTemplateId',
 					type: 'string',
 					default: ''
 				},
@@ -18006,24 +18022,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Mail Template ID',
-					name: 'mailTemplateId',
+					displayName: 'Subject',
+					name: 'subject',
 					type: 'string',
 					default: ''
-				},
-				{
-					displayName: 'Cc',
-					name: 'cc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Bcc',
-					name: 'bcc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
 				}
 		],
 	},
@@ -18067,37 +18069,37 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Invoice Recurring',
 				value: 'createInvoiceRecurring',
-				action: 'Create Invoice Recurring',
+				action: 'Create invoice recurring',
 			},
 			{
 				name: 'Delete Invoice Recurring',
 				value: 'deleteInvoiceRecurring',
-				action: 'Delete Invoice Recurring',
+				action: 'Delete invoice recurring',
 			},
 			{
 				name: 'Get Invoice Recurring',
 				value: 'getInvoiceRecurring',
-				action: 'Get Invoice Recurring',
+				action: 'Get invoice recurring',
 			},
 			{
 				name: 'Get Recurring Schedule',
 				value: 'getRecurringSchedule',
-				action: 'Get Recurring Schedule',
+				action: 'Get recurring schedule',
 			},
 			{
 				name: 'List Invoice Recurrings',
 				value: 'listInvoiceRecurrings',
-				action: 'List Invoice Recurrings',
+				action: 'List invoice recurrings',
 			},
 			{
 				name: 'Skip Recurring Occurrence',
 				value: 'skipRecurringOccurrence',
-				action: 'Skip Recurring Occurrence',
+				action: 'Skip recurring occurrence',
 			},
 			{
 				name: 'Update Invoice Recurring',
 				value: 'updateInvoiceRecurring',
-				action: 'Update Invoice Recurring',
+				action: 'Update invoice recurring',
 			},
 		],
 		default: 'createInvoiceRecurring',
@@ -18134,7 +18136,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['recurringInvoice'],
@@ -18156,22 +18158,16 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Contact Name',
-					name: 'contactName',
+					displayName: 'Body',
+					name: 'body',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Convert Automatically',
-					name: 'convertAutomatically',
-					type: 'boolean',
-					default: false
-				},
-				{
-					displayName: 'Due Days',
-					name: 'dueDays',
-					type: 'number',
-					default: 0
+					displayName: 'Contact Name',
+					name: 'contactName',
+					type: 'string',
+					default: ''
 				},
 				{
 					displayName: 'Contact Payment Day',
@@ -18180,40 +18176,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
-					displayName: 'End Date',
-					name: 'endDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Body',
-					name: 'body',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
-					type: 'string',
-					default: ''
+					displayName: 'Convert Automatically',
+					name: 'convertAutomatically',
+					type: 'boolean',
+					default: false
 				},
 				{
 					displayName: 'Currency',
@@ -18228,15 +18194,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
+					default: ''
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -18247,10 +18212,47 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
+					displayName: 'Due Days',
+					name: 'dueDays',
+					type: 'number',
+					default: 0
+				},
+				{
+					displayName: 'End Date',
+					name: 'endDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Project ID',
 					name: 'projectId',
 					type: 'string',
 					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
 				}
 		],
 	},
@@ -18444,6 +18446,12 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Body',
+					name: 'body',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Contact ID',
 					name: 'contactId',
 					type: 'string',
@@ -18452,36 +18460,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				{
 					displayName: 'Contact Name',
 					name: 'contactName',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Body',
-					name: 'body',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
 					type: 'string',
 					default: ''
 				},
@@ -18498,22 +18476,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Items',
-					name: 'items',
-					type: 'string',
-					default: '',
-					description: 'Send as JSON.'
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
+					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -18524,10 +18494,42 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
+					displayName: 'Items',
+					name: 'items',
+					type: 'string',
+					default: '',
+					description: 'Send as JSON'
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Project ID',
 					name: 'projectId',
 					type: 'string',
 					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
 				}
 		],
 	},
@@ -18543,14 +18545,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Get Remittance',
-				value: 'get',
-				action: 'Get Remittance',
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many remittances',
 			},
 			{
-				name: 'List Remittances',
-				value: 'getAll',
-				action: 'List Remittances',
+				name: 'Get Remittance',
+				value: 'get',
+				action: 'Get remittance',
 			},
 		],
 		default: 'get',
@@ -18582,38 +18584,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Type',
-					name: 'type',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Status',
-					name: 'status',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Start Date',
-					name: 'startDate',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'End Date',
-					name: 'endDate',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Bank ID',
 					name: 'bankId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Creditor Swift',
-					name: 'creditorSwift',
 					type: 'string',
 					default: ''
 				},
@@ -18630,8 +18602,38 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
+					displayName: 'Creditor Swift',
+					name: 'creditorSwift',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'End Date',
+					name: 'endDate',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Issuer ID',
 					name: 'issuerId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Start Date',
+					name: 'startDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Status',
+					name: 'status',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Type',
+					name: 'type',
 					type: 'string',
 					default: ''
 				}
@@ -18679,27 +18681,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Sales Channel',
 				value: 'create',
-				action: 'Create Sales Channel',
-			},
-			{
-				name: 'Get Sales Channel',
-				value: 'get',
-				action: 'Get Sales Channel',
-			},
-			{
-				name: 'List Sales Channels',
-				value: 'getAll',
-				action: 'List Sales Channels',
-			},
-			{
-				name: 'Update Sales Channel',
-				value: 'update',
-				action: 'Update Sales Channel',
+				action: 'Create sales channel',
 			},
 			{
 				name: 'Delete Sales Channel',
 				value: 'delete',
-				action: 'Delete Sales Channel',
+				action: 'Delete sales channel',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many sales channels',
+			},
+			{
+				name: 'Get Sales Channel',
+				value: 'get',
+				action: 'Get sales channel',
+			},
+			{
+				name: 'Update Sales Channel',
+				value: 'update',
+				action: 'Update sales channel',
 			},
 		],
 		default: 'create',
@@ -18746,7 +18748,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				{
 					displayName: 'Color',
 					name: 'color',
-					type: 'string',
+					type: 'color',
 					default: ''
 				}
 		],
@@ -18819,14 +18821,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
-					type: 'string',
+					displayName: 'Color',
+					name: 'color',
+					type: 'color',
 					default: ''
 				},
 				{
-					displayName: 'Color',
-					name: 'color',
+					displayName: 'Name',
+					name: 'name',
 					type: 'string',
 					default: ''
 				}
@@ -18859,67 +18861,67 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Approve Receiptnote',
 				value: 'approveReceiptnote',
-				action: 'Approve Receiptnote',
+				action: 'Approve receiptnote',
 			},
 			{
 				name: 'Attach Receiptnote File',
 				value: 'attachReceiptnoteFile',
-				action: 'Attach Receiptnote File',
+				action: 'Attach receiptnote file',
 			},
 			{
 				name: 'Create Receiptnote',
 				value: 'createReceiptnote',
-				action: 'Create Receiptnote',
+				action: 'Create receiptnote',
 			},
 			{
 				name: 'Create Receiptnote Payment',
 				value: 'createReceiptnotePayment',
-				action: 'Create Receiptnote Payment',
+				action: 'Create receiptnote payment',
 			},
 			{
 				name: 'Delete Receiptnote',
 				value: 'deleteReceiptnote',
-				action: 'Delete Receiptnote',
+				action: 'Delete receiptnote',
 			},
 			{
 				name: 'Get Receiptnote',
 				value: 'getReceiptnote',
-				action: 'Get Receiptnote',
+				action: 'Get receiptnote',
 			},
 			{
 				name: 'Get Receiptnote Attachment',
 				value: 'getReceiptnoteAttachment',
-				action: 'Get Receiptnote Attachment',
+				action: 'Get receiptnote attachment',
 			},
 			{
 				name: 'Get Receiptnote PDF',
 				value: 'getReceiptnotePdf',
-				action: 'Get Receiptnote PDF',
+				action: 'Get receiptnote PDF',
 			},
 			{
 				name: 'List Receiptnote Attachments',
 				value: 'listReceiptnoteAttachments',
-				action: 'List Receiptnote Attachments',
+				action: 'List receiptnote attachments',
 			},
 			{
 				name: 'List Receiptnotes',
 				value: 'listReceiptnotes',
-				action: 'List Receiptnotes',
+				action: 'List receiptnotes',
 			},
 			{
 				name: 'Send Receiptnote',
 				value: 'sendReceiptnote',
-				action: 'Send Receiptnote',
+				action: 'Send receiptnote',
 			},
 			{
 				name: 'Set Receiptnote Pipeline',
 				value: 'setReceiptnotePipeline',
-				action: 'Set Receiptnote Pipeline',
+				action: 'Set receiptnote pipeline',
 			},
 			{
 				name: 'Update Receiptnote',
 				value: 'updateReceiptnote',
-				action: 'Update Receiptnote',
+				action: 'Update receiptnote',
 			},
 		],
 		default: 'approveReceiptnote',
@@ -18990,7 +18992,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['salesCreditNote'],
@@ -19012,44 +19014,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Contact Name',
-					name: 'contactName',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Body',
 					name: 'body',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Language',
-					name: 'language',
+					displayName: 'Contact Name',
+					name: 'contactName',
 					type: 'string',
 					default: ''
 				},
@@ -19066,34 +19038,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sales Channel ID',
-					name: 'salesChannelId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -19104,14 +19063,57 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
-					displayName: 'Project ID',
-					name: 'projectId',
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
 					type: 'string',
 					default: ''
 				},
 				{
 					displayName: 'Payment Method ID',
 					name: 'paymentMethodId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Project ID',
+					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sales Channel ID',
+					name: 'salesChannelId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -19156,14 +19158,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Treasury ID',
-					name: 'treasuryId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
+					displayName: 'Treasury ID',
+					name: 'treasuryId',
 					type: 'string',
 					default: ''
 				}
@@ -19317,20 +19319,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Approval Status',
+					name: 'approvalStatus',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Contact ID',
 					name: 'contactId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Status',
-					name: 'status',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Start Date',
-					name: 'startDate',
 					type: 'string',
 					default: ''
 				},
@@ -19341,14 +19337,20 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Approval Status',
-					name: 'approvalStatus',
+					displayName: 'Sort',
+					name: 'sort',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Sort',
-					name: 'sort',
+					displayName: 'Start Date',
+					name: 'startDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				}
@@ -19401,7 +19403,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Comma-separated.',
+		description: 'Comma-separated',
 		displayOptions: {
 			show: {
 				resource: ['salesCreditNote'],
@@ -19423,8 +19425,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Subject',
-					name: 'subject',
+					displayName: 'Bcc',
+					name: 'bcc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Cc',
+					name: 'cc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Mail Template ID',
+					name: 'mailTemplateId',
 					type: 'string',
 					default: ''
 				},
@@ -19435,24 +19451,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Mail Template ID',
-					name: 'mailTemplateId',
+					displayName: 'Subject',
+					name: 'subject',
 					type: 'string',
 					default: ''
-				},
-				{
-					displayName: 'Cc',
-					name: 'cc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Bcc',
-					name: 'bcc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
 				}
 		],
 	},
@@ -19540,84 +19542,84 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Create Sales Order',
-				value: 'create',
-				action: 'Create Sales Order',
-			},
-			{
-				name: 'Get Sales Order',
-				value: 'get',
-				action: 'Get Sales Order',
-			},
-			{
-				name: 'List Sales Orders',
-				value: 'getAll',
-				action: 'List Sales Orders',
-			},
-			{
-				name: 'Update Sales Order',
-				value: 'update',
-				action: 'Update Sales Order',
-			},
-			{
-				name: 'Delete Sales Order',
-				value: 'delete',
-				action: 'Delete Sales Order',
-			},
-			{
 				name: 'Approve Sales Order',
 				value: 'approve',
-				action: 'Approve Sales Order',
+				action: 'Approve sales order',
 			},
 			{
 				name: 'Attach Sales Order File',
 				value: 'attachSalesOrderFile',
-				action: 'Attach Sales Order File',
+				action: 'Attach sales order file',
+			},
+			{
+				name: 'Create Sales Order',
+				value: 'create',
+				action: 'Create sales order',
+			},
+			{
+				name: 'Delete Sales Order',
+				value: 'delete',
+				action: 'Delete sales order',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many sales orders',
+			},
+			{
+				name: 'Get Sales Order',
+				value: 'get',
+				action: 'Get sales order',
 			},
 			{
 				name: 'Get Sales Order Attachment',
 				value: 'getSalesOrderAttachment',
-				action: 'Get Sales Order Attachment',
+				action: 'Get sales order attachment',
 			},
 			{
 				name: 'Get Sales Order PDF',
 				value: 'getSalesOrderPdf',
-				action: 'Get Sales Order PDF',
+				action: 'Get sales order PDF',
 			},
 			{
 				name: 'Get Sales Order Shipped Items',
 				value: 'getSalesOrderShippedItems',
-				action: 'Get Sales Order Shipped Items',
+				action: 'Get sales order shipped items',
 			},
 			{
 				name: 'List Sales Order Attachments',
 				value: 'listSalesOrderAttachments',
-				action: 'List Sales Order Attachments',
+				action: 'List sales order attachments',
 			},
 			{
 				name: 'Send Sales Order',
 				value: 'send',
-				action: 'Send Sales Order',
+				action: 'Send sales order',
 			},
 			{
 				name: 'Set Sales Order Pipeline',
 				value: 'setSalesOrderPipeline',
-				action: 'Set Sales Order Pipeline',
+				action: 'Set sales order pipeline',
 			},
 			{
 				name: 'Ship Sales Order',
 				value: 'ship',
-				action: 'Ship Sales Order',
+				action: 'Ship sales order',
 			},
 			{
 				name: 'Ship Sales Order By Lines',
 				value: 'shipSalesOrderByLines',
-				action: 'Ship Sales Order By Lines',
+				action: 'Ship sales order by lines',
+			},
+			{
+				name: 'Update Sales Order',
+				value: 'update',
+				action: 'Update sales order',
 			},
 			{
 				name: 'Update Sales Order Tracking',
 				value: 'updateSalesOrderTracking',
-				action: 'Update Sales Order Tracking',
+				action: 'Update sales order tracking',
 			},
 		],
 		default: 'create',
@@ -19641,7 +19643,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['salesOrder'],
@@ -19669,36 +19671,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Language',
-					name: 'language',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Currency',
 					name: 'currency',
 					type: 'string',
@@ -19711,34 +19683,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sales Channel ID',
-					name: 'salesChannelId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -19749,8 +19708,51 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Project ID',
 					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sales Channel ID',
+					name: 'salesChannelId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -19789,8 +19791,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Status',
-					name: 'status',
+					displayName: 'End Date',
+					name: 'endDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sort',
+					name: 'sort',
 					type: 'string',
 					default: ''
 				},
@@ -19801,14 +19809,8 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'End Date',
-					name: 'endDate',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sort',
-					name: 'sort',
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				}
@@ -20116,7 +20118,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Comma-separated.',
+		description: 'Comma-separated',
 		displayOptions: {
 			show: {
 				resource: ['salesOrder'],
@@ -20138,8 +20140,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Subject',
-					name: 'subject',
+					displayName: 'Bcc',
+					name: 'bcc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Cc',
+					name: 'cc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Mail Template ID',
+					name: 'mailTemplateId',
 					type: 'string',
 					default: ''
 				},
@@ -20150,24 +20166,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Mail Template ID',
-					name: 'mailTemplateId',
+					displayName: 'Subject',
+					name: 'subject',
 					type: 'string',
 					default: ''
-				},
-				{
-					displayName: 'Cc',
-					name: 'cc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Bcc',
-					name: 'bcc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
 				}
 		],
 	},
@@ -20241,7 +20243,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'lines',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				}
 		],
 	},
@@ -20272,6 +20274,24 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Delivery Date',
+					name: 'deliveryDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Internal Notes',
+					name: 'internalNotes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Pickup Date',
+					name: 'pickupDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
 					displayName: 'Tracking Key',
 					name: 'trackingKey',
 					type: 'string',
@@ -20286,24 +20306,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 				{
 					displayName: 'Tracking Number',
 					name: 'trackingNumber',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Pickup Date',
-					name: 'pickupDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Delivery Date',
-					name: 'deliveryDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Internal Notes',
-					name: 'internalNotes',
 					type: 'string',
 					default: ''
 				}
@@ -20321,69 +20323,69 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'Create Sales Receipt',
-				value: 'create',
-				action: 'Create Sales Receipt',
-			},
-			{
-				name: 'Get Sales Receipt',
-				value: 'get',
-				action: 'Get Sales Receipt',
-			},
-			{
-				name: 'List Sales Receipts',
-				value: 'getAll',
-				action: 'List Sales Receipts',
-			},
-			{
-				name: 'Update Sales Receipt',
-				value: 'update',
-				action: 'Update Sales Receipt',
-			},
-			{
-				name: 'Delete Sales Receipt',
-				value: 'delete',
-				action: 'Delete Sales Receipt',
-			},
-			{
 				name: 'Approve Sales Receipt',
 				value: 'approve',
-				action: 'Approve Sales Receipt',
+				action: 'Approve sales receipt',
 			},
 			{
 				name: 'Attach Sales Receipt File',
 				value: 'attachSalesReceiptFile',
-				action: 'Attach Sales Receipt File',
+				action: 'Attach sales receipt file',
+			},
+			{
+				name: 'Create Sales Receipt',
+				value: 'create',
+				action: 'Create sales receipt',
 			},
 			{
 				name: 'Create Sales Receipt Payment',
 				value: 'createSalesReceiptPayment',
-				action: 'Create Sales Receipt Payment',
+				action: 'Create sales receipt payment',
+			},
+			{
+				name: 'Delete Sales Receipt',
+				value: 'delete',
+				action: 'Delete sales receipt',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many sales receipts',
+			},
+			{
+				name: 'Get Sales Receipt',
+				value: 'get',
+				action: 'Get sales receipt',
 			},
 			{
 				name: 'Get Sales Receipt Attachment',
 				value: 'getSalesReceiptAttachment',
-				action: 'Get Sales Receipt Attachment',
+				action: 'Get sales receipt attachment',
 			},
 			{
 				name: 'Get Sales Receipt PDF',
 				value: 'getSalesReceiptPdf',
-				action: 'Get Sales Receipt PDF',
+				action: 'Get sales receipt PDF',
 			},
 			{
 				name: 'List Sales Receipt Attachments',
 				value: 'listSalesReceiptAttachments',
-				action: 'List Sales Receipt Attachments',
+				action: 'List sales receipt attachments',
 			},
 			{
 				name: 'Send Sales Receipt',
 				value: 'send',
-				action: 'Send Sales Receipt',
+				action: 'Send sales receipt',
 			},
 			{
 				name: 'Set Sales Receipt Pipeline',
 				value: 'setSalesReceiptPipeline',
-				action: 'Set Sales Receipt Pipeline',
+				action: 'Set sales receipt pipeline',
+			},
+			{
+				name: 'Update Sales Receipt',
+				value: 'update',
+				action: 'Update sales receipt',
 			},
 		],
 		default: 'create',
@@ -20407,7 +20409,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Send as JSON.',
+		description: 'Send as JSON',
 		displayOptions: {
 			show: {
 				resource: ['salesReceipt'],
@@ -20429,44 +20431,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Contact Name',
-					name: 'contactName',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Description',
-					name: 'description',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Date',
-					name: 'date',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Due Date',
-					name: 'dueDate',
-					type: 'dateTime',
-					default: ''
-				},
-				{
-					displayName: 'Notes',
-					name: 'notes',
-					type: 'string',
-					default: ''
-				},
-				{
 					displayName: 'Body',
 					name: 'body',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Language',
-					name: 'language',
+					displayName: 'Contact Name',
+					name: 'contactName',
 					type: 'string',
 					default: ''
 				},
@@ -20483,34 +20455,21 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
 					displayName: 'Custom Fields',
 					name: 'customFields',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					description: 'Send as JSON'
 				},
 				{
-					displayName: 'Number Line ID',
-					name: 'numberLineId',
-					type: 'string',
+					displayName: 'Date',
+					name: 'date',
+					type: 'dateTime',
 					default: ''
 				},
 				{
-					displayName: 'Warehouse ID',
-					name: 'warehouseId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Sales Channel ID',
-					name: 'salesChannelId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
@@ -20521,14 +20480,57 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
-					displayName: 'Project ID',
-					name: 'projectId',
+					displayName: 'Due Date',
+					name: 'dueDate',
+					type: 'dateTime',
+					default: ''
+				},
+				{
+					displayName: 'Language',
+					name: 'language',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Notes',
+					name: 'notes',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Number Line ID',
+					name: 'numberLineId',
 					type: 'string',
 					default: ''
 				},
 				{
 					displayName: 'Payment Method ID',
 					name: 'paymentMethodId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Project ID',
+					name: 'projectId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Sales Channel ID',
+					name: 'salesChannelId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Warehouse ID',
+					name: 'warehouseId',
 					type: 'string',
 					default: ''
 				}
@@ -20561,20 +20563,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Approval Status',
+					name: 'approvalStatus',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Contact ID',
 					name: 'contactId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Status',
-					name: 'status',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Start Date',
-					name: 'startDate',
 					type: 'string',
 					default: ''
 				},
@@ -20591,8 +20587,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Approval Status',
-					name: 'approvalStatus',
+					displayName: 'Start Date',
+					name: 'startDate',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
 					default: ''
 				}
@@ -20771,14 +20773,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Treasury ID',
-					name: 'treasuryId',
+					displayName: 'Description',
+					name: 'description',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Description',
-					name: 'description',
+					displayName: 'Treasury ID',
+					name: 'treasuryId',
 					type: 'string',
 					default: ''
 				}
@@ -20911,7 +20913,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		type: 'string',
 		default: '',
 		required: true,
-		description: 'Comma-separated.',
+		description: 'Comma-separated',
 		displayOptions: {
 			show: {
 				resource: ['salesReceipt'],
@@ -20933,8 +20935,22 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Subject',
-					name: 'subject',
+					displayName: 'Bcc',
+					name: 'bcc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Cc',
+					name: 'cc',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
+					displayName: 'Mail Template ID',
+					name: 'mailTemplateId',
 					type: 'string',
 					default: ''
 				},
@@ -20945,24 +20961,10 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
-					displayName: 'Mail Template ID',
-					name: 'mailTemplateId',
+					displayName: 'Subject',
+					name: 'subject',
 					type: 'string',
 					default: ''
-				},
-				{
-					displayName: 'Cc',
-					name: 'cc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Bcc',
-					name: 'bcc',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
 				}
 		],
 	},
@@ -21006,27 +21008,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Service',
 				value: 'create',
-				action: 'Create Service',
-			},
-			{
-				name: 'Get Service',
-				value: 'get',
-				action: 'Get Service',
-			},
-			{
-				name: 'List Services',
-				value: 'getAll',
-				action: 'List Services',
-			},
-			{
-				name: 'Update Service',
-				value: 'update',
-				action: 'Update Service',
+				action: 'Create service',
 			},
 			{
 				name: 'Delete Service',
 				value: 'delete',
-				action: 'Delete Service',
+				action: 'Delete service',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many services',
+			},
+			{
+				name: 'Get Service',
+				value: 'get',
+				action: 'Get service',
+			},
+			{
+				name: 'Update Service',
+				value: 'update',
+				action: 'Update service',
 			},
 		],
 		default: 'create',
@@ -21058,10 +21060,34 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Code',
+					name: 'code',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Color',
+					name: 'color',
+					type: 'color',
+					default: ''
+				},
+				{
+					displayName: 'Cost',
+					name: 'cost',
+					type: 'number',
+					default: 0
+				},
+				{
 					displayName: 'Description',
 					name: 'description',
 					type: 'string',
 					default: ''
+				},
+				{
+					displayName: 'Duration',
+					name: 'duration',
+					type: 'number',
+					default: 0
 				},
 				{
 					displayName: 'Price',
@@ -21070,10 +21096,17 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
-					displayName: 'Cost',
-					name: 'cost',
-					type: 'number',
-					default: 0
+					displayName: 'Sales Channel ID',
+					name: 'salesChannelId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
 				},
 				{
 					displayName: 'Tax',
@@ -21086,38 +21119,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'taxes',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Sales Channel ID',
-					name: 'salesChannelId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Code',
-					name: 'code',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Color',
-					name: 'color',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Duration',
-					name: 'duration',
-					type: 'number',
-					default: 0
+					description: 'Comma-separated'
 				}
 		],
 	},
@@ -21210,14 +21212,38 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
+					displayName: 'Code',
+					name: 'code',
 					type: 'string',
 					default: ''
 				},
 				{
+					displayName: 'Color',
+					name: 'color',
+					type: 'color',
+					default: ''
+				},
+				{
+					displayName: 'Cost',
+					name: 'cost',
+					type: 'number',
+					default: 0
+				},
+				{
 					displayName: 'Description',
 					name: 'description',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Duration',
+					name: 'duration',
+					type: 'number',
+					default: 0
+				},
+				{
+					displayName: 'Name',
+					name: 'name',
 					type: 'string',
 					default: ''
 				},
@@ -21228,10 +21254,17 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: 0
 				},
 				{
-					displayName: 'Cost',
-					name: 'cost',
-					type: 'number',
-					default: 0
+					displayName: 'Sales Channel ID',
+					name: 'salesChannelId',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Tags',
+					name: 'tags',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
 				},
 				{
 					displayName: 'Tax',
@@ -21244,38 +21277,7 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'taxes',
 					type: 'string',
 					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Tags',
-					name: 'tags',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
-				},
-				{
-					displayName: 'Sales Channel ID',
-					name: 'salesChannelId',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Code',
-					name: 'code',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Color',
-					name: 'color',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Duration',
-					name: 'duration',
-					type: 'number',
-					default: 0
+					description: 'Comma-separated'
 				}
 		],
 	},
@@ -21306,17 +21308,17 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Tag',
 				value: 'create',
-				action: 'Create Tag',
-			},
-			{
-				name: 'List Tags',
-				value: 'getAll',
-				action: 'List Tags',
+				action: 'Create tag',
 			},
 			{
 				name: 'Delete Tag',
 				value: 'delete',
-				action: 'Delete Tag',
+				action: 'Delete tag',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many tags',
 			},
 		],
 		default: 'create',
@@ -21389,27 +21391,27 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Task',
 				value: 'create',
-				action: 'Create Task',
-			},
-			{
-				name: 'Get Task',
-				value: 'get',
-				action: 'Get Task',
-			},
-			{
-				name: 'List Tasks',
-				value: 'getAll',
-				action: 'List Tasks',
-			},
-			{
-				name: 'Update Task',
-				value: 'update',
-				action: 'Update Task',
+				action: 'Create task',
 			},
 			{
 				name: 'Delete Task',
 				value: 'delete',
-				action: 'Delete Task',
+				action: 'Delete task',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many tasks',
+			},
+			{
+				name: 'Get Task',
+				value: 'get',
+				action: 'Get task',
+			},
+			{
+				name: 'Update Task',
+				value: 'update',
+				action: 'Update task',
 			},
 		],
 		default: 'create',
@@ -21454,6 +21456,13 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
+					displayName: 'Assigned To',
+					name: 'assignedTo',
+					type: 'string',
+					default: '',
+					description: 'Comma-separated'
+				},
+				{
 					displayName: 'Description',
 					name: 'description',
 					type: 'string',
@@ -21476,13 +21485,6 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					name: 'status',
 					type: 'string',
 					default: ''
-				},
-				{
-					displayName: 'Assigned To',
-					name: 'assignedTo',
-					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
 				}
 		],
 	},
@@ -21554,16 +21556,11 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Project ID',
-					name: 'projectId',
+					displayName: 'Assigned To',
+					name: 'assignedTo',
 					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Name',
-					name: 'name',
-					type: 'string',
-					default: ''
+					default: '',
+					description: 'Comma-separated'
 				},
 				{
 					displayName: 'Description',
@@ -21578,23 +21575,28 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: ''
 				},
 				{
+					displayName: 'Name',
+					name: 'name',
+					type: 'string',
+					default: ''
+				},
+				{
 					displayName: 'Priority',
 					name: 'priority',
 					type: 'number',
 					default: 0
 				},
 				{
-					displayName: 'Status',
-					name: 'status',
+					displayName: 'Project ID',
+					name: 'projectId',
 					type: 'string',
 					default: ''
 				},
 				{
-					displayName: 'Assigned To',
-					name: 'assignedTo',
+					displayName: 'Status',
+					name: 'status',
 					type: 'string',
-					default: '',
-					description: 'Comma-separated.'
+					default: ''
 				}
 		],
 	},
@@ -21623,14 +21625,14 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 			{
-				name: 'List Taxes',
-				value: 'getAll',
-				action: 'List Taxes',
-			},
-			{
 				name: 'Get Keys By Country',
 				value: 'getKeysByCountry',
-				action: 'Get Keys By Country',
+				action: 'Get keys by country',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many taxes',
 			},
 		],
 		default: 'getAll',
@@ -21704,12 +21706,12 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Get Usage',
 				value: 'get',
-				action: 'Get Usage',
+				action: 'Get usage',
 			},
 			{
 				name: 'Get Usage By Type',
 				value: 'getUsageByType',
-				action: 'Get Usage By Type',
+				action: 'Get usage by type',
 			},
 		],
 		default: 'get',
@@ -21741,32 +21743,32 @@ export const v2GeneratedProperties: INodeProperties[] = [
 			{
 				name: 'Create Warehouse',
 				value: 'create',
-				action: 'Create Warehouse',
-			},
-			{
-				name: 'Get Warehouse',
-				value: 'get',
-				action: 'Get Warehouse',
-			},
-			{
-				name: 'List Warehouses',
-				value: 'getAll',
-				action: 'List Warehouses',
-			},
-			{
-				name: 'Update Warehouse',
-				value: 'update',
-				action: 'Update Warehouse',
+				action: 'Create warehouse',
 			},
 			{
 				name: 'Delete Warehouse',
 				value: 'delete',
-				action: 'Delete Warehouse',
+				action: 'Delete warehouse',
+			},
+			{
+				name: 'Get Many',
+				value: 'getAll',
+				action: 'Get many warehouses',
+			},
+			{
+				name: 'Get Warehouse',
+				value: 'get',
+				action: 'Get warehouse',
 			},
 			{
 				name: 'Get Warehouse Stock',
 				value: 'getWarehouseStock',
-				action: 'Get Warehouse Stock',
+				action: 'Get warehouse stock',
+			},
+			{
+				name: 'Update Warehouse',
+				value: 'update',
+				action: 'Update warehouse',
 			},
 		],
 		default: 'create',
@@ -21798,22 +21800,11 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Email',
-					name: 'email',
+					displayName: 'Address',
+					name: 'address',
 					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Phone',
-					name: 'phone',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Mobile',
-					name: 'mobile',
-					type: 'string',
-					default: ''
+					default: '',
+					description: 'Send as JSON'
 				},
 				{
 					displayName: 'Default',
@@ -21822,11 +21813,23 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: false
 				},
 				{
-					displayName: 'Address',
-					name: 'address',
+					displayName: 'Email',
+					name: 'email',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					placeholder: 'name@email.com'
+				},
+				{
+					displayName: 'Mobile',
+					name: 'mobile',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Phone',
+					name: 'phone',
+					type: 'string',
+					default: ''
 				}
 		],
 	},
@@ -21898,28 +21901,11 @@ export const v2GeneratedProperties: INodeProperties[] = [
 		},
 		options: [
 				{
-					displayName: 'Name',
-					name: 'name',
+					displayName: 'Address',
+					name: 'address',
 					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Email',
-					name: 'email',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Phone',
-					name: 'phone',
-					type: 'string',
-					default: ''
-				},
-				{
-					displayName: 'Mobile',
-					name: 'mobile',
-					type: 'string',
-					default: ''
+					default: '',
+					description: 'Send as JSON'
 				},
 				{
 					displayName: 'Default',
@@ -21928,11 +21914,29 @@ export const v2GeneratedProperties: INodeProperties[] = [
 					default: false
 				},
 				{
-					displayName: 'Address',
-					name: 'address',
+					displayName: 'Email',
+					name: 'email',
 					type: 'string',
 					default: '',
-					description: 'Send as JSON.'
+					placeholder: 'name@email.com'
+				},
+				{
+					displayName: 'Mobile',
+					name: 'mobile',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Name',
+					name: 'name',
+					type: 'string',
+					default: ''
+				},
+				{
+					displayName: 'Phone',
+					name: 'phone',
+					type: 'string',
+					default: ''
 				}
 		],
 	},
